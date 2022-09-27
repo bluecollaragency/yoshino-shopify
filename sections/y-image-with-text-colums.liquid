@@ -1,0 +1,71 @@
+{{ 'y-section-image-text-column.css' | asset_url | stylesheet_tag }}
+
+<div class="image-w-text-cols tw-relative tw-block">
+
+  <div class="tw-container tw-mx-auto">
+    <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+
+      
+      <div>
+        <img src="https://via.placeholder.com/800x800" alt="">
+      </div>
+      <div>
+        <div class="tw-grid tw-grid-cols-2 tw-gap-8">
+
+          {% for block in section.blocks %}  
+            {% case block.type %}
+              {% when 'column' %}
+              <div class="tw-space-y-4">
+                <img src="https://via.placeholder.com/50x50" alt="{{ block.settings.columns_image.alt }}">
+                <h3 class="tw-text-2xl">{{ block.settings.column_headline }}</h3>
+                {{ block.settings.column_copy }}
+              </div>
+            {% endcase %} 
+          {% endfor %}
+
+        </div>
+        <a href="#" class="button tw-mt-12">Learn More</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Image with text columns",
+    "class": "section",
+    "settings": [],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+          {
+            "id": "column_image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "column_headline",
+            "type": "text",
+            "label": "Column Headline",
+            "default": "Headline 3"
+          },
+          {
+            "id": "column_copy",
+            "type": "richtext",
+            "label": "Column Copy",
+            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Image with text columns"
+      }
+    ]
+  }
+{% endschema %}
