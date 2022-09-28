@@ -34,6 +34,7 @@ module.exports = {
     './sections/*.liquid',
     './snippets/*.liquid',
   ],
+  safelist: ['lg:tw-col-span-6', 'lg:tw-min-h-[380px]', 'lg:tw-min-h-[760px]'],
   theme: {
     borderRadius: rem2rem(defaultTheme.borderRadius),
     columns: rem2rem(defaultTheme.columns),
@@ -48,11 +49,11 @@ module.exports = {
       },
     },
     screens: {
-      sm: '320px',
-      md: '750px',
-      lg: '990px',
-      xl: '1440px',
-      xxl: '1920px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      xxl: '1440px',
       pageMaxWidth: '1440px',
     },
     extend: {
@@ -62,6 +63,11 @@ module.exports = {
     },
     color: {
       black: '#000000',
+      gray: {
+        900: '#191A19',
+        800: '#323333',
+        700: '#4B4D4C',
+      },
     },
   },
   plugins: [],

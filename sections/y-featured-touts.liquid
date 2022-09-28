@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="featured-touts tw-relative tw-block">
+
+  <div class="tw-container">
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12 tw-gap-8 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
+
+      {% for block in section.blocks %}  
+        {% case block.type %}
+          {% when 'tout' %}
+          {% include 'y-featured-tout' %}
+        {% endcase %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+
+<div class="tw-container">
+  <slider-component class="">
+    <div>
+      <ul class="multicolumn-list contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop slider slider--tablet grid--peek" id="Slider-template--featured-tout" role="list">
+        <li id="Slide-template--featured-tout-1" class="multicolumn-list__item grid__item slider__slide">1</li>
+        <li id="Slide-template--featured-tout-2" class="multicolumn-list__item grid__item slider__slide">2</li>
+        <li id="Slide-template--featured-tout-3" class="multicolumn-list__item grid__item slider__slide">3</li>
+      </ul>
+    </div>
+    <div class="slider-buttons no-js-hidden large-up-hide">
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+      <div class="slider-counter caption">
+        <span class="slider-counter--current"></span>
+        <span aria-hidden="true"> / </span>
+        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+        <span class="slider-counter--total"></span>
+      </div>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+    </div>
+  </slider-component>
+</div>
+{% schema %}
+  {
+    "name": "Featured Touts",
+    "class": "section",
+    "settings": [
+  
+    ],
+    "blocks": [
+      {
+        "type": "tout",
+        "name": "Tout",
+        "settings": [
+          {
+            "id": "tout_width",
+            "type": "select",
+            "label": "Tout Width",
+            "options": [
+              {
+                "value": "6",
+                "label": "50%"
+              },
+              {
+                "value": "12",
+                "label": "100%"
+              }
+            ],
+            "default": "6"
+          },
+          {
+            "id": "tout_height",
+            "type": "select",
+            "label": "Tout Height",
+            "options": [
+              {
+                "value": "380px",
+                "label": "Small"
+              },
+              {
+                "value": "760px",
+                "label": "Large"
+              }
+            ],
+            "default": "380px"
+          },
+          {
+            "id": "tout_image",
+            "type": "image_picker",
+            "label": "Image"
+          },
+          {
+            "id": "tout_headline",
+            "type": "text",
+            "label": "Tout Headline",
+            "default": "Headline 4"
+          },
+          {
+            "id": "tout_copy",
+            "type": "richtext",
+            "label": "Tout Copy",
+            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<p>"
+          },
+          {
+            "id": "button_link",
+            "type": "url",
+            "label": "Button Link"
+          },
+          {
+            "id": "button_cta",
+            "type": "text",
+            "label": "Button CTA",
+            "default": "Learn More"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Featured Touts"
+      }
+    ]
+  }
+{% endschema %}

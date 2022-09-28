@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .tw-h4 {
+    @apply tw-text-[4rem] tw-leading-tight;
+  }
+}
