@@ -3,12 +3,12 @@
 <div class="image-w-text-cols tw-relative tw-block">
 
   <div class="tw-container tw-mx-auto">
-    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8">
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 {% if section.settings.content_align == 'middle' %} items-center{% endif %}">
 
-      
       <div>
         <img src="https://via.placeholder.com/800x800" alt="">
       </div>
+
       <div>
         <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8">
 
@@ -24,7 +24,7 @@
           {% endfor %}
 
         </div>
-        <a href="#" class="button tw-mt-12">{{ block.settings.button_cta | escape }}</a>
+        <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
       </div>
 
     </div>
@@ -51,6 +51,22 @@
         "id": "button_cta",
         "type": "text",
         "label": "Button CTA"
+      },
+      {
+        "id": "content_align",
+        "type": "select",
+        "label": "Content align",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          }
+        ],
+        "default": "top"
       }
     ],
     "blocks": [

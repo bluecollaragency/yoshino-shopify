@@ -38,9 +38,9 @@
         "image_overlay_opacity": 40,
         "image_height": "large",
         "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
+        "desktop_content_position": "middle-left",
         "show_text_box": false,
-        "desktop_content_alignment": "center",
+        "desktop_content_alignment": "left",
         "color_scheme": "background-1",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -116,8 +116,8 @@
         "8bd2a4f5-7397-4665-b590-f1b9c963cb55"
       ],
       "settings": {
-        "button_link": "#",
-        "button_cta": "Learn More"
+        "button_link": "shopify:\/\/pages\/contact",
+        "button_cta": "Click Me"
       }
     },
     "featured_collection": {
