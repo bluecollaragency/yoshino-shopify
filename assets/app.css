@@ -610,12 +610,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(1.6rem * var(--tw-space-y-reverse));
 }
 
-.tw-space-y-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(3.2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(3.2rem * var(--tw-space-y-reverse));
-}
-
 .tw-overflow-hidden {
   overflow: hidden;
 }

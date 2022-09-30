@@ -150,7 +150,7 @@
         "8f968c31-6df8-4d84-a71d-6bb2d20b6eb2": {
           "type": "tout",
           "settings": {
-            "tout_width": "6",
+            "tout_width": "1\/2",
             "tout_height": "380px",
             "tout_headline": "A headline",
             "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
@@ -161,7 +161,7 @@
         "eba1799c-365e-4bec-b23c-b2f725ea80fd": {
           "type": "tout",
           "settings": {
-            "tout_width": "6",
+            "tout_width": "1\/2",
             "tout_height": "380px",
             "tout_headline": "Headline 4",
             "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
@@ -172,7 +172,7 @@
         "fa2e2b72-338e-4f50-801a-98fdddd9685a": {
           "type": "tout",
           "settings": {
-            "tout_width": "12",
+            "tout_width": "full",
             "tout_height": "760px",
             "tout_headline": "Headline 4",
             "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
