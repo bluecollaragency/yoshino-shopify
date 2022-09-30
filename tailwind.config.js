@@ -34,7 +34,12 @@ module.exports = {
     './sections/*.liquid',
     './snippets/*.liquid',
   ],
-  safelist: ['lg:tw-col-span-6', 'lg:tw-min-h-[380px]', 'lg:tw-min-h-[760px]'],
+  safelist: [
+    'lg:tw-col-span-6',
+    'lg:tw-min-h-[380px]',
+    'lg:tw-min-h-[760px]',
+    'lg:tw-w-1/2',
+  ],
   theme: {
     borderRadius: rem2rem(defaultTheme.borderRadius),
     columns: rem2rem(defaultTheme.columns),

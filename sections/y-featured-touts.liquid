@@ -1,43 +1,33 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="featured-touts tw-relative tw-block">
+<div class="featured-touts tw-relative tw-block tw-overflow-hidden">
 
-  <div class="tw-container">
-    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12 tw-gap-8 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
+  <div class="tw-max-w-screen-xxl tw-mx-auto -mx-4">
+    <slider-component class="">
+      <div class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--tablet" id="Slider-template--featured-touter" role="list">
 
-      {% for block in section.blocks %}  
-        {% case block.type %}
-          {% when 'tout' %}
-          {% include 'y-featured-tout' %}
-        {% endcase %}
-      {% endfor %}
+        {% for block in section.blocks %}  
+          {% case block.type %}
+            {% when 'tout' %}
+            {% include 'y-featured-tout' %}
+          {% endcase %}
+        {% endfor %}
 
-    </div>
+      </div>
+      <div class="slider-buttons no-js-hidden large-up-hide">
+        <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
+        <div class="slider-counter caption">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total"></span>
+        </div>
+        <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+      </div>
+    </slider-component>
   </div>
 
-</div>
-
-<div class="tw-container">
-  <slider-component class="">
-    <div>
-      <ul class="multicolumn-list contains-content-container grid grid--1-col-tablet-down grid--2-col-desktop slider slider--tablet grid--peek" id="Slider-template--featured-tout" role="list">
-        <li id="Slide-template--featured-tout-1" class="multicolumn-list__item grid__item slider__slide">1</li>
-        <li id="Slide-template--featured-tout-2" class="multicolumn-list__item grid__item slider__slide">2</li>
-        <li id="Slide-template--featured-tout-3" class="multicolumn-list__item grid__item slider__slide">3</li>
-      </ul>
-    </div>
-    <div class="slider-buttons no-js-hidden large-up-hide">
-      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-      <div class="slider-counter caption">
-        <span class="slider-counter--current"></span>
-        <span aria-hidden="true"> / </span>
-        <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-        <span class="slider-counter--total"></span>
-      </div>
-      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
-    </div>
-  </slider-component>
 </div>
 {% schema %}
   {
@@ -57,15 +47,15 @@
             "label": "Tout Width",
             "options": [
               {
-                "value": "6",
+                "value": "1/2",
                 "label": "50%"
               },
               {
-                "value": "12",
+                "value": "full",
                 "label": "100%"
               }
             ],
-            "default": "6"
+            "default": "1/2"
           },
           {
             "id": "tout_height",

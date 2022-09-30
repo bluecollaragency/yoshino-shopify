@@ -543,10 +543,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 10;
 }
 
-.tw-col-span-12 {
-  grid-column: span 12 / span 12;
-}
-
 .tw-mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -572,10 +568,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
-.tw-min-h-screen {
-  min-height: 100vh;
-}
-
 .tw-min-h-\[540px\] {
   min-height: 540px;
 }
@@ -584,8 +576,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
 }
 
+.tw-max-w-screen-xxl {
+  max-width: 1440px;
+}
+
 .tw-grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.tw-flex-wrap {
+  flex-wrap: wrap;
 }
 
 .tw-items-end {
@@ -600,10 +600,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 3.2rem;
 }
 
+.tw-gap-y-8 {
+  row-gap: 3.2rem;
+}
+
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.6rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.6rem * var(--tw-space-y-reverse));
+}
+
+.tw-space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(3.2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3.2rem * var(--tw-space-y-reverse));
+}
+
+.tw-overflow-hidden {
+  overflow: hidden;
 }
 
 .tw-bg-gray-800 {
@@ -618,6 +632,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-p-10 {
   padding: 4rem;
+}
+
+.tw-px-4 {
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
 }
 
 .tw-text-2xl {
@@ -649,11 +668,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     min-height: 760px;
   }
 
-  .lg\:tw-grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .lg\:tw-w-1\/2 {
+    width: 50%;
   }
 
-  .lg\:tw-grid-cols-12 {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+  .lg\:tw-grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

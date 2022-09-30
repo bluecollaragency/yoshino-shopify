@@ -3,7 +3,7 @@
   Make sure the data naming is the same across all these or this snippet wont work.
   Add any classes that include liquid to the safelist [in tailwind.config] or they wont get included.
 {% endcomment %}
-<div class="tw-col-span-12 lg:tw-col-span-{{ block.settings.tout_width }}">
+<div class="tw-w-full lg:tw-w-{{ block.settings.tout_width }} tw-px-4 slider__slide" id="Slide-template--featured-touter-{{ forloop.index }}">
   <div class="featured-tout tw-relative tw-flex tw-min-h-[540px] lg:tw-min-h-[{{ block.settings.tout_height }}] tw-bg-gray-800 tw-items-end">
     <img src="https://via.placeholder.com/500" alt="" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover tw-z-0">
     <div class="tw-relative tw-p-10 tw-space-y-4 tw-z-10">
