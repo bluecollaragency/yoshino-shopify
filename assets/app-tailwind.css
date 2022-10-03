@@ -37,4 +37,8 @@
   .y-newsletter-form__field-wrapper .field__label {
     @apply tw-left-0;
   }
+
+  .footer-social-links .social-icon-link svg {
+    @apply tw-w-6 tw-h-auto;
+  }
 }

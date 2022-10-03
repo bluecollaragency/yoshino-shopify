@@ -1,10 +1,18 @@
 <footer class="tw-py-20">
-  <div class="tw-max-w-screen-xxl tw-mx-auto tw-overflow-hidden tw-px-4 lg:tw-px-0">
-    <div class="tw-flex tw--mx-4">
+  <div class="tw-max-w-screen-xxl tw-mx-auto tw-overflow-hidden tw-px-4">
+    <div class="tw-flex tw--mx-4 tw-flex-wrap lg:tw-flex-nowrap tw-gap-y-16">
       <div class="tw-w-full lg:tw-w-3/12 tw-px-4">
-        Yoshino logo
+        {%- if section.settings.footer_logo != blank -%}
+          {%- assign footer_logo_width_2x = section.settings.footer_logo_width | times: 2 | at_most: 2000 -%}
+          <img 
+            srcset= "{{ section.settings.footer_logo | image_url: width: section.settings.footer_logo_width }}, {{ section.settings.footer_logo | image_url: width: footer_logo_width_2x }} 2x"
+            src="{{ section.settings.footer_logo | image_url: width: section.settings.footer_logo_width }}" 
+            alt="{{ section.settings.footer_logo.alt | escape }}"
+            width="{{ section.settings.footer_logo_width }}"
+          >
+        {%- endif -%}
       </div>
-      <div class="tw-w-full lg:tw-w-5/12 tw-px-4 lg:tw-pr-[8.333%]">
+      <div class="tw-w-full md:tw-w-6/12 lg:tw-w-5/12 tw-px-4 lg:tw-pr-[8.333%]">
         <h4 class="tw-h6">Mailing List</h4>
         <p class="tw-mt-6">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
         {%- form 'customer', id: 'ContactFooter-y', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
@@ -47,7 +55,7 @@
               {%- endif -%}
             {%- endform -%}
       </div>
-      <div class="tw-w-full lg:tw-w-4/12 tw-px-4">
+      <div class="tw-w-full md:tw-w-6/12 lg:tw-w-4/12 tw-px-4">
         <h4 class="tw-h6">Contact Us</h4>
         <ul class="footer-contact-list tw-w-full tw-block tw-mt-3 tw-text-sm">
           <li class="tw-flex tw-w-full tw-py-3">
@@ -65,19 +73,19 @@
         </ul>
       </div>
     </div>
-    <div class="tw-grid tw-grid-cols-12 tw-gap-8">
-      <div class="tw-col-start-4 tw-col-span-9">
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12 tw-gap-8 tw-mt-16 lg:tw-mt-24">
+      <div class="lg:tw-col-start-4 lg:tw-col-span-9">
         <span class="tw-h6 tw-font-semibold tw-text-gray-800">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</span>
-        <div class="tw-flex tw-justify-between tw-items-center tw-mt-6">
-          <ul class="footer-links tw-flex tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
+        <div class="tw-flex tw-flex-wrap md:tw-flex-nowrap tw-justify-between tw-items-center tw-mt-6">
+          <ul class="footer-links tw-w-full md:tw-w-auto tw-flex tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
             {%- for link in linklists.footer.links -%}
               <li>{{ link.title | link_to: link.url }}</li>
             {%- endfor -%}
             <li><a href="#">Privacy Policy</a></li>
           </ul>
-          <ul class="footer-social-links tw-flex tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
+          <ul class="footer-social-links tw-flex tw-w-full md:tw-w-auto tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold tw-mt-16 md:tw-mt-0">
             <li>
-              <a href="{{ settings.social_facebook_link }}" class="link list-social__link tw-fill-current tw-text-gray-900 list-social__item" >
+              <a href="{{ settings.social_facebook_link }}" class="social-icon-link tw-text-gray-900" >
                 {%- render 'icon-facebook' -%}
                 <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
               </a>
@@ -92,6 +100,21 @@
 {% schema %}
   {
     "name": "Custom Footer",
-    "settings": []
+    "settings": [
+      {
+        "id": "footer_logo",
+        "type": "image_picker",
+        "label": "Footer Logo"
+      },
+      {
+        "id": "footer_logo_width",
+        "type": "range",
+        "label": "Footer Logo Width",
+        "min": 100,
+        "max": 200,
+        "step": 1,
+        "default": 136
+      }
+    ]
   }
 {% endschema %}

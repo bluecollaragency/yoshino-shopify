@@ -55,8 +55,8 @@ module.exports = {
     },
     screens: {
       sm: '640px',
-      md: '768px',
-      lg: '1024px',
+      md: '750px',
+      lg: '990px',
       xl: '1280px',
       xxl: '1440px',
       pageMaxWidth: '1440px',
