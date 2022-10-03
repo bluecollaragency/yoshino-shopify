@@ -6,4 +6,35 @@
   .tw-h4 {
     @apply tw-text-[4rem] tw-leading-tight;
   }
+  .tw-h6 {
+    @apply tw-text-[2.4rem] tw-leading-tight;
+  }
+}
+
+@layer components {
+  .footer-contact-list li:not(:last-child) {
+    @apply tw-border-b tw-border-gray-100;
+  }
+  .y-newsletter-form__field-wrapper .field:after {
+    @apply tw-border-0 tw-border-b-2 tw-border-b-green tw-shadow-none;
+  }
+  .y-newsletter-form__field-wrapper .field:hover.field:after {
+    @apply tw-shadow-none;
+  }
+  .y-newsletter-form__field-wrapper .field__input {
+    @apply tw-p-0;
+  }
+  .y-newsletter-form__field-wrapper .field__input:focus,
+  .y-newsletter-form__field-wrapper .field__input:not(:placeholder-shown) {
+    @apply tw-shadow-none tw-p-0;
+  }
+  .y-newsletter-form__field-wrapper .field__input:focus ~ .field__label,
+  .y-newsletter-form__field-wrapper
+    .field__input:not(:placeholder-shown)
+    ~ .field__label {
+    @apply tw-left-0;
+  }
+  .y-newsletter-form__field-wrapper .field__label {
+    @apply tw-left-0;
+  }
 }

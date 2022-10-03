@@ -62,6 +62,9 @@ module.exports = {
       pageMaxWidth: '1440px',
     },
     extend: {
+      colors: {
+        'b-green': '#40A828',
+      },
       fontFamily: {
         heading: 'var(--font-heading-family)',
       },
