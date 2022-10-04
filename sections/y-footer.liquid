@@ -14,7 +14,9 @@
       </div>
       <div class="tw-w-full md:tw-w-6/12 lg:tw-w-5/12 tw-px-4 lg:tw-pr-[8.333%]">
         <h4 class="tw-h6">Mailing List</h4>
-        <p class="tw-mt-6">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+        {%- if section.settings.mailing_list_text != blank -%}
+        <p class="tw-mt-6">{{ section.settings.mailing_list_text | escape }}</p>
+        {%- endif -%}
         {%- form 'customer', id: 'ContactFooter-y', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
           <input type="hidden" name="contact[tags]" value="newsletter">
             <div class="y-newsletter-form__field-wrapper">
@@ -58,18 +60,36 @@
       <div class="tw-w-full md:tw-w-6/12 lg:tw-w-4/12 tw-px-4">
         <h4 class="tw-h6">Contact Us</h4>
         <ul class="footer-contact-list tw-w-full tw-block tw-mt-3 tw-text-sm">
-          <li class="tw-flex tw-w-full tw-py-3">
-            <span class="tw-w-1/2 tw-font-semibold">Phone</span><span><a href="#">+1 (555) 555 1212</a></span>
+          {%- if section.settings.contact_text_1 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_1 | escape }}</span><span><a href="{{ section.settings.contact_text_1_url }}">{{ section.settings.contact_text_1_cta | escape }}</a></span>
           </li>
-          <li class="tw-flex tw-w-full tw-py-3">
-            <span class="tw-w-1/2 tw-font-semibold">Customer Support</span><span><a href="#">+1 (555) 555 1212</a></span>
+          {%- endif -%}
+          {%- if section.settings.contact_text_2 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_2 | escape }}</span><span><a href="{{ section.settings.contact_text_2_url }}">{{ section.settings.contact_text_2_cta | escape }}</a></span>
           </li>
-          <li class="tw-flex tw-w-full tw-py-3">
-            <span class="tw-w-1/2 tw-font-semibold">Customer Support</span><span><a href="#">+1 (555) 555 1212</a></span>
+          {%- endif -%}
+          {%- if section.settings.contact_text_3 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_3 | escape }}</span><span><a href="{{ section.settings.contact_text_3_url }}">{{ section.settings.contact_text_3_cta | escape }}</a></span>
           </li>
-          <li class="tw-flex tw-w-full tw-py-3">
-            <span class="tw-w-1/2 tw-font-semibold">Customer Support</span><span><a href="#">+1 (555) 555 1212</a></span>
+          {%- endif -%}
+          {%- if section.settings.contact_text_4 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_4 | escape }}</span><span><a href="{{ section.settings.contact_text_4_url }}">{{ section.settings.contact_text_4_cta | escape }}</a></span>
           </li>
+          {%- endif -%}
+          {%- if section.settings.contact_text_5 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_5 | escape }}</span><span><a href="{{ section.settings.contact_text_5_url }}">{{ section.settings.contact_text_5_cta | escape }}</a></span>
+          </li>
+          {%- endif -%}
+          {%- if section.settings.contact_text_6 != blank -%}
+          <li class="footer-contact-list-item">
+            <span class="item-title">{{ section.settings.contact_text_6 | escape }}</span><span><a href="{{ section.settings.contact_text_6_url }}">{{ section.settings.contact_text_6_cta | escape }}</a></span>
+          </li>
+          {%- endif -%}
         </ul>
       </div>
     </div>
@@ -77,17 +97,34 @@
       <div class="lg:tw-col-start-4 lg:tw-col-span-9">
         <span class="tw-h6 tw-font-semibold tw-text-gray-800">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</span>
         <div class="tw-flex tw-flex-wrap md:tw-flex-nowrap tw-justify-between tw-items-center tw-mt-6">
-          <ul class="footer-links tw-w-full md:tw-w-auto tw-flex tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
+          <ul class="footer-links tw-w-full md:tw-w-auto tw-flex tw-flex-wrap tw-gap-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
             {%- for link in linklists.footer.links -%}
               <li>{{ link.title | link_to: link.url }}</li>
             {%- endfor -%}
-            <li><a href="#">Privacy Policy</a></li>
           </ul>
-          <ul class="footer-social-links tw-flex tw-w-full md:tw-w-auto tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold tw-mt-16 md:tw-mt-0">
+          <ul class="footer-social-links tw-flex tw-items-center tw-w-full md:tw-w-auto tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold tw-mt-16 md:tw-mt-0">
+            <li>
+              <a href="{{ settings.social_twitter_link }}" class="social-icon-link tw-text-gray-900" >
+                {%- render 'icon-twitter' -%}
+                <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+              </a>
+            </li>
             <li>
               <a href="{{ settings.social_facebook_link }}" class="social-icon-link tw-text-gray-900" >
                 {%- render 'icon-facebook' -%}
                 <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ settings.social_linkedin_link }}" class="social-icon-link tw-text-gray-900" >
+                {%- render 'icon-linkedin' -%}
+                <span class="visually-hidden">{{ 'general.social.links.linkedin' | t }}</span>
+              </a>
+            </li>
+            <li>
+              <a href="{{ settings.social_youtube_link }}" class="social-icon-link tw-text-gray-900" >
+                {%- render 'icon-youtube' -%}
+                <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
               </a>
             </li>
           </ul>
@@ -114,6 +151,101 @@
         "max": 200,
         "step": 1,
         "default": 136
+      },
+      {
+        "id": "mailing_list_text",
+        "type": "textarea",
+        "label": "Mailing list text area"
+      },
+      {
+        "id": "contact_text_1",
+        "type": "text",
+        "label": "Contact Text 1"
+      },
+      {
+        "id": "contact_text_1_cta",
+        "type": "text",
+        "label": "Contact Text 1 CTA"
+      },
+      {
+        "id": "contact_text_1_url",
+        "type": "url",
+        "label": "Contact Text 1 CTA"
+      },
+      {
+        "id": "contact_text_2",
+        "type": "text",
+        "label": "Contact Text 2"
+      },
+      {
+        "id": "contact_text_2_cta",
+        "type": "text",
+        "label": "Contact Text 2 CTA"
+      },
+      {
+        "id": "contact_text_2_url",
+        "type": "url",
+        "label": "Contact Text 2 CTA"
+      },
+      {
+        "id": "contact_text_3",
+        "type": "text",
+        "label": "Contact Text 3"
+      },
+      {
+        "id": "contact_text_3_cta",
+        "type": "text",
+        "label": "Contact Text 3 CTA"
+      },
+      {
+        "id": "contact_text_3_url",
+        "type": "url",
+        "label": "Contact Text 3 CTA"
+      },
+      {
+        "id": "contact_text_4",
+        "type": "text",
+        "label": "Contact Text 4"
+      },
+      {
+        "id": "contact_text_4_cta",
+        "type": "text",
+        "label": "Contact Text 4 CTA"
+      },
+      {
+        "id": "contact_text_4_url",
+        "type": "url",
+        "label": "Contact Text 4 CTA"
+      },
+      {
+        "id": "contact_text_5",
+        "type": "text",
+        "label": "Contact Text 5"
+      },
+      {
+        "id": "contact_text_5_cta",
+        "type": "text",
+        "label": "Contact Text 5 CTA"
+      },
+      {
+        "id": "contact_text_5_url",
+        "type": "url",
+        "label": "Contact Text 5 CTA"
+      },
+      {
+        "id": "contact_text_6",
+        "type": "text",
+        "label": "Contact Text 6"
+      },
+      {
+        "id": "contact_text_6_cta",
+        "type": "text",
+        "label": "Contact Text 6 CTA"
+      },
+      {
+        "id": "contact_text_6_url",
+        "type": "url",
+        "label": "Contact Text 6 CTA"
       }
     ]
   }

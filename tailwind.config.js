@@ -63,7 +63,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'b-green': '#40A828',
+        'b-green': {
+          100: '#74D948',
+          200: '#40A828',
+          300: '#428425',
+        },
       },
       fontFamily: {
         heading: 'var(--font-heading-family)',
@@ -75,6 +79,12 @@ module.exports = {
         900: '#191A19',
         800: '#323333',
         700: '#4B4D4C',
+        600: '#656666',
+        500: '#7E807F',
+        400: '#979998',
+        300: '#BDBFBF',
+        200: '#D7D9D8',
+        100: '#F0F2F1',
       },
     },
   },
