@@ -688,6 +688,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 1.6rem;
 }
 
+.tw-mt-2 {
+  margin-top: 0.8rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -736,6 +740,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.4000000000000004rem;
 }
 
+.tw-w-60 {
+  width: 24rem;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -752,6 +760,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.tw-flex-row {
+  flex-direction: row;
+}
+
 .tw-flex-col {
   flex-direction: column;
 }
@@ -760,12 +772,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: wrap;
 }
 
+.tw-items-start {
+  align-items: flex-start;
+}
+
 .tw-items-end {
   align-items: flex-end;
 }
 
 .tw-items-center {
   align-items: center;
+}
+
+.tw-justify-start {
+  justify-content: flex-start;
 }
 
 .tw-justify-center {
@@ -794,6 +814,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-gap-y-8 {
   row-gap: 3.2rem;
+}
+
+.tw-gap-y-4 {
+  row-gap: 1.6rem;
+}
+
+.tw-gap-y-2 {
+  row-gap: 0.8rem;
 }
 
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -904,6 +932,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-font-bold {
   font-weight: 700;
+}
+
+.tw-font-medium {
+  font-weight: 500;
 }
 
 .tw-text-gray-800 {
