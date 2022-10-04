@@ -692,6 +692,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.8rem;
 }
 
+.tw-ml-auto {
+  margin-left: auto;
+}
+
 .tw-block {
   display: block;
 }
@@ -1063,6 +1067,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-block {
     display: block;
+  }
+
+  .lg\:tw-inline-block {
+    display: inline-block;
   }
 
   .lg\:tw-flex {
