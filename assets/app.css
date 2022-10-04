@@ -1150,6 +1150,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: center;
   }
 
+  .lg\:tw-space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.6rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.6rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:tw-bg-transparent {
     background-color: transparent;
   }
