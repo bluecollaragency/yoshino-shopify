@@ -1,6 +1,6 @@
 <nav 
   class="tw-relative tw-flex tw-flex-col lg:tw-flex-row tw-items-center"
-  x-data="{ open: true }" 
+  x-data="{ open: false }" 
   x-effect="document.body.classList.toggle('mobile-nav-open', open)"
   >
   <div class="tw-flex tw-w-full lg:tw-w-auto tw-justify-between">
@@ -15,7 +15,7 @@
   <div 
     x-transition 
     :class="{'tw-block': open, 'tw-hidden': !open}"
-    class="lg:tw-relative tw-block tw-w-full lg:tw-w-auto"
+    class="lg:tw-relative lg:tw-block tw-w-full lg:tw-w-auto"
     >
     <div x-popover:group class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-py-2 tw-z-20 tw-bg-b-green-200 lg:tw-bg-transparent">
 
