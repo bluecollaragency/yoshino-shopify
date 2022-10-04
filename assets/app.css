@@ -631,6 +631,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: relative;
 }
 
+.tw-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .tw-inset-0 {
   top: 0px;
   right: 0px;
@@ -640,6 +645,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-left-0 {
   left: 0px;
+}
+
+.tw-top-0 {
+  top: 0px;
 }
 
 .tw-z-0 {
