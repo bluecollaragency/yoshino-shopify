@@ -684,6 +684,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1.6rem;
 }
 
+.tw-ml-4 {
+  margin-left: 1.6rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -734,6 +738,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-screen-xxl {
   max-width: 1440px;
+}
+
+.tw-max-w-3xl {
+  max-width: 48rem;
 }
 
 .\!tw-scroll-pl-0 {
@@ -862,6 +870,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1rem;
 }
 
+.tw-py-4 {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.tw-pb-4 {
+  padding-bottom: 1.6rem;
+}
+
 .tw-text-left {
   text-align: left;
 }
@@ -876,8 +893,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2rem;
 }
 
+.tw-text-xl {
+  font-size: 2rem;
+  line-height: 2.8000000000000003rem;
+}
+
 .tw-font-semibold {
   font-weight: 600;
+}
+
+.tw-font-bold {
+  font-weight: 700;
 }
 
 .tw-text-gray-800 {
