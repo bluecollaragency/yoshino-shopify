@@ -96,6 +96,7 @@
     "predictive_search_show_vendor": false,
     "predictive_search_show_price": false,
     "currency_code_enabled": true,
+    "cart_type": "notification",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -211,6 +212,11 @@
           "contact_text_6": "",
           "contact_text_6_cta": "",
           "contact_text_6_url": ""
+        }
+      },
+      "y-header": {
+        "type": "y-header",
+        "settings": {
         }
       }
     },

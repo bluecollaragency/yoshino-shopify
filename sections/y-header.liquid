@@ -41,7 +41,29 @@
       x-effect="document.body.classList.toggle('mobile-nav-open', open)"
     >
       <div class="tw-flex tw-w-full lg:tw-w-auto tw-justify-between">
-        <div class="tw-px-4">Yoshino</div>
+        <div class="tw-px-4">
+          {%- if request.page_type == 'index' -%}
+            <h1 class="header__heading">
+          {%- endif -%}
+              <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+                {%- if section.settings.logo != blank -%}
+                  {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+                  {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+                  {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+                    class: 'header__heading-logo',
+                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
+                    height: logo_height,
+                    width: section.settings.logo_width,
+                    alt: logo_alt
+                  }}
+                {%- else -%}
+                  <span class="h2">{{ shop.name }}</span>
+                {%- endif -%}
+              </a>
+          {%- if request.page_type == 'index' -%}
+            </h1>
+          {%- endif -%}
+        </div>
         <button class="lg:tw-hidden tw-rounded-lg focus:tw-outline-none focus:tw-shadow-outline tw-text-gray-800 tw-px-4" @click="open = !open" @keyup.escape.window="open = false">
     			<svg fill="currentColor" viewBox="0 0 20 20" class="tw-w-6 tw-h-6">
     				<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -353,6 +375,22 @@
 {
   "name": "Custom Header",
   "class": "tw-sticky tw-top-0 tw-bg-white tw-z-20",
-  "settings": []
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 100,
+      "unit": "t:sections.header.settings.logo_width.unit",
+      "label": "t:sections.header.settings.logo_width.label"
+    }
+  ]
 }
 {% endschema %}
