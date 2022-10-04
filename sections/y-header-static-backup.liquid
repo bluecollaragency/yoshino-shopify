@@ -127,77 +127,156 @@
     			</svg>
     		</button>
       </div>
-      {%- if section.settings.menu != blank -%}
       <div 
         x-transition 
         :class="{'tw-block': open, 'tw-hidden': !open}"
         class="lg:tw-relative lg:tw-block tw-w-full lg:tw-w-auto"
-      >
+        >
         <div x-popover:group class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-py-2 tw-z-10 tw-bg-b-green-200 lg:tw-bg-transparent">
-          
-          {%- for link in section.settings.menu.links -%}
-            <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
-              {%- if link.links != blank -%}
-              <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
-                {{ link.title | escape }}         
-                <!-- Heroicon: chevron-down -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-text-white lg:tw-text-gray-800" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </button>
-              
-              <div
-                x-popover:panel x-cloak x-transition.origin.top.left
-                class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-w-full lg:tw-w-60 tw-bg-b-green-200 lg:tw-bg-white lg:tw-shadow-md tw-z-10"
+    
+          <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
+            <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
+              Shop
+        
+              <!-- Heroicon: chevron-down -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-text-white lg:tw-text-gray-800" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+        
+            <div
+              x-popover:panel x-cloak x-transition.origin.top.left
+              class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-w-full lg:tw-w-60 tw-bg-b-green-200 lg:tw-bg-white lg:tw-shadow-md tw-z-10"
+              >
+              <div x-data="{ active: 0 }" class="tw-mx-auto tw-max-w-3xl">
+                <div 
+                  x-data="{
+                    id: 1,
+                    get expanded() {
+                    return this.active === this.id
+                    },
+                    set expanded(value) {
+                    this.active = value ? this.id : null
+                    },
+                  }" 
+                  role="region" 
                 >
-                {%- for childlink in link.links -%}
-                  {%- if childlink.links == blank -%}
-                    <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
-                      {{ childlink.title | escape }}
-                    </a>
-                  {%- else -%}
-                    <div x-data="{ active: 0 }" class="tw-mx-auto">
-                      <div 
-                        x-data="{
-                          id: {{ forloop.index }},
-                          get expanded() {
-                          return this.active === this.id
-                          },
-                          set expanded(value) {
-                          this.active = value ? this.id : null
-                          },
-                        }" 
-                        role="region" 
-                      >
-                        <button
-                          x-on:click="expanded = !expanded"
-                          :aria-expanded="expanded"
-                          class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
-                        >
-                          <span>{{ childlink.title | escape }}</span>
-                          <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
-                          <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
-                        </button>
-                        <div x-show="expanded" x-collapse>
-                          <div class="tw-px-4 tw-pb-4">
-                            <ul>
-                              {%- for grandchildlink in childlink.links -%}
-                              <li><a class="tw-text-white lg:tw-text-gray-800" href="{{ grandchildlink.url }}" {% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title | escape }}</a></li>
-                              {%- endfor -%}
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+                  <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                  >
+                    <span>Portable Power</span>
+                    <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
+                  </button>
+                  <div x-show="expanded" x-collapse>
+                    <div class="tw-px-4 tw-pb-4">
+                      <ul class="tw-flex tw-flex-col tw-gap-y-2">
+                        <li>
+                          <a href="#" class="tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-sm">Portable Power Stations</a>
+                          <ul>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P330</a></li>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P660</a></li>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P2200</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#" class="tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-sm">Hi-Capacity Power Stations</a></li>
+                      </ul>
                     </div>
-                  {%- endif -%}
-                {%- endfor -%}
+                  </div>
+                </div>
+                <div 
+                  x-data="{
+                    id: 2,
+                    get expanded() {
+                    return this.active === this.id
+                    },
+                    set expanded(value) {
+                    this.active = value ? this.id : null
+                    },
+                  }" 
+                  role="region" 
+                >
+                  <button
+                    x-on:click="expanded = !expanded"
+                    :aria-expanded="expanded"
+                    class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                  >
+                    <span>Solar Panels</span>
+                    <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
+                    <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
+                  </button>
+                  <div x-show="expanded" x-collapse>
+                    <div class="tw-px-4 tw-pb-4">
+                      <ul class="tw-flex tw-flex-col tw-gap-y-2">
+                        <li>
+                          <a href="#" class="tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-sm">Portable Power Stations</a>
+                          <ul>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P330</a></li>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P660</a></li>
+                            <li><a class="tw-text-white lg:tw-text-gray-800" href="#">P2200</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#" class="tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-sm">Hi-Capacity Power Stations</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-              {%- endif -%}
             </div>
-          {%- endfor -%}
+          </div>
+          
+          <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
+            <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
+              About
+        
+              <!-- Heroicon: chevron-down -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-text-white lg:tw-text-gray-800" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+        
+            <div
+              x-popover:panel x-cloak x-transition.origin.top.left
+              class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-w-60 lg:tw-bg-white lg:tw-shadow-md tw-z-10"
+              >
+              <a href="#" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" >
+                About Us
+              </a>
+              <a href="#" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" >
+                Team
+              </a>
+            </div>
+          </div>
+    
+          <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
+            <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
+              Support
+        
+              <!-- Heroicon: chevron-down -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-text-white lg:tw-text-gray-800" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
+        
+            <div
+              x-popover:panel x-cloak x-transition.origin.top.left
+              class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-w-60 tw-bg-white tw-shadow-md tw-z-10"
+              >
+              <a href="#" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left tw-text-sm hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-gray-800 tw-font-semibold" >
+                FAQs
+              </a>
+              <a href="#" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left tw-text-sm hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-gray-800 tw-font-semibold" >
+                User Manuals
+              </a>
+              <a href="#" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left tw-text-sm hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-gray-800 tw-font-semibold" >
+                Warranty / Returns
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-      {%- endif -%}
       <div class="tw-ml-auto tw-px-4 tw-hidden lg:tw-flex lg:tw-flex-row">
         <details-modal class="header__search">
           <details>
@@ -350,7 +429,7 @@
 
 {% schema %}
 {
-  "name": "Custom Header",
+  "name": "Custom Header Backup",
   "class": "tw-sticky tw-top-0 tw-bg-white tw-z-20",
   "settings": [
     {
