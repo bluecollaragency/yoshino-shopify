@@ -864,6 +864,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-bg-b-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 168 40 / var(--tw-bg-opacity));
+}
+
 .tw-object-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -924,6 +929,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-text-xl {
   font-size: 2rem;
   line-height: 2.8000000000000003rem;
+}
+
+.tw-text-lg {
+  font-size: 1.8rem;
+  line-height: 2.8000000000000003rem;
+}
+
+.tw-text-5xl {
+  font-size: 4.800000000000001rem;
+  line-height: 1;
 }
 
 .tw-font-semibold {
@@ -1086,6 +1101,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: auto;
   }
 
+  .lg\:tw-w-60 {
+    width: 24rem;
+  }
+
   .lg\:tw-grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1114,7 +1133,49 @@ Ensure the default browser behavior of the `hidden` attribute.
     justify-content: center;
   }
 
+  .lg\:tw-bg-transparent {
+    background-color: transparent;
+  }
+
+  .lg\:tw-bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .lg\:tw-pr-\[8\.333\%\] {
     padding-right: 8.333%;
+  }
+
+  .lg\:tw-text-lg {
+    font-size: 1.8rem;
+    line-height: 2.8000000000000003rem;
+  }
+
+  .lg\:tw-text-sm {
+    font-size: 1.4000000000000001rem;
+    line-height: 2rem;
+  }
+
+  .lg\:tw-font-semibold {
+    font-weight: 600;
+  }
+
+  .lg\:tw-text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+  }
+
+  .lg\:tw-shadow-md {
+    --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+      0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+      0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .lg\:hover\:tw-bg-gray-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(249 250 251 / var(--tw-bg-opacity));
   }
 }
