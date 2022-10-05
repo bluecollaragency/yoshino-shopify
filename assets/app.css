@@ -733,8 +733,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.4000000000000004rem;
 }
 
-.tw-h-screen {
-  height: 100vh;
+.tw-h-screen-nav {
+  height: calc(100vh - 56px);
 }
 
 .tw-h-5 {
@@ -747,10 +747,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-h-full {
   height: 100%;
-}
-
-.tw-h-screen-nav {
-  height: calc(100vh - 56px);
 }
 
 .tw-min-h-\[540px\] {
@@ -902,6 +898,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-fill-current {
+  fill: currentColor;
+}
+
 .tw-object-cover {
   -o-object-fit: cover;
   object-fit: cover;
@@ -992,6 +992,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     0 2px 4px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tw-transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .bg-gray-gradient-1 {
@@ -1172,5 +1178,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:hover\:tw-bg-gray-50:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+  }
+
+  .lg\:hover\:tw-text-bee-green-200:hover {
+    --tw-text-opacity: 1;
+    color: rgb(64 168 40 / var(--tw-text-opacity));
+  }
+
+  .lg\:focus\:tw-text-bee-green-200:focus {
+    --tw-text-opacity: 1;
+    color: rgb(64 168 40 / var(--tw-text-opacity));
+  }
+
+  .lg\:active\:tw-text-bee-green-200:active {
+    --tw-text-opacity: 1;
+    color: rgb(64 168 40 / var(--tw-text-opacity));
   }
 }
