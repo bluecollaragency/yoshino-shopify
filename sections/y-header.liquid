@@ -150,47 +150,55 @@
                 x-popover:panel x-cloak x-transition.origin.top.left
                 class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-w-full lg:tw-w-60 tw-bg-b-green-200 lg:tw-bg-white lg:tw-shadow-md tw-z-10"
                 >
-                {%- for childlink in link.links -%}
-                  {%- if childlink.links == blank -%}
-                    <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
-                      {{ childlink.title | escape }}
-                    </a>
-                  {%- else -%}
-                    <div x-data="{ active: 0 }" class="tw-mx-auto">
-                      <div 
-                        x-data="{
-                          id: {{ forloop.index }},
-                          get expanded() {
-                          return this.active === this.id
-                          },
-                          set expanded(value) {
-                          this.active = value ? this.id : null
-                          },
-                        }" 
-                        role="region" 
-                      >
-                        <button
-                          x-on:click="expanded = !expanded"
-                          :aria-expanded="expanded"
-                          class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                {%- if forloop.index == 1 -%}
+                  <div class="tw-hidden lg:tw-block">
+                    Mega menu
+                  </div>
+                {%- endif -%}
+                <div class="{% if forloop.index == 1 %}lg:tw-hidden{% endif %}">
+                  {%- for childlink in link.links -%}
+                    {%- if childlink.links == blank -%}
+                      <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
+                        {{ childlink.title | escape }}
+                      </a>
+                    {%- else -%}
+                      <div x-data="{ active: 0 }" class="tw-mx-auto">
+                        <div 
+                          x-data="{
+                            id: {{ forloop.index }},
+                            get expanded() {
+                            return this.active === this.id
+                            },
+                            set expanded(value) {
+                            this.active = value ? this.id : null
+                            },
+                          }" 
+                          role="region" 
                         >
-                          <span>{{ childlink.title | escape }}</span>
-                          <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
-                          <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
-                        </button>
-                        <div x-show="expanded" x-collapse>
-                          <div class="tw-px-4 tw-pb-4">
-                            <ul>
-                              {%- for grandchildlink in childlink.links -%}
-                              <li><a class="tw-text-white lg:tw-text-gray-800" href="{{ grandchildlink.url }}" {% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title | escape }}</a></li>
-                              {%- endfor -%}
-                            </ul>
+                          <button
+                            x-on:click="expanded = !expanded"
+                            :aria-expanded="expanded"
+                            class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                          >
+                            <span>{{ childlink.title | escape }}</span>
+                            <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
+                            <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
+                          </button>
+                          <div x-show="expanded" x-collapse>
+                            <div class="tw-px-4 tw-pb-4">
+                              <ul>
+                                {%- for grandchildlink in childlink.links -%}
+                                <li><a class="tw-text-white lg:tw-text-gray-800" href="{{ grandchildlink.url }}" {% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title | escape }}</a></li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  {%- endif -%}
-                {%- endfor -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                
               </div>
               {%- endif -%}
             </div>
