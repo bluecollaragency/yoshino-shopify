@@ -48,3 +48,14 @@
     @apply tw-w-1/2 tw-font-semibold;
   }
 }
+
+@layer utilities {
+  .bg-gray-gradient-1 {
+    background: linear-gradient(
+      180deg,
+      #525e5a 0%,
+      #7f8b87 60.09%,
+      #fafafa 100%
+    );
+  }
+}
