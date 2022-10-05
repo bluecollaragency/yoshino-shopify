@@ -133,7 +133,10 @@
         :class="{'tw-block': open, 'tw-hidden': !open}"
         class="lg:tw-block tw-w-full lg:tw-w-auto"
       >
-        <div x-popover:group class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-py-2 tw-z-10 tw-bg-bee-green-200 lg:tw-bg-transparent">
+        <div 
+          x-popover:group 
+          class="tw-flex tw-flex-col lg:tw-flex-row tw-items-start lg:tw-items-center tw-py-2 tw-z-10 tw-bg-bee-green-200 lg:tw-bg-transparent tw-h-screen-nav lg:tw-h-auto"
+        >
           
           {%- for link in section.settings.menu.links -%}
             <div x-data x-popover class="{% unless forloop.index == 1 %}tw-relative {% endunless %}tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">

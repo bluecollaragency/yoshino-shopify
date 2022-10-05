@@ -733,6 +733,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2.4000000000000004rem;
 }
 
+.tw-h-screen {
+  height: 100vh;
+}
+
 .tw-h-5 {
   height: 2rem;
 }
@@ -743,6 +747,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-h-full {
   height: 100%;
+}
+
+.tw-h-screen-nav {
+  height: calc(100vh - 56px);
 }
 
 .tw-min-h-\[540px\] {
@@ -869,32 +877,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-bottom-width: 2px;
 }
 
-.tw-border-b-green-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(64 168 40 / var(--tw-border-opacity));
-}
-
 .tw-border-bee-green-200 {
   --tw-border-opacity: 1;
   border-color: rgb(64 168 40 / var(--tw-border-opacity));
 }
 
-.tw-border-b-green-200 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(187 247 208 / var(--tw-border-opacity));
-}
-
-.tw-border-b-b-green-200 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(64 168 40 / var(--tw-border-opacity));
-}
-
-.tw-border-b-bee-green-200 {
-  --tw-border-opacity: 1;
-  border-bottom-color: rgb(64 168 40 / var(--tw-border-opacity));
-}
-
-.tw-bg-b-green-200 {
+.tw-bg-bee-green-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(64 168 40 / var(--tw-bg-opacity));
 }
@@ -904,14 +892,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.tw-bg-b-green-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(64 168 40 / var(--tw-bg-opacity));
+}
+
 .tw-bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
-.tw-bg-bee-green-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(64 168 40 / var(--tw-bg-opacity));
 }
 
 .tw-object-cover {
@@ -948,12 +936,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 6.4rem;
 }
 
-.tw-pb-4 {
-  padding-bottom: 1.6rem;
-}
-
 .tw-pb-2 {
   padding-bottom: 0.8rem;
+}
+
+.tw-pb-4 {
+  padding-bottom: 1.6rem;
 }
 
 .tw-text-left {
@@ -1082,6 +1070,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-hidden {
     display: none;
+  }
+
+  .lg\:tw-h-auto {
+    height: auto;
   }
 
   .lg\:tw-min-h-\[380px\] {

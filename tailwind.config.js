@@ -77,6 +77,9 @@ module.exports = {
       fontFamily: {
         heading: 'var(--font-heading-family)',
       },
+      height: {
+        'screen-nav': 'calc( 100vh - 56px )',
+      },
     },
     color: {
       black: '#000000',
