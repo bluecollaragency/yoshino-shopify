@@ -234,10 +234,10 @@
                     </div>
                   </div>
                 {%- endif -%}
-                <div class="tw-w-full lg:tw-w-60 lg:tw-bg-white lg:tw-shadow-md {% if forloop.index == section.settings.shop_position %} lg:tw-hidden{% endif %}">
+                <div class="tw-w-full lg:tw-w-60 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 {% if forloop.index == section.settings.shop_position %} lg:tw-hidden{% endif %}">
                   {%- for childlink in link.links -%}
                     {%- if childlink.links == blank -%}
-                      <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-bg-gray-50 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
+                      <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-text-bee-green-200 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
                         {{ childlink.title | escape }}
                       </a>
                     {%- else -%}

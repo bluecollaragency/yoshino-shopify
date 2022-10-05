@@ -188,6 +188,41 @@
       ],
       "settings": {
       }
+    },
+    "41570371-1614-4c6c-a777-232746d02b22": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>From the Blog<\/p>",
+            "heading_size": "h1"
+          }
+        },
+        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-0",
+        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "f79034cd-39a7-4979-ae80-773e720f8734": {
+      "type": "y-blog-slider",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -195,6 +230,8 @@
     "rich_text",
     "1664315491b5cb0a61",
     "1664388421889fc26b",
-    "16643898014cfaebbe"
+    "16643898014cfaebbe",
+    "41570371-1614-4c6c-a777-232746d02b22",
+    "f79034cd-39a7-4979-ae80-773e720f8734"
   ]
 }

@@ -4,7 +4,10 @@
 
 @layer base {
   .tw-h4 {
-    @apply tw-text-[4rem] tw-leading-tight;
+    @apply tw-text-[4rem] tw-leading-tight tw-tracking-tight;
+  }
+  .tw-h5 {
+    @apply tw-text-2xl lg:tw-text-[3.2rem] tw-leading-tight tw-tracking-tight tw-font-semibold lg:tw-font-bold;
   }
   .tw-h6 {
     @apply tw-text-[2.4rem] tw-leading-tight;
@@ -12,6 +15,10 @@
 }
 
 @layer components {
+  .blog-card-link {
+    @apply tw-inline-block tw-text-bee-green-200 tw-underline tw-underline-offset-[6px] tw-font-semibold tw-decoration-2 hover:tw-text-bee-green-300;
+  }
+
   .footer-contact-list li:not(:last-child) {
     @apply tw-border-b tw-border-gray-100;
   }
