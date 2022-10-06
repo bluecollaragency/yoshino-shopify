@@ -1,0 +1,135 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-grid tw-grid-cols-{{ section.settings.grid_cols_sm }} lg:tw-grid-cols-{{ section.settings.grid_cols_lg }} tw-gap-8">
+      {% for block in section.blocks %}  
+        {% case block.type %}
+          {% when 'column' %}
+          <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }}">
+            <img src="https://via.placeholder.com/50x50" alt="">
+            <h3 
+              class="tw-h{{ section.settings.headline_size }}"
+            >
+              {{ block.settings.column_headline | escape }}
+            </h3>
+            {{ block.settings.column_copy }}
+          </div>
+        {% endcase %} 
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Icon text grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default":  0
+    },
+    {
+      "type": "range",
+      "id": "grid_cols_lg",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Grid columns large",
+      "default": 3
+    },
+    {
+      "type": "range",
+      "id": "grid_cols_sm",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "label": "Grid columns small",
+      "default": 1
+    },
+    {
+      "type": "select",
+      "id": "headline_size",
+      "label": "Headline Size",
+      "options": [
+          {
+            "value": "5",
+            "label": "Headline 5"
+          },
+          {
+            "value": "6",
+            "label": "Headline 6"
+          }
+        ],
+        "default": "5"
+    },
+    {
+      "type": "select",
+      "id": "paragraph_size",
+      "label": "Paragraph Size",
+      "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "base",
+            "label": "Medium"
+          }
+        ],
+        "default": "base"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
+      "settings": [
+        {
+          "id": "column_image",
+          "type": "image_picker",
+          "label": "Image"
+        },
+        {
+          "id": "column_headline",
+          "type": "text",
+          "label": "Column Headline",
+          "default": "Headline 6"
+        },
+        {
+          "id": "column_copy",
+          "type": "richtext",
+          "label": "Column Copy",
+          "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Icon text grid"
+    }
+  ]
+}
+{% endschema %}

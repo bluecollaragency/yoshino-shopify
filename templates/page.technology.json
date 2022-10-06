@@ -1,5 +1,54 @@
 {
-  "sections": {
+  "sections": {    
+    "9f37aee0-aa0a-44a5-b92e-35e01244b08f": {
+      "type": "y-image-hero",
+      "settings": {
+      }
+    },
+    "3a98beb4-4466-4548-b793-7a8174f65c0c": {
+      "type": "y-image-with-text-colums",
+      "blocks": {
+        "47501b66-1841-4fdd-a261-680531420154": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 3",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "76c81610-b136-44b2-a5f0-16026a68f6f9": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 3",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "b7d23dfe-1c36-48bc-9cbc-843bc0571980": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 3",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "f3e6fdcb-de7e-4168-8ef1-2a301a431953": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 3",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "47501b66-1841-4fdd-a261-680531420154",
+        "76c81610-b136-44b2-a5f0-16026a68f6f9",
+        "b7d23dfe-1c36-48bc-9cbc-843bc0571980",
+        "f3e6fdcb-de7e-4168-8ef1-2a301a431953"
+      ],
+      "settings": {
+        "button_link": "",
+        "button_cta": "",
+        "content_align": "top"
+      }
+    },
     "main": {
       "type": "main-page",
       "settings": {
@@ -9,6 +58,8 @@
     }
   },
   "order": [
+    "9f37aee0-aa0a-44a5-b92e-35e01244b08f",
+    "3a98beb4-4466-4548-b793-7a8174f65c0c",
     "main"
   ]
 }

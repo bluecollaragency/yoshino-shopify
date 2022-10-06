@@ -1,0 +1,99 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative tw-block tw-h-[640px] tw-min-h-full y-page-section-{{ section.id }}-padding">
+  <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-bg-bee-green-200 tw-z-0"></span>
+  <div class="tw-container tw-relative tw-block lg:tw-px-4 tw-z-10 tw-h-full">
+    <div class="tw-flex tw-justify-start tw-items-end tw-h-full">
+      <div class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6">
+        <h2 class="tw-h3 tw-text-white">Safer</h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.</p>
+        {%- if section.settings.button_link != blank -%}
+          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="tw-relative tw-block tw-h-[640px] tw-min-h-full y-page-section-{{ section.id }}-padding">
+  <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-bg-bee-green-300 tw-z-0"></span>
+  <div class="tw-container tw-relative tw-block lg:tw-px-4 tw-z-10 tw-h-full">
+    <div class="tw-flex tw-justify-end tw-items-end tw-h-full">
+      <div class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6">
+        <h2 class="tw-h3 tw-text-white">Safer</h2>
+        <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.</p>
+        {%- if section.settings.button_link != blank -%}
+          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom Full Width Image",
+    "class": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      },
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "button_link",
+        "type": "url",
+        "label": "Button Link"
+      },
+      {
+        "id": "button_cta",
+        "type": "text",
+        "label": "Button CTA"
+      },
+      {
+        "id": "content_align",
+        "type": "select",
+        "label": "Content align",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          }
+        ],
+        "default": "middle"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Full Width Image"
+      }
+    ]
+  }
+{% endschema %}

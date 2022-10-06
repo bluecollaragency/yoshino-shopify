@@ -1,0 +1,105 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative tw-block y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-mx-auto lg:tw-px-4">
+    <div 
+      class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 
+      {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}"
+    >
+      <div class="{% if section.settings.image_position == 'right' %} tw-order-1 lg:tw-order-2{% endif %}">
+        <img src="https://via.placeholder.com/800x800" alt="">
+      </div>
+      <div class="tw-px-6 lg:tw-p-0 {% if section.settings.image_position == 'right' %} tw-order-2 lg:tw-order-1{% endif %}">
+        <h2 class="tw-text-bee-green-200 tw-h2">Sem Inceptos</h2>
+        <p class="tw-mt-4">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</p>
+        {%- if section.settings.button_link != blank -%}
+          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Custom image with text",
+    "class": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      },
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "image_position",
+        "type": "select",
+        "label": "Image Position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "id": "button_link",
+        "type": "url",
+        "label": "Button Link"
+      },
+      {
+        "id": "button_cta",
+        "type": "text",
+        "label": "Button CTA"
+      },
+      {
+        "id": "content_align",
+        "type": "select",
+        "label": "Content align",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "middle",
+            "label": "Middle"
+          }
+        ],
+        "default": "middle"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom image with text"
+      }
+    ]
+  }
+{% endschema %}

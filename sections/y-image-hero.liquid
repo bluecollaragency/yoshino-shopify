@@ -1,9 +1,83 @@
+{%- style -%}
+  .y-page-hero-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .y-hero-{{ section.id }}-gradient-overlap {
+    height: calc( 100% + {{ section.settings.gradient_overlap_sm }}px );
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-hero-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .y-hero-{{ section.id }}-gradient-overlap {
+      height: calc( 100% + {{ section.settings.gradient_overlap_lg }}px );
+    }
+  }
+{%- endstyle -%}
+<div class="y-page-hero tw-relative tw-w-full y-page-hero-{{ section.id }}-padding">
+  <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-1 tw-w-full y-hero-{{ section.id }}-gradient-overlap tw-min-h-full"></span>
+  <div class="tw-container tw-relative tw-z-10 tw-px-6 lg:tw-px-4">
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 tw-items-center">
+      <div 
+        class="tw-text-left tw-space-y-4 tw-order-2 lg:tw-order-1"
+      >
+        <h1 
+          class="
+          tw-text-white 
+          tw-hxl"
+        >
+          Solid-State Technology
+        </h1>
+        <div class="tw-space-y-4">
+          <p class="tw-text-base lg:tw-text-xl tw-text-white">Whether hiking in the Himalayas or backcountry camping in the Gates of the Arctic, Yoshino’s high energy density has plenty of juice for your essentials and survival.</p>
+        </div>
+      </div>
+      <div class="tw-order-1 lg:tw-order-2">
+        <img src="https://via.placeholder.com/1040x660" alt="">
+      </div>
+    </div>
+  </div>
+</div>
 
 {% schema %}
 {
   "name": "Custom Image Hero",
   "tag": "section",
   "class": "section",
-  "settings": []
+  "settings": [
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 156
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 156
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_lg",
+      "label": "Gradient overlap desktop",
+      "default": 96
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_sm",
+      "label": "Gradient overlap mobile",
+      "default": 320
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Hero"
+    }
+  ]
 }
 {% endschema %}

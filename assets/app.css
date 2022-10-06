@@ -428,6 +428,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.tw-hxl {
+  font-size: 5.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 4.6rem;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 1280px) {
+  .tw-hxl {
+    font-size: 9.6rem;
+    line-height: 7.6rem;
+  }
+}
+
+.tw-h2 {
+  font-size: 5.6rem;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 990px) {
+  .tw-h2 {
+    font-size: 7.2rem;
+  }
+}
+
+.tw-h3 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 990px) {
+  .tw-h3 {
+    font-size: 5.6rem;
+  }
+}
+
 .tw-h4 {
   font-size: 4rem;
   line-height: 1.25;
@@ -505,8 +545,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 @media (min-width: 640px) {
@@ -524,8 +562,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 @media (min-width: 990px) {
   .tw-container {
     max-width: 990px;
-    padding-right: 1.6rem;
-    padding-left: 1.6rem;
   }
 }
 
@@ -699,6 +735,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 20;
 }
 
+.tw-order-2 {
+  order: 2;
+}
+
+.tw-order-1 {
+  order: 1;
+}
+
 .tw-mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -777,8 +821,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 250px;
 }
 
+.tw-h-\[640px\] {
+  height: 640px;
+}
+
 .tw-h-full {
   height: 100%;
+}
+
+.tw-min-h-full {
+  min-height: 100%;
 }
 
 .tw-min-h-\[540px\] {
@@ -807,6 +859,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-3xl {
   max-width: 48rem;
+}
+
+.tw-max-w-prose {
+  max-width: 65ch;
 }
 
 .\!tw-scroll-pl-0 {
@@ -849,6 +905,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.tw-justify-start {
+  justify-content: flex-start;
+}
+
+.tw-justify-end {
+  justify-content: flex-end;
+}
+
 .tw-justify-between {
   justify-content: space-between;
 }
@@ -889,6 +953,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(1.6rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.tw-space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.4000000000000004rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.4000000000000004rem * var(--tw-space-y-reverse));
+}
+
 .tw-overflow-hidden {
   overflow: hidden;
 }
@@ -925,6 +995,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(64 168 40 / var(--tw-bg-opacity));
 }
 
+.tw-bg-bee-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 132 37 / var(--tw-bg-opacity));
+}
+
 .tw-bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -941,6 +1016,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-p-10 {
   padding: 4rem;
+}
+
+.tw-px-6 {
+  padding-left: 2.4000000000000004rem;
+  padding-right: 2.4000000000000004rem;
 }
 
 .tw-py-20 {
@@ -995,6 +1075,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1;
 }
 
+.tw-text-base {
+  font-size: 1.6rem;
+  line-height: 2.4000000000000004rem;
+}
+
 .tw-font-semibold {
   font-weight: 600;
 }
@@ -1016,6 +1101,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tw-text-bee-green-200 {
+  --tw-text-opacity: 1;
+  color: rgb(64 168 40 / var(--tw-text-opacity));
 }
 
 .tw-shadow-md {
@@ -1078,6 +1168,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-relative {
     position: relative;
+  }
+
+  .lg\:tw-order-1 {
+    order: 1;
+  }
+
+  .lg\:tw-order-2 {
+    order: 2;
   }
 
   .lg\:tw-col-span-9 {
@@ -1156,6 +1254,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
+  .lg\:tw-grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .lg\:tw-grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .lg\:tw-flex-row {
     flex-direction: row;
   }
@@ -1186,6 +1292,15 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .lg\:tw-p-0 {
+    padding: 0px;
+  }
+
+  .lg\:tw-px-4 {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
   .lg\:tw-pr-\[8\.333\%\] {
     padding-right: 8.333%;
   }
@@ -1198,6 +1313,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:tw-text-sm {
     font-size: 1.4000000000000001rem;
     line-height: 2rem;
+  }
+
+  .lg\:tw-text-xl {
+    font-size: 2rem;
+    line-height: 2.8000000000000003rem;
   }
 
   .lg\:tw-font-semibold {

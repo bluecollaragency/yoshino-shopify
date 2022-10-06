@@ -35,10 +35,15 @@ module.exports = {
     './snippets/*.liquid',
   ],
   safelist: [
+    'tw-grid-cols-1',
+    'tw-grid-cols-2',
     'lg:tw-col-span-6',
     'lg:tw-min-h-[380px]',
     'lg:tw-min-h-[760px]',
     'lg:tw-w-1/2',
+    'lg:tw-grid-cols-2',
+    'lg:tw-grid-cols-3',
+    'lg:tw-grid-cols-4',
   ],
   theme: {
     borderRadius: rem2rem(defaultTheme.borderRadius),
@@ -48,10 +53,6 @@ module.exports = {
     spacing: rem2rem(defaultTheme.spacing),
     container: {
       center: true,
-      padding: {
-        DEFAULT: '2rem',
-        lg: '1.6rem',
-      },
     },
     screens: {
       sm: '640px',
