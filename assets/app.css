@@ -853,6 +853,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 24rem;
 }
 
+.tw-w-\[90\%\] {
+  width: 90%;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -863,6 +867,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-prose {
   max-width: 65ch;
+}
+
+.tw-max-w-none {
+  max-width: none;
+}
+
+.tw-flex-none {
+  flex: none;
 }
 
 .\!tw-scroll-pl-0 {
@@ -893,6 +905,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   flex-wrap: wrap;
 }
 
+.tw-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 .tw-items-start {
   align-items: flex-start;
 }
@@ -905,12 +921,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.tw-justify-start {
-  justify-content: flex-start;
-}
-
 .tw-justify-end {
   justify-content: flex-end;
+}
+
+.tw-justify-center {
+  justify-content: center;
 }
 
 .tw-justify-between {
@@ -961,6 +977,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-overflow-hidden {
   overflow: hidden;
+}
+
+.tw-overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.tw-overflow-x-scroll {
+  overflow-x: scroll;
 }
 
 .tw-rounded-lg {
@@ -1106,6 +1130,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-text-bee-green-200 {
   --tw-text-opacity: 1;
   color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.tw-opacity-80 {
+  opacity: 0.8;
 }
 
 .tw-shadow-md {

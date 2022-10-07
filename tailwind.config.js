@@ -35,6 +35,8 @@ module.exports = {
     './snippets/*.liquid',
   ],
   safelist: [
+    'tw-justify-center',
+    'tw-justify-end',
     'tw-grid-cols-1',
     'tw-grid-cols-2',
     'lg:tw-col-span-6',

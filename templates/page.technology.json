@@ -1,65 +1,218 @@
 {
-  "sections": {    
+  "sections": {
     "9f37aee0-aa0a-44a5-b92e-35e01244b08f": {
       "type": "y-image-hero",
       "settings": {
+        "padding_top": 156,
+        "padding_bottom": 156,
+        "gradient_overlap_lg": 96,
+        "gradient_overlap_sm": 320
       }
     },
-    "3a98beb4-4466-4548-b793-7a8174f65c0c": {
-      "type": "y-image-with-text-colums",
+    "a0942f04-b8a7-4c0e-89e8-680c754d15e6": {
+      "type": "y-icon-text-grid",
       "blocks": {
-        "47501b66-1841-4fdd-a261-680531420154": {
+        "33cb80b5-e316-40dc-bdbd-f6a5ea958662": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
+            "column_headline": "Headline 6",
             "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
           }
         },
-        "76c81610-b136-44b2-a5f0-16026a68f6f9": {
+        "30a8a0f1-c106-4682-b855-99fc80201cfa": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
+            "column_headline": "Headline 6",
             "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
           }
         },
-        "b7d23dfe-1c36-48bc-9cbc-843bc0571980": {
+        "235130c0-4163-4428-9d27-1c9a1f4fbd03": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
-          }
-        },
-        "f3e6fdcb-de7e-4168-8ef1-2a301a431953": {
-          "type": "column",
-          "settings": {
-            "column_headline": "Headline 3",
+            "column_headline": "Headline 6",
             "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
           }
         }
       },
       "block_order": [
-        "47501b66-1841-4fdd-a261-680531420154",
-        "76c81610-b136-44b2-a5f0-16026a68f6f9",
-        "b7d23dfe-1c36-48bc-9cbc-843bc0571980",
-        "f3e6fdcb-de7e-4168-8ef1-2a301a431953"
+        "33cb80b5-e316-40dc-bdbd-f6a5ea958662",
+        "30a8a0f1-c106-4682-b855-99fc80201cfa",
+        "235130c0-4163-4428-9d27-1c9a1f4fbd03"
       ],
       "settings": {
-        "button_link": "",
-        "button_cta": "",
-        "content_align": "top"
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "grid_cols_lg": 3,
+        "grid_cols_sm": 1,
+        "headline_size": "5",
+        "paragraph_size": "base"
       }
     },
-    "main": {
-      "type": "main-page",
+    "6529620e-f725-465b-9184-9d92ab06b0ba": {
+      "type": "y-image-with-text",
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image_position": "left",
+        "button_link": "",
+        "button_cta": "",
+        "content_align": "middle"
+      }
+    },
+    "839b77a3-7b9c-4b79-b046-a18de4fccf51": {
+      "type": "y-full-width-image",
+      "settings": {
+        "bg_color": "#000",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "end",
+        "content_align_x": "start",
+        "text_align": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "8e7c9ebe-58d2-419a-80d6-0b6628559637": {
+      "type": "y-full-width-image",
+      "settings": {
+        "bg_color": "#40a828",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "end",
+        "content_align_x": "end",
+        "text_align": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "987ff771-a8ac-4630-8674-73380cc2bcbd": {
+      "type": "y-image-with-text",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "image_position": "right",
+        "button_link": "",
+        "button_cta": "",
+        "content_align": "middle"
+      }
+    },
+    "359ef085-06a1-4797-a426-40876cd2dfd7": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15900875948198__359ef085-06a1-4797-a426-40876cd2dfd7-16650849261f836495-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Packed with Tech<\/p>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--15900875948198__359ef085-06a1-4797-a426-40876cd2dfd7-16650849261f836495-0"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "5c8c4dd1-7149-468b-8f31-5000668ff774": {
+      "type": "y-icon-text-grid",
+      "blocks": {
+        "0317c8e0-ff84-4e23-9c45-b47c3cdc11b7": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "9e3d1db5-13f8-4fd6-bd42-a17b2dd85e1b": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "3ff6e4d8-2f96-400a-8f6c-9610e81e6e26": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "a951f19d-ce81-4154-9748-1f0f7628f4dc": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "e01a917a-2e16-4a64-bd69-b27d463a3778": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "f1170557-ed8f-4799-9631-a59bf6f1ba88": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "991dc35e-9ec8-4272-8f82-f1934c6bf14d": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "4e0330ad-9297-4f94-9f34-6dc3e2a22a81": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<p>"
+          }
+        }
+      },
+      "block_order": [
+        "0317c8e0-ff84-4e23-9c45-b47c3cdc11b7",
+        "9e3d1db5-13f8-4fd6-bd42-a17b2dd85e1b",
+        "3ff6e4d8-2f96-400a-8f6c-9610e81e6e26",
+        "a951f19d-ce81-4154-9748-1f0f7628f4dc",
+        "e01a917a-2e16-4a64-bd69-b27d463a3778",
+        "f1170557-ed8f-4799-9631-a59bf6f1ba88",
+        "991dc35e-9ec8-4272-8f82-f1934c6bf14d",
+        "4e0330ad-9297-4f94-9f34-6dc3e2a22a81"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "grid_cols_lg": 4,
+        "grid_cols_sm": 2,
+        "headline_size": "6",
+        "paragraph_size": "sm"
+      }
+    },
+    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14": {
+      "type": "y-scroll-images",
+      "settings": {
       }
     }
   },
   "order": [
     "9f37aee0-aa0a-44a5-b92e-35e01244b08f",
-    "3a98beb4-4466-4548-b793-7a8174f65c0c",
-    "main"
+    "a0942f04-b8a7-4c0e-89e8-680c754d15e6",
+    "6529620e-f725-465b-9184-9d92ab06b0ba",
+    "839b77a3-7b9c-4b79-b046-a18de4fccf51",
+    "8e7c9ebe-58d2-419a-80d6-0b6628559637",
+    "987ff771-a8ac-4630-8674-73380cc2bcbd",
+    "359ef085-06a1-4797-a426-40876cd2dfd7",
+    "5c8c4dd1-7149-468b-8f31-5000668ff774",
+    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14"
   ]
 }
