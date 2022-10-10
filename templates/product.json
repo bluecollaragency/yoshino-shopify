@@ -72,9 +72,27 @@
     },
     "d3a10749-c424-402b-82ce-fc660a33a1ff": {
       "type": "y-product-page-touts",
+      "blocks": {
+        "6ec70669-eda7-49ed-bc22-045586873648": {
+          "type": "column",
+          "settings": {
+            "column_text": "2 Year Warranty"
+          }
+        },
+        "6581739f-e61c-43ba-914c-f5c2c05b54d7": {
+          "type": "column",
+          "settings": {
+            "column_text": "2 Year Warranty"
+          }
+        }
+      },
+      "block_order": [
+        "6ec70669-eda7-49ed-bc22-045586873648",
+        "6581739f-e61c-43ba-914c-f5c2c05b54d7"
+      ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 70,
+        "padding_bottom": 70
       }
     },
     "image-with-text": {
