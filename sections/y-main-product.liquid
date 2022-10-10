@@ -82,6 +82,16 @@
             </div>
           {%- when 'product_type' -%}
             <h2 class="tw-text-white tw-h4">{{ product.type }}</h2>
+          {%- when 'product_features_list' -%}
+            <h3>Features:</h3>
+            <ul class="tw-list-disc tw-grid tw-grid-rows-4 tw-grid-flow-col tw-pl-6">
+              <li>Power:</li>
+              <li>Capacity:</li>
+              <li>Fast Charge:</li>
+              <li>Weight:</li>
+              <li>Dimensions:</li>
+              <li>Certificate:</li>
+            </ul>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
               {%- render 'y-price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
@@ -717,6 +727,11 @@
     {
       "type": "product_type",
       "name": "Product Type",
+      "limit": 1
+    },
+    {
+      "type": "product_features_list",
+      "name": "Product Features List",
       "limit": 1
     },
     {

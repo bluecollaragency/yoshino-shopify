@@ -36,10 +36,9 @@
           "settings": {
           }
         },
-        "7f1bb397-da87-4998-be17-d4ac10bf794d": {
-          "type": "custom_liquid",
+        "6500f609-d5f5-499b-8a93-df18955fa7cf": {
+          "type": "product_features_list",
           "settings": {
-            "custom_liquid": "<h3 class=\"y-product-features\">Features:<\/h3>"
           }
         },
         "share": {
@@ -56,7 +55,7 @@
         "price",
         "buy_buttons",
         "description",
-        "7f1bb397-da87-4998-be17-d4ac10bf794d",
+        "6500f609-d5f5-499b-8a93-df18955fa7cf",
         "share"
       ],
       "settings": {
@@ -93,6 +92,43 @@
       "settings": {
         "padding_top": 70,
         "padding_bottom": 70
+      }
+    },
+    "c5597ab6-4f04-47d7-8683-0567a93299c3": {
+      "type": "y-product-page-features-hero",
+      "blocks": {
+        "7ee97f6c-c572-4364-9194-9f7b87eff384": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+          }
+        },
+        "0e5a7c65-81b7-4214-b6cd-68c771916daa": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+          }
+        },
+        "b431a8be-67cc-4ee4-bb04-0094e9c7467d": {
+          "type": "column",
+          "settings": {
+            "column_headline": "Headline 6",
+            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "7ee97f6c-c572-4364-9194-9f7b87eff384",
+        "0e5a7c65-81b7-4214-b6cd-68c771916daa",
+        "b431a8be-67cc-4ee4-bb04-0094e9c7467d"
+      ],
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "headline_size": "5",
+        "paragraph_size": "base"
       }
     },
     "image-with-text": {
@@ -194,6 +230,7 @@
   "order": [
     "main",
     "d3a10749-c424-402b-82ce-fc660a33a1ff",
+    "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "image-with-text",
     "multicolumn",
     "product-recommendations"

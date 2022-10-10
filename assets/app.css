@@ -815,6 +815,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.tw-ml-6 {
+  margin-left: 2.4000000000000004rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -926,6 +930,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   scroll-padding-left: 0px !important;
 }
 
+.tw-list-disc {
+  list-style-type: disc;
+}
+
+.tw-grid-flow-col {
+  grid-auto-flow: column;
+}
+
 .tw-grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -936,6 +948,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.tw-grid-rows-4 {
+  grid-template-rows: repeat(4, minmax(0, 1fr));
 }
 
 .tw-flex-row {
@@ -1000,6 +1016,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-gap-y-2 {
   row-gap: 0.8rem;
+}
+
+.tw-gap-y-4 {
+  row-gap: 1.6rem;
 }
 
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1074,6 +1094,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-bg-\[\#23312C\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(35 49 44 / var(--tw-bg-opacity));
+}
+
 .tw-bg-cover {
   background-size: cover;
 }
@@ -1127,6 +1152,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-pb-4 {
   padding-bottom: 1.6rem;
+}
+
+.tw-pl-6 {
+  padding-left: 2.4000000000000004rem;
 }
 
 .tw-text-left {

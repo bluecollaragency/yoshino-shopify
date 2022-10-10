@@ -14,8 +14,30 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative tw-container tw-px-6 lg:tw-px-4 y-page-section-{{ section.id }}-padding">
-  
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-bg-[#23312C]">
+    <div class="tw-container tw-px-6 lg:tw-px-4 ">
+      <div class="tw-flex tw-items-center tw-justify-center">
+        <img src="https://via.placeholder.com/1185x760" alt="">
+      </div>
+      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-8">
+        {% for block in section.blocks %}  
+          {% case block.type %}
+            {% when 'column' %}
+            <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }} tw-text-white">
+              <img src="https://via.placeholder.com/50x50" alt="">
+              <h3 
+                class="tw-text-white tw-h{{ section.settings.headline_size }}"
+              >
+                {{ block.settings.column_headline | escape }}
+              </h3>
+              {{ block.settings.column_copy }}
+            </div>
+          {% endcase %} 
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 
 {% schema %}
@@ -34,6 +56,38 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default":  0
+      },
+      {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "options": [
+            {
+              "value": "5",
+              "label": "Headline 5"
+            },
+            {
+              "value": "6",
+              "label": "Headline 6"
+            }
+          ],
+          "default": "5"
+      },
+      {
+        "type": "select",
+        "id": "paragraph_size",
+        "label": "Paragraph Size",
+        "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "base",
+              "label": "Medium"
+            }
+          ],
+          "default": "base"
       }
     ],
     "blocks": [
@@ -47,10 +101,16 @@
             "label": "Image"
           },
           {
-            "id": "column_text",
+            "id": "column_headline",
             "type": "text",
-            "label": "Column Text",
-            "default": "2 Year Warranty"
+            "label": "Column Headline",
+            "default": "Headline 6"
+          },
+          {
+            "id": "column_copy",
+            "type": "richtext",
+            "label": "Column Copy",
+            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>"
           }
         ]
       }
