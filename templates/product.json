@@ -178,6 +178,36 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "628d1e14-12d7-47ac-b23a-eb98ca0a4664": {
+      "type": "y-product-comparison",
+      "settings": {
+      }
+    },
+    "6dbc3dab-bad3-4256-9a75-db4d64e47775": {
+      "type": "y-faq-accordion",
+      "blocks": {
+        "58851671-29e8-46a5-9846-f1e0ce6e478f": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "Sed posuere consectetur est at lobortis?",
+            "faq_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        },
+        "655ef157-0bab-4e13-9e49-1c5938823121": {
+          "type": "faq",
+          "settings": {
+            "faq_title": "Sed posuere consectetur est at lobortis?",
+            "faq_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "58851671-29e8-46a5-9846-f1e0ce6e478f",
+        "655ef157-0bab-4e13-9e49-1c5938823121"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -187,6 +217,8 @@
     "1db5e708-62cc-46aa-88e6-c01752fa696b",
     "6bf7f3cf-3958-40fe-9255-136f11be0fda",
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",
-    "product-recommendations"
+    "product-recommendations",
+    "628d1e14-12d7-47ac-b23a-eb98ca0a4664",
+    "6dbc3dab-bad3-4256-9a75-db4d64e47775"
   ]
 }

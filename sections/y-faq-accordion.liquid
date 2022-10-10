@@ -1,0 +1,108 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-text-center">
+      <h2 class="tw-h4">{{ section.settings.section_headline }}</h2>
+    </div>
+    <div x-data="{ active: 1 }" class="tw-w-full tw-space-y-4 tw-mt-16">
+      {% for block in section.blocks %}  
+        {% case block.type %}
+          {% when 'faq' %}
+          <div x-data="{
+            id: {{ forloop.index }},
+            get expanded() {
+              return this.active === this.id
+            },
+            set expanded(value) {
+              this.active = value ? this.id : null
+            },
+          }" role="region" class="tw-shadow"
+          >
+            <h2>
+              <button
+                x-on:click="expanded = !expanded"
+                :class="expanded ? 'tw-bg-bee-green-300' : 'tw-bg-bee-green-200'"
+                :aria-expanded="expanded"
+                class="tw-flex tw-w-full tw-items-end tw-justify-between tw-px-6 tw-py-4 tw-text-xl tw-font-bold tw-text-white hover:tw-bg-bee-green-300"
+              >
+                <span>{{ block.settings.faq_title | escape }}</span>
+                <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
+                <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
+              </button>
+            </h2>
+    
+            <div x-show="expanded" x-collapse class="tw-bg-bee-green-200">
+              <div class="tw-px-6 tw-py-4 tw-text-white">
+                {{ block.settings.faq_copy }}
+              </div>
+            </div>
+          </div>
+        {% endcase %} 
+      {% endfor %}
+    </div>
+      {% comment %} <div x-disclosure class="tw-rounded-lg tw-bg-bee-green-200 tw-shadow">
+        <button
+          x-disclosure:button
+          class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-6 tw-py-4 tw-text-xl tw-font-bold"
+        >
+          <span>Question #1</span>
+          <span x-show="$disclosure.isOpen" x-cloak aria-hidden="true" class="tw-ml-4">&minus;</span>
+          <span x-show="! $disclosure.isOpen" aria-hidden="true" class="tw-ml-4">&plus;</span>
+        </button>
+  
+        <div x-disclosure:panel x-collapse>
+          <div class="tw-px-6 tw-pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
+        </div>
+      </div> {% endcomment %}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "FAQ Accordion",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Section Headline",
+        "id": "section_headline",
+        "default": "FAQs"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq",
+        "name": "FAQ",
+        "settings": [
+          {
+            "id": "faq_title",
+            "type": "text",
+            "label": "FAQ Title"
+          },
+          {
+            "id": "faq_copy",
+            "type": "richtext",
+            "label": "FAQ Copy",
+            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "FAQ Accordion"
+      }
+    ]
+  }
+{% endschema %}

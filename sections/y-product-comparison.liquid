@@ -1,0 +1,72 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .y-comparison-cell {
+    padding: 2rem 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+  .y-comparison-border {
+    border-top: 1px #D7D9D8 solid;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-grid tw-overflow-x-scroll tw-grid-cols-[185px_repeat(7,218px)] tw-grid-rows-[auto,repeat(5,70px)]">
+      <div class="tw-row-start-1 tw-col-start-1 tw-left-0 tw-sticky tw-bg-[#FAFAFA] tw-z-10">&nbsp;</div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-2 tw-top-0 tw-sticky">
+        <img src="https://via.placeholder.com/186x105" alt="">
+        PXXX
+      </div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-3 tw-top-0 tw-sticky">
+        <img src="https://via.placeholder.com/186x105" alt="">
+        PXXX
+      </div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-4 tw-top-0 tw-sticky">PXXX</div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-5 tw-top-0 tw-sticky">PXXX</div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-6 tw-top-0 tw-sticky">PXXX</div>
+      <div class="tw-px-4 tw-row-start-1 tw-col-start-7 tw-top-0 tw-sticky">PXXX</div>
+      
+      <div class="y-comparison-cell y-comparison-border tw-row-start-2 tw-col-start-1 tw-left-0 tw-sticky tw-bg-[#FAFAFA] tw-z-10 !tw-pl-0">
+        <h4 class="tw-block tw-font-semibold">Phone</h4>
+      </div>
+      <div class="y-comparison-cell y-comparison-border tw-row-start-2 tw-col-start-2 tw-left-0 tw-sticky tw-text-bee-green-200">
+        {% include 'icon-circle-check' %}
+        <span class="tw-sr-only">Yes</span>
+      </div>
+      <div class="y-comparison-cell y-comparison-border tw-row-start-2 tw-col-start-3 tw-left-0 tw-sticky tw-text-gray-300">
+        {% include 'icon-circle-minus' %}
+        <span class="tw-sr-only">No</span>
+      </div>
+
+      <div class="y-comparison-cell y-comparison-border tw-row-start-3 tw-col-start-1 tw-left-0 tw-sticky tw-bg-[#FAFAFA] tw-z-10 !tw-pl-0">
+        <div class="tw-block">Phone</div>
+      </div>
+      <div class="y-comparison-cell y-comparison-border tw-row-start-3 tw-col-start-2 tw-left-0 tw-sticky">check</div>
+      <div class="y-comparison-cell y-comparison-border tw-row-start-3 tw-col-start-3 tw-left-0 tw-sticky">nocheck</div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Comparison",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Product Comparison"
+      }
+    ]
+  }
+{% endschema %}
