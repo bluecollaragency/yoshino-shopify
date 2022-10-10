@@ -769,6 +769,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   order: 1;
 }
 
+.tw-col-span-5 {
+  grid-column: span 5 / span 5;
+}
+
+.tw-col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.tw-col-start-2 {
+  grid-column-start: 2;
+}
+
+.tw-col-start-8 {
+  grid-column-start: 8;
+}
+
 .tw-mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -817,6 +833,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-ml-6 {
   margin-left: 2.4000000000000004rem;
+}
+
+.tw-mt-8 {
+  margin-top: 3.2rem;
 }
 
 .tw-block {
@@ -895,6 +915,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 146px;
 }
 
+.tw-w-1\/2 {
+  width: 50%;
+}
+
+.tw-w-4\/12 {
+  width: 33.333333%;
+}
+
+.tw-w-8\/12 {
+  width: 66.666667%;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -915,8 +947,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 100%;
 }
 
+.tw-max-w-screen-xl {
+  max-width: 1280px;
+}
+
 .tw-flex-none {
   flex: none;
+}
+
+.tw-flex-initial {
+  flex: 0 1 auto;
 }
 
 .tw--translate-y-1\/2 {
@@ -1040,6 +1080,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(2.4000000000000004rem * var(--tw-space-y-reverse));
 }
 
+.tw-space-y-24 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(9.600000000000001rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(9.600000000000001rem * var(--tw-space-y-reverse));
+}
+
+.tw-divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
+.tw-divide-bee-green-100 > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-opacity: 1;
+  border-color: rgb(116 217 72 / var(--tw-divide-opacity));
+}
+
 .tw-overflow-hidden {
   overflow: hidden;
 }
@@ -1146,6 +1203,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 6.4rem;
 }
 
+.tw-py-64 {
+  padding-top: 25.6rem;
+  padding-bottom: 25.6rem;
+}
+
+.tw-py-24 {
+  padding-top: 9.600000000000001rem;
+  padding-bottom: 9.600000000000001rem;
+}
+
+.tw-py-4 {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
 .tw-pb-2 {
   padding-bottom: 0.8rem;
 }
@@ -1164,6 +1236,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-text-center {
   text-align: center;
+}
+
+.tw-text-right {
+  text-align: right;
 }
 
 .tw-text-2xl {
@@ -1305,8 +1381,24 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 6 / span 6;
   }
 
+  .lg\:tw-col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .lg\:tw-col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
   .lg\:tw-col-start-4 {
     grid-column-start: 4;
+  }
+
+  .lg\:tw-col-start-2 {
+    grid-column-start: 2;
+  }
+
+  .lg\:tw-col-start-8 {
+    grid-column-start: 8;
   }
 
   .lg\:tw-mt-24 {

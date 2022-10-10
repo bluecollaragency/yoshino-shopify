@@ -1,0 +1,36 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-w-full tw-max-w-none tw-overflow-x-scroll tw-overflow-y-hidden tw-flex tw-flex-row tw-flex-nowrap">
+    <div class="tw-relative tw-w-[90%] tw-bg-bee-green-200 tw-h-[640px] tw-flex-none">
+      <img src="https://via.placeholder.com/1920x1080" alt="" class="tw-absolute tw-w-full tw-h-full tw-inset-0 tw-object-cover tw-opacity-80">
+    </div>
+    <div class="tw-relative tw-w-[90%] tw-bg-bee-green-300 tw-h-[640px] tw-flex-none">
+      <img src="https://via.placeholder.com/1920x1080" alt="" class="tw-absolute tw-w-full tw-h-full tw-inset-0 tw-object-cover tw-opacity-80">
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product X Scroll Images",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Product X Scroll Images"
+      }
+    ]
+  }
+{% endschema %}

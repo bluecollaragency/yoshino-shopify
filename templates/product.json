@@ -83,11 +83,18 @@
           "settings": {
             "column_text": "2 Year Warranty"
           }
+        },
+        "2f0c896f-6124-4519-8811-a1e65a67b8e5": {
+          "type": "column",
+          "settings": {
+            "column_text": "2 Year Warranty"
+          }
         }
       },
       "block_order": [
         "6ec70669-eda7-49ed-bc22-045586873648",
-        "6581739f-e61c-43ba-914c-f5c2c05b54d7"
+        "6581739f-e61c-43ba-914c-f5c2c05b54d7",
+        "2f0c896f-6124-4519-8811-a1e65a67b8e5"
       ],
       "settings": {
         "padding_top": 70,
@@ -131,82 +138,28 @@
         "paragraph_size": "base"
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
+    "1db5e708-62cc-46aa-88e6-c01752fa696b": {
+      "type": "y-product-full-width-image",
       "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-2",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "#000000",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "end",
+        "content_align_x": "start",
+        "text_align": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column-0": {
-          "type": "column",
-          "settings": {
-            "title": "Free Shipping",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column-1": {
-          "type": "column",
-          "settings": {
-            "title": "Hassle-Free Exchanges",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column-0",
-        "column-1"
-      ],
+    "6bf7f3cf-3958-40fe-9255-136f11be0fda": {
+      "type": "y-product-ideal-for",
       "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 2,
-        "column_alignment": "left",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "bg_color": "#40A828"
+      }
+    },
+    "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
+      "type": "y-product-scroll-images",
+      "settings": {
       }
     },
     "product-recommendations": {
@@ -231,8 +184,9 @@
     "main",
     "d3a10749-c424-402b-82ce-fc660a33a1ff",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
-    "image-with-text",
-    "multicolumn",
+    "1db5e708-62cc-46aa-88e6-c01752fa696b",
+    "6bf7f3cf-3958-40fe-9255-136f11be0fda",
+    "4833f036-f2ec-4e18-8eed-bcf8299703a9",
     "product-recommendations"
   ]
 }

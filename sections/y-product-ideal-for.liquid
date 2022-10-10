@@ -1,0 +1,97 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  .y-page-section-{{ section.id }}-bg-color {
+    background-color: {{ section.settings.bg_color }}
+  }
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="y-page-section-{{ section.id }}-padding">
+  <div class="y-page-section-{{ section.id }}-bg-color tw-py-24">
+    <div class="tw-container tw-px-6 lg:tw-px-4 tw-space-y-24">
+      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12">
+        <div class="lg:tw-col-span-5 lg:tw-col-start-2">
+          <img src="https://via.placeholder.com/544x307" alt="">
+        </div>
+        <div class="lg:tw-col-span-4 lg:tw-col-start-8">
+          <h3 class="tw-h4 tw-text-white">Ideal For</h3>
+          <ul class="tw-divide-y tw-divide-bee-green-100 tw-text-white tw-mt-6">
+            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
+              <div class="tw-w-1/2 tw-flex-initial">
+                <h4 class="tw-h7 tw-text-white">Cell Phone</h4>
+              </div>
+              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
+                <div class="tw-w-4/12">12 Wh</div>
+                <div class="tw-w-8/12">25 Charges</div>
+              </div>
+            </li>
+            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
+              <div class="tw-w-1/2 tw-flex-initial">
+                <h4 class="tw-h7 tw-text-white">TV</h4>
+              </div>
+              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
+                <div class="tw-w-4/12">100 Wh</div>
+                <div class="tw-w-8/12">25 Charges</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12">
+        <div class="lg:tw-col-span-5 lg:tw-col-start-2">
+          <img src="https://via.placeholder.com/544x307" alt="">
+        </div>
+        <div class="lg:tw-col-span-4 lg:tw-col-start-8">
+          <h3 class="tw-h4 tw-text-white">Recharge Times</h3>
+          <ul class="tw-divide-y tw-divide-bee-green-100 tw-text-white tw-mt-6">
+            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
+              <div class="tw-w-1/2 tw-flex-initial">
+                <h4 class="tw-h7 tw-text-white">Cell Phone</h4>
+              </div>
+              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
+                <div class="tw-w-4/12">12 Wh</div>
+                <div class="tw-w-8/12">25 Charges</div>
+              </div>
+            </li>
+            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
+              <div class="tw-w-1/2 tw-flex-initial">
+                <h4 class="tw-h7 tw-text-white">TV</h4>
+              </div>
+              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
+                <div class="tw-w-4/12">100 Wh</div>
+                <div class="tw-w-8/12">25 Charges</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Ideal For",
+    "class": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#40A828"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Ideal For"
+      }
+    ]
+  }
+{% endschema %}
