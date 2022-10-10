@@ -1,0 +1,6 @@
+.price-item--regular {
+  color: white;
+}
+.price--on-sale .price-item--regular {
+  color: #fff;
+}

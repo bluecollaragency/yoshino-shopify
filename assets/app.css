@@ -494,6 +494,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25;
 }
 
+.tw-h7 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.tw-text-display-1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 4.6rem;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 990px) {
+  .tw-text-display-1 {
+    font-size: 9.6rem;
+    line-height: 7.8rem;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -723,6 +745,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0px;
 }
 
+.tw-top-1\/2 {
+  top: 50%;
+}
+
 .tw-z-10 {
   z-index: 10;
 }
@@ -829,6 +855,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.tw-h-\[167px\] {
+  height: 167px;
+}
+
 .tw-min-h-full {
   min-height: 100%;
 }
@@ -857,6 +887,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 90%;
 }
 
+.tw-w-\[146px\] {
+  width: 146px;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -873,8 +907,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: none;
 }
 
+.tw-max-w-full {
+  max-width: 100%;
+}
+
 .tw-flex-none {
   flex: none;
+}
+
+.tw--translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .\!tw-scroll-pl-0 {
@@ -1029,6 +1074,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-bg-cover {
+  background-size: cover;
+}
+
 .tw-fill-current {
   fill: currentColor;
 }
@@ -1084,6 +1133,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: left;
 }
 
+.tw-text-center {
+  text-align: center;
+}
+
 .tw-text-2xl {
   font-size: 2.4000000000000004rem;
   line-height: 3.2rem;
@@ -1112,6 +1165,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.tw-tracking-tight {
+  letter-spacing: -0.025em;
+}
+
 .tw-text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1130,6 +1187,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-text-bee-green-200 {
   --tw-text-opacity: 1;
   color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.tw-text-iron-gate-300 {
+  --tw-text-opacity: 1;
+  color: rgb(49 52 58 / var(--tw-text-opacity));
 }
 
 .tw-opacity-80 {
@@ -1228,6 +1290,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-flex {
     display: flex;
+  }
+
+  .lg\:tw-grid {
+    display: grid;
   }
 
   .lg\:tw-hidden {

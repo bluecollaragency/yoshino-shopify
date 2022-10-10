@@ -1,4 +1,6 @@
-<section id="MainProduct-{{ section.id }}" class="page-width section-{{ section.id }}-padding" data-section="{{ section.id }}">
+<section id="MainProduct-{{ section.id }}" data-section="{{ section.id }}" class="tw-relative">
+  <span class="tw-absolute tw-w-full tw-h-full bg-gray-gradient-1 tw-z-0"></span>
+<div class="tw-relative page-width section-{{ section.id }}-padding tw-z-10">
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
@@ -7,6 +9,8 @@
   {{ 'component-rating.css' | asset_url | stylesheet_tag }}
   {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
   {{ 'component-deferred-media.css' | asset_url | stylesheet_tag }}
+
+  {{ 'y-main-product.css' | asset_url | stylesheet_tag }}
 
   {%- style -%}
     .section-{{ section.id }}-padding {
@@ -24,6 +28,10 @@
     .product__info-wrapper {
       padding-left: 0;
     }
+
+    .price--on-sale .price-item--regular {
+  color: #fff;
+}
   {%- endstyle -%}
 
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -51,16 +59,18 @@
             </p>
           {%- when 'title' -%}
             <div class="product__title" {{ block.shopify_attributes }}>
-              <h1>{{ product.title | escape }}</h1>
+              <h1 class="tw-text-white tw-text-display-1">{{ product.title | escape }}</h1>
               <a href="{{ product.url }}" class="product__title">
                 <h2 class="h1">
                   {{ product.title | escape }}
                 </h2>
               </a>
             </div>
+          {%- when 'product_type' -%}
+            <h2 class="tw-text-white tw-h4">{{ product.type }}</h2>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- render 'y-price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
             {%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
               <div class="product__tax caption rte">
@@ -641,6 +651,7 @@
       ]
     }
   </script>
+</div>
 </section>
 
 {% schema %}
@@ -687,6 +698,11 @@
     {
       "type": "title",
       "name": "t:sections.main-product.blocks.title.name",
+      "limit": 1
+    },
+    {
+      "type": "product_type",
+      "name": "Product Type",
       "limit": 1
     },
     {

@@ -21,6 +21,13 @@
   .tw-h6 {
     @apply tw-text-[2.4rem] tw-leading-tight;
   }
+  .tw-h7 {
+    @apply tw-text-[2rem] tw-leading-none tw-tracking-tight tw-font-bold;
+  }
+
+  .tw-text-display-1 {
+    @apply tw-font-bold tw-text-[5.6rem] tw-leading-[4.6rem] lg:tw-text-[9.6rem] lg:tw-leading-[7.8rem] tw-uppercase tw-tracking-tight;
+  }
 }
 
 @layer components {

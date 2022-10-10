@@ -76,6 +76,11 @@ module.exports = {
           200: '#40A828',
           300: '#428425',
         },
+        'iron-gate': {
+          300: '#31343A',
+          200: '#4E5055',
+          100: '#777981',
+        },
       },
       fontFamily: {
         heading: 'var(--font-heading-family)',
