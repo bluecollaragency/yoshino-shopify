@@ -25,6 +25,12 @@
           "settings": {
           }
         },
+        "0e171c1d-3c81-4893-bff4-2ad417f98f31": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -53,6 +59,7 @@
         "a79e161a-e5c9-4e01-a331-31fe6fc3ba5c",
         "caption",
         "price",
+        "0e171c1d-3c81-4893-bff4-2ad417f98f31",
         "buy_buttons",
         "description",
         "6500f609-d5f5-499b-8a93-df18955fa7cf",
@@ -65,7 +72,7 @@
         "mobile_thumbnails": "show",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
+        "padding_top": 96,
         "padding_bottom": 12
       }
     },
@@ -160,6 +167,9 @@
     "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
       "type": "y-product-scroll-images",
       "settings": {
+        "section_headline": "Headline 4",
+        "padding_top": 96,
+        "padding_bottom": 0
       }
     },
     "product-recommendations": {
@@ -182,6 +192,9 @@
     "628d1e14-12d7-47ac-b23a-eb98ca0a4664": {
       "type": "y-product-comparison",
       "settings": {
+        "section_headline": "Product Comparison",
+        "padding_top": 96,
+        "padding_bottom": 0
       }
     },
     "6dbc3dab-bad3-4256-9a75-db4d64e47775": {
@@ -208,13 +221,15 @@
       ],
       "settings": {
         "section_headline": "FAQs",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     },
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
       "type": "y-product-tech-specs",
       "settings": {
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
