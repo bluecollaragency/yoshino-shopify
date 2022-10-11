@@ -35,10 +35,13 @@
     @apply tw-bg-transparent tw-text-bee-green-200;
   }
   .tw-btn {
-    @apply tw-inline-block tw-px-10 tw-py-4 tw-text-base tw-font-semibold tw-transition-all;
+    @apply tw-inline-block tw-px-10 tw-py-4 tw-text-base tw-font-semibold tw-transition-all tw-uppercase;
   }
   .tw-btn-hollow {
     @apply tw-border-2;
+  }
+  .tw-btn-green {
+    @apply tw-bg-bee-green-200 hover:tw-bg-bee-green-300 tw-text-white;
   }
   .tw-btn-hollow-green {
     @apply tw-border-bee-green-200 tw-text-bee-green-200

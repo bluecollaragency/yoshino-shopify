@@ -35,11 +35,17 @@
 
     .shopify-payment-button__button {
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 600;
       border: solid 2px #fff;
       background: transparent;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
     }
-
+    .shopify-payment-button__button--unbranded:hover, .shopify-payment-button__button--unbranded:hover:not([disabled]) {
+      background-color: #428425;
+      border-color: #428425;
+    }
     .button:after, .shopify-challenge__button:after, .customer button:after, .shopify-payment-button__button--unbranded:after {
       box-shadow: none;
     }
@@ -207,7 +213,24 @@
             </share-button>
             <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
           {%- when 'variant_picker' -%}
-            {%- unless product.has_only_default_variant -%}
+            {%- if product.has_only_default_variant -%}
+              <div class="select hidden">
+                  <select name="id" id="Variants-{{ section.id }}" class="select__select" form="{{ product_form_id }}">
+                    {%- for variant in product.variants -%}
+                      <option
+                        {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                        {% if variant.available == false %}disabled{% endif %}
+                        value="{{ variant.id }}"
+                      >
+                        {{ variant.title }}
+                        {%- if variant.available == false %} - {{ 'products.product.sold_out' | t }}{% endif %}
+                        - {{ variant.price | money | strip_html }}
+                      </option>
+                    {%- endfor -%}
+                  </select>
+                  {% render 'icon-caret' %}
+                </div>
+            {% else %}
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
@@ -259,7 +282,7 @@
                   </script>
                 </variant-selects>
               {%- endif -%}
-            {%- endunless -%}
+            {%- endif -%}
 
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
               <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -301,7 +324,7 @@
                     <button
                       type="submit"
                       name="add"
-                      class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--primary{% else %}button--secondary{% endif %}"
+                      class="product-form__submit tw-btn tw-btn-green tw-w-full"
                       {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
                         <span>
