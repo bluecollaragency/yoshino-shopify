@@ -154,7 +154,7 @@
     "6bf7f3cf-3958-40fe-9255-136f11be0fda": {
       "type": "y-product-ideal-for",
       "settings": {
-        "bg_color": "#40A828"
+        "bg_color": "#40a828"
       }
     },
     "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
@@ -207,6 +207,14 @@
         "655ef157-0bab-4e13-9e49-1c5938823121"
       ],
       "settings": {
+        "section_headline": "FAQs",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
+      "type": "y-product-tech-specs",
+      "settings": {
       }
     }
   },
@@ -219,6 +227,7 @@
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",
     "product-recommendations",
     "628d1e14-12d7-47ac-b23a-eb98ca0a4664",
-    "6dbc3dab-bad3-4256-9a75-db4d64e47775"
+    "6dbc3dab-bad3-4256-9a75-db4d64e47775",
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
   ]
 }
