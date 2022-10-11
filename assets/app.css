@@ -599,6 +599,46 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.button.button-hollow {
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.tw-btn {
+  display: inline-block;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.4000000000000004rem;
+  font-weight: 600;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.tw-btn-hollow {
+  border-width: 2px;
+}
+
+.tw-btn-hollow-green {
+  --tw-border-opacity: 1;
+  border-color: rgb(64 168 40 / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.tw-btn-hollow-green:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(66 132 37 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 132 37 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .blog-card-link {
   display: inline-block;
   font-weight: 600;
@@ -1090,6 +1130,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0.8rem;
 }
 
+.tw-gap-x-8 {
+  -moz-column-gap: 3.2rem;
+  column-gap: 3.2rem;
+}
+
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.6rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1147,6 +1192,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-border-b-2 {
   border-bottom-width: 2px;
+}
+
+.\!tw-border-t-0 {
+  border-top-width: 0px !important;
 }
 
 .tw-border-bee-green-200 {
@@ -1307,6 +1356,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.tw-uppercase {
+  text-transform: uppercase;
+}
+
 .tw-tracking-tight {
   letter-spacing: -0.025em;
 }
@@ -1341,6 +1394,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
+.tw-underline {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
 .tw-opacity-80 {
   opacity: 0.8;
 }
@@ -1373,6 +1431,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:tw-bg-bee-green-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 132 37 / var(--tw-bg-opacity));
+}
+
+.hover\:tw-no-underline:hover {
+  -webkit-text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 .focus\:tw-outline-none:focus {

@@ -1,0 +1,106 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  .y-prod-tech-spec {
+    padding: 2.4rem 0;
+    border-top: 1px solid rgb(229 231 235);
+  }
+  .y-prod-tech-spec .y-spec-title {
+    color: rgb(31 41 55);
+    margin: 0 0 0.8rem 0;
+  }
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .y-prod-tech-spec:first-child {
+      border-top: 0;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:px-4">
+    <h2 class="tw-text-center tw-h4">Tech Specs</h2>
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-x-8 tw-mt-16">
+      <div>
+        <ul class="y-prod-spec-list">
+          <li class="y-prod-tech-spec !tw-border-t-0">
+            <h6 class="y-spec-title tw-h7">Net Weight</h6>
+            40 lbs
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Power</h6>
+            40 lbs
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">WiFi & Bluetooth</h6>
+            40 lbs
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">User Manual</h6>
+            <a href="#" class="tw-underline hover:tw-no-underline">Download here</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="y-prod-spec-list">
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Dimensions</h6>
+            15.7 x 8.3 x 10.6 in (40 x 21 x 27 cm)
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Cell</h6>
+            SST Solid State NCM
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Full Recharge Time</h6>
+            1.6 Hours (AC) 13.5 Hours (12/24V Car Adaptor) 4-8 Hours (Using 4x 110W Solar Panels in parallel) 3.5-7 Hours (Using 3x 160W Solar Panels) 4-8 Hours (Using 1x400W Solar Panel)
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">In the Box</h6>
+            1.6 Hours (AC) 13.5 Hours (12/24V Car Adaptor) 4-8 Hours (Using 4x 110W Solar Panels in parallel) 3.5-7 Hours (Using 3x 160W Solar Panels) 4-8 Hours (Using 1x400W Solar Panel)
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="y-prod-spec-list">
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Capacity</h6>
+            2400Wh
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Cycle</h6>
+            1000 cycles to 80% capacity
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">RV 30A</h6>
+            Yes
+          </li>
+          <li class="y-prod-tech-spec">
+            <h6 class="y-spec-title tw-h7">Warranty</h6>
+            24 Months
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="tw-text-center tw-mt-12">
+      <a href="#" class="tw-btn tw-btn-hollow tw-btn-hollow-green tw-uppercase">View All Specs</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Tech Specs",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Product Tech Specs"
+      }
+    ]
+  }
+{% endschema %}
