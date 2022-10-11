@@ -1008,6 +1008,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
+.tw-w-5\/12 {
+  width: 41.666667%;
+}
+
+.tw-w-7\/12 {
+  width: 58.333333%;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -1034,6 +1042,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-flex-initial {
   flex: 0 1 auto;
+}
+
+.tw-flex-shrink {
+  flex-shrink: 1;
+}
+
+.tw-shrink {
+  flex-shrink: 1;
+}
+
+.tw-grow {
+  flex-grow: 1;
 }
 
 .tw--translate-y-1\/2 {
@@ -1146,6 +1166,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-gap-x-8 {
   -moz-column-gap: 3.2rem;
   column-gap: 3.2rem;
+}
+
+.tw-gap-x-2 {
+  -moz-column-gap: 0.8rem;
+  column-gap: 0.8rem;
 }
 
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1697,5 +1722,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:focus\:tw-text-bee-green-200:focus {
     --tw-text-opacity: 1;
     color: rgb(64 168 40 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:tw-w-4\/12 {
+    width: 33.333333%;
+  }
+
+  .xl\:tw-w-8\/12 {
+    width: 66.666667%;
   }
 }
