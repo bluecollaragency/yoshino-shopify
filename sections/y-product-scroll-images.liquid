@@ -13,6 +13,11 @@
 {%- endstyle -%}
 
 <div class="tw-relative y-page-section-{{ section.id }}-padding">
+  {%- if section.settings.section_headline != blank -%}
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <h2 class="tw-text-center tw-text-gray-800 tw-h4 tw-mb-16">{{ section.settings.section_headline }}</h2>
+  </div>
+  {%- endif -%}
   <div class="tw-w-full tw-max-w-none tw-overflow-x-scroll tw-overflow-y-hidden tw-flex tw-flex-row tw-flex-nowrap">
     <div class="tw-relative tw-w-[90%] tw-bg-bee-green-200 tw-h-[640px] tw-flex-none">
       <img src="https://via.placeholder.com/1920x1080" alt="" class="tw-absolute tw-w-full tw-h-full tw-inset-0 tw-object-cover tw-opacity-80">
@@ -26,7 +31,26 @@
 {% schema %}
   {
     "name": "Product X Scroll Images",
-    "settings": [],
+    "settings": [
+      {
+        "id": "section_headline",
+        "label": "Section Headline",
+        "type": "text",
+        "default": "Headline 4"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
+    ],
     "presets": [
       {
         "name": "Product X Scroll Images"

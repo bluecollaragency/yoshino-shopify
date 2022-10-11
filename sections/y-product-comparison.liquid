@@ -23,6 +23,11 @@
 
 <div class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-container tw-px-6 lg:tw-px-4">
+    {%- if section.settings.section_headline != blank -%}
+      <div class="tw-container tw-px-6 lg:tw-px-4">
+        <h2 class="tw-text-center tw-text-gray-800 tw-h4 tw-mb-16">{{ section.settings.section_headline }}</h2>
+      </div>
+    {%- endif -%}
     <div class="tw-grid tw-overflow-x-scroll tw-grid-cols-[185px_repeat(7,218px)] tw-grid-rows-[auto,repeat(5,70px)]">
       <div class="tw-row-start-1 tw-col-start-1 tw-left-0 tw-sticky tw-bg-[#FAFAFA] tw-z-10">&nbsp;</div>
       <div class="tw-px-4 tw-row-start-1 tw-col-start-2 tw-top-0 tw-sticky">
@@ -68,7 +73,26 @@
 {% schema %}
   {
     "name": "Product Comparison",
-    "settings": [],
+    "settings": [
+      {
+        "id": "section_headline",
+        "label": "Section Headline",
+        "type": "text",
+        "default": "Product Comparison"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
+    ],
     "presets": [
       {
         "name": "Product Comparison"

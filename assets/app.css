@@ -920,6 +920,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.tw-mb-16 {
+  margin-bottom: 6.4rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -1347,6 +1351,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!tw-pl-0 {
   padding-left: 0px !important;
+}
+
+.tw-pt-24 {
+  padding-top: 9.600000000000001rem;
 }
 
 .tw-text-left {

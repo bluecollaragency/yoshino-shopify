@@ -96,7 +96,20 @@
 {% schema %}
   {
     "name": "Product Tech Specs",
-    "settings": [],
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
+    ],
     "presets": [
       {
         "name": "Product Tech Specs"
