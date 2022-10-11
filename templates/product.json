@@ -108,6 +108,11 @@
         "padding_bottom": 70
       }
     },
+    "21c53cbe-d175-4f47-96e9-c6c36c239f69": {
+      "type": "y-product-subnav",
+      "settings": {
+      }
+    },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
       "type": "y-product-page-features-hero",
       "blocks": {
@@ -236,6 +241,7 @@
   "order": [
     "main",
     "d3a10749-c424-402b-82ce-fc660a33a1ff",
+    "21c53cbe-d175-4f47-96e9-c6c36c239f69",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "1db5e708-62cc-46aa-88e6-c01752fa696b",
     "6bf7f3cf-3958-40fe-9255-136f11be0fda",
