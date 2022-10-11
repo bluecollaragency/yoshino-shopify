@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-bg-[#23312C] tw-py-24">
     <div class="tw-container tw-px-6 lg:tw-px-4 ">
       <div class="tw-flex tw-items-center tw-justify-center">
@@ -43,8 +43,14 @@
 {% schema %}
   {
     "name": "Product - Features Hero",
-    "class": "section",
+    "tag": "section",
     "settings": [
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links",
+        "default": "overview"
+      },
       {
         "type": "number",
         "id": "padding_top",

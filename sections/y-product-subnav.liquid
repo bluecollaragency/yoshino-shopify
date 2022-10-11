@@ -1,0 +1,45 @@
+{%- style -%}
+  .tw-product-subnav {
+    position: sticky;
+    top: 62px;
+    z-index: 20;
+  }
+  @media screen and (min-width: 990px) {
+    .tw-product-subnav {
+      top: 64px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-bg-bee-green-200 tw-text-white">
+  <div class="tw-container tw-px-6 lg:tw-px-4 tw-overflow-x-auto tw-py-2">
+    <nav class="tw-flex tw-justify-between tw-items-center tw-gap-4">
+      <ul class="tw-flex tw-gap-x-8 tw-text-sm tw-items-center tw-flex-none">
+        <li class="tw-text-base tw-font-semibold">
+          <a href="#MainContent">{{ product.title | escape }}</a>
+        </li>
+        <li><a href="#">Overview</a></li>
+        <li><a href="#">Ideal For</a></li>
+        <li><a href="#">Compare</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Tech Specs</a></li>
+      </ul>
+      <a href="#MainContent" class="tw-btn-small tw-btn-white tw-flex-none">Add to Cart</a>
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Subnav",
+    "class": "tw-product-subnav",
+    "settings": [
+     
+    ],
+    "presets": [
+      {
+        "name": "Product Subnav"
+      }
+    ]
+  }
+{% endschema %}

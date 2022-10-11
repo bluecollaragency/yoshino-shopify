@@ -611,8 +611,25 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 4rem;
   padding-top: 1.6rem;
   padding-bottom: 1.6rem;
+  text-align: center;
   font-size: 1.6rem;
   line-height: 2.4000000000000004rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.tw-btn-small {
+  display: inline-block;
+  padding-left: 2.4000000000000004rem;
+  padding-right: 2.4000000000000004rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  text-align: center;
+  font-size: 1.4000000000000001rem;
+  line-height: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   transition-property: all;
@@ -650,6 +667,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(66 132 37 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.tw-btn-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.tw-btn-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .blog-card-link {
@@ -812,6 +841,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-top-1\/2 {
   top: 50%;
+}
+
+.tw-top-\[64px\] {
+  top: 64px;
 }
 
 .tw-z-10 {
@@ -1004,20 +1037,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.tw-w-4\/12 {
-  width: 33.333333%;
-}
-
-.tw-w-8\/12 {
-  width: 66.666667%;
-}
-
 .tw-w-5\/12 {
   width: 41.666667%;
 }
 
 .tw-w-7\/12 {
   width: 58.333333%;
+}
+
+.tw-w-4\/12 {
+  width: 33.333333%;
+}
+
+.tw-w-8\/12 {
+  width: 66.666667%;
 }
 
 .tw-max-w-screen-xxl {
@@ -1046,18 +1079,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-flex-initial {
   flex: 0 1 auto;
-}
-
-.tw-flex-shrink {
-  flex-shrink: 1;
-}
-
-.tw-shrink {
-  flex-shrink: 1;
-}
-
-.tw-grow {
-  flex-grow: 1;
 }
 
 .tw--translate-y-1\/2 {
@@ -1167,14 +1188,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   row-gap: 0.8rem;
 }
 
-.tw-gap-x-8 {
-  -moz-column-gap: 3.2rem;
-  column-gap: 3.2rem;
-}
-
 .tw-gap-x-2 {
   -moz-column-gap: 0.8rem;
   column-gap: 0.8rem;
+}
+
+.tw-gap-x-8 {
+  -moz-column-gap: 3.2rem;
+  column-gap: 3.2rem;
 }
 
 .tw-space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1214,6 +1235,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-overflow-hidden {
   overflow: hidden;
+}
+
+.tw-overflow-x-auto {
+  overflow-x: auto;
 }
 
 .tw-overflow-y-hidden {
@@ -1351,10 +1376,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!tw-pl-0 {
   padding-left: 0px !important;
-}
-
-.tw-pt-24 {
-  padding-top: 9.600000000000001rem;
 }
 
 .tw-text-left {
@@ -1730,15 +1751,5 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:focus\:tw-text-bee-green-200:focus {
     --tw-text-opacity: 1;
     color: rgb(64 168 40 / var(--tw-text-opacity));
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:tw-w-4\/12 {
-    width: 33.333333%;
-  }
-
-  .xl\:tw-w-8\/12 {
-    width: 66.666667%;
   }
 }

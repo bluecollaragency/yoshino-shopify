@@ -12,7 +12,7 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
   {%- if section.settings.section_headline != blank -%}
   <div class="tw-container tw-px-6 lg:tw-px-4">
     <h2 class="tw-text-center tw-text-gray-800 tw-h4 tw-mb-16">{{ section.settings.section_headline }}</h2>
@@ -31,6 +31,7 @@
 {% schema %}
   {
     "name": "Product X Scroll Images",
+    "tag": "section",
     "settings": [
       {
         "id": "section_headline",
@@ -49,6 +50,11 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default":  0
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links"
       }
     ],
     "presets": [

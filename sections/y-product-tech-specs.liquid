@@ -22,7 +22,7 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-container tw-px-6 lg:px-4">
     <h2 class="tw-text-center tw-h4">Tech Specs</h2>
     <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-x-8 tw-mt-16">
@@ -96,6 +96,7 @@
 {% schema %}
   {
     "name": "Product Tech Specs",
+    "tag": "section",
     "settings": [
       {
         "type": "number",
@@ -108,6 +109,12 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default":  0
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links",
+        "default": "tech-specs"
       }
     ],
     "presets": [

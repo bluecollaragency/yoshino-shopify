@@ -11,7 +11,7 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-container tw-px-6 lg:tw-px-4">
     <div class="tw-text-center">
       <h2 class="tw-h4">{{ section.settings.section_headline }}</h2>
@@ -52,20 +52,6 @@
         {% endcase %} 
       {% endfor %}
     </div>
-      {% comment %} <div x-disclosure class="tw-rounded-lg tw-bg-bee-green-200 tw-shadow">
-        <button
-          x-disclosure:button
-          class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-6 tw-py-4 tw-text-xl tw-font-bold"
-        >
-          <span>Question #1</span>
-          <span x-show="$disclosure.isOpen" x-cloak aria-hidden="true" class="tw-ml-4">&minus;</span>
-          <span x-show="! $disclosure.isOpen" aria-hidden="true" class="tw-ml-4">&plus;</span>
-        </button>
-  
-        <div x-disclosure:panel x-collapse>
-          <div class="tw-px-6 tw-pb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam quod natus deleniti architecto eaque consequuntur ex, illo neque iste repellendus modi, quasi ipsa commodi saepe? Provident ipsa nulla earum.</div>
-        </div>
-      </div> {% endcomment %}
   </div>
 </div>
 
@@ -90,6 +76,12 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default":  0
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links",
+        "default": "faqs"
       }
     ],
     "blocks": [

@@ -21,7 +21,7 @@
   }
 {%- endstyle -%}
 
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-container tw-px-6 lg:tw-px-4">
     {%- if section.settings.section_headline != blank -%}
       <div class="tw-container tw-px-6 lg:tw-px-4">
@@ -73,6 +73,7 @@
 {% schema %}
   {
     "name": "Product Comparison",
+    "tag": "section",
     "settings": [
       {
         "id": "section_headline",
@@ -91,6 +92,12 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default":  0
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links",
+        "default": "product-comparison"
       }
     ],
     "presets": [

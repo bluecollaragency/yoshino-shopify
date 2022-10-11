@@ -13,7 +13,7 @@
     }
   }
 {%- endstyle -%}
-<div class="y-page-section-{{ section.id }}-padding">
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="y-page-section-{{ section.id }}-padding">
   <div class="y-page-section-{{ section.id }}-bg-color tw-py-24">
     <div class="tw-container tw-px-6 lg:tw-px-4 tw-space-y-24">
       <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12">
@@ -79,13 +79,31 @@
 {% schema %}
   {
     "name": "Product Ideal For",
-    "class": "section",
+    "tag": "section",
     "settings": [
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom id for anchor links",
+        "default": "ideal-for"
+      },
       {
         "type": "color",
         "id": "bg_color",
         "label": "Background Color",
         "default": "#40A828"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
       }
     ],
     "presets": [

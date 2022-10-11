@@ -35,7 +35,10 @@
     @apply tw-bg-transparent tw-text-bee-green-200;
   }
   .tw-btn {
-    @apply tw-inline-block tw-px-10 tw-py-4 tw-text-base tw-font-semibold tw-transition-all tw-uppercase;
+    @apply tw-inline-block tw-px-10 tw-py-4 tw-text-base tw-font-semibold tw-transition-all tw-uppercase tw-text-center;
+  }
+  .tw-btn-small {
+    @apply tw-inline-block tw-px-6 tw-py-2 tw-text-sm tw-font-semibold tw-transition-all tw-uppercase tw-text-center;
   }
   .tw-btn-hollow {
     @apply tw-border-2;
@@ -46,6 +49,9 @@
   .tw-btn-hollow-green {
     @apply tw-border-bee-green-200 tw-text-bee-green-200
     hover:tw-bg-bee-green-300 hover:tw-text-white hover:tw-border-bee-green-300;
+  }
+  .tw-btn-white {
+    @apply tw-bg-white tw-text-bee-green-200 hover:tw-bg-gray-100;
   }
   .blog-card-link {
     @apply tw-inline-block tw-text-bee-green-200 tw-underline tw-underline-offset-[6px] tw-font-semibold tw-decoration-2 hover:tw-text-bee-green-300;
