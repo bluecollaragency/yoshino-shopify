@@ -1,0 +1,16 @@
+{
+  "sections" : {
+    "hero": {
+      "type": "y-image-hero",
+      "settings": {
+        "padding_top": 156,
+        "padding_bottom": 156,
+        "gradient_overlap_lg": 0,
+        "gradient_overlap_sm": 0
+      }
+    }
+  },
+  "order": [
+    "hero"
+  ]
+}
