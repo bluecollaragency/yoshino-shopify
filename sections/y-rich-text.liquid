@@ -1,0 +1,96 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-max-w-prose">
+      <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">What is a portable power station?</h2>
+      <p class="tw-mt-4 tw-text-{{ section.settings.paragraph_size }}">Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      <a href="#" class="tw-btn tw-btn-green tw-mt-4">Click Me</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Rich Text",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "headline_size",
+      "label": "Headline Size",
+      "options": [
+          {
+            "value": "2",
+            "label": "Headline 2"
+          },
+          {
+            "value": "3",
+            "label": "Headline 3"
+          },
+          {
+            "value": "4",
+            "label": "Headline 4"
+          },
+          {
+            "value": "5",
+            "label": "Headline 5"
+          },
+          {
+            "value": "6",
+            "label": "Headline 6"
+          }
+        ],
+        "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "paragraph_size",
+      "label": "Paragraph Size",
+      "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "base",
+            "label": "Medium"
+          }
+        ],
+        "default": "base"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default":  0
+    }
+  ],
+  "blocks": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Custom Rich Text"
+    }
+  ]
+}
+{% endschema %}

@@ -3,6 +3,18 @@
 <div class="image-w-text-cols tw-relative tw-block">
 
   <div class="tw-container tw-mx-auto tw-px-6 lg:tw-px-4">
+    {%- unless section.settings.intro_headline and section.settings.intro_text  == blank -%}
+    <div class="tw-max-w-prose tw-mb-16">
+      {%- if section.settings.intro_headline != blank -%}
+        <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
+      {%- endif -%}
+      {%- if section.settings.intro_text != blank -%}
+        <div class="tw-text-{{ section.settings.intro_text_size }} tw-space-y-4 tw-mt-4">
+          {{ section.settings.intro_text }}
+        </div>
+      {%- endif -%}
+    </div>
+    {%- endunless -%}
     <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
 
       <div>
@@ -37,6 +49,60 @@
     "name": "Image with text columns",
     "class": "section",
     "settings": [
+      {
+        "id": "intro_headline",
+        "type": "text",
+        "label": "Intro Headline"
+      },
+      {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "options": [
+          {
+            "value": "2",
+            "label": "Headline 2"
+          },
+          {
+            "value": "3",
+            "label": "Headline 3"
+          },
+          {
+            "value": "4",
+            "label": "Headline 4"
+          },
+          {
+            "value": "5",
+            "label": "Headline 5"
+          },
+          {
+            "value": "6",
+            "label": "Headline 6"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "id": "intro_text",
+        "type": "textarea",
+        "label": "Intro Text"
+      },
+      {
+        "type": "select",
+        "id": "intro_text_size",
+        "label": "Intro Text Size",
+        "options": [
+          {
+            "value": "sm",
+            "label": "Small"
+          },
+          {
+            "value": "base",
+            "label": "Medium"
+          }
+        ],
+        "default": "base"
+      },
       {
         "id": "image",
         "type": "image_picker",

@@ -25,16 +25,20 @@
       <div 
         class="tw-text-left tw-space-y-4 tw-order-2 lg:tw-order-1"
       >
-        <h1 
-          class="
-          tw-text-white 
-          tw-hxl"
-        >
-          Solid-State Technology
-        </h1>
-        <div class="tw-space-y-4">
-          <p class="tw-text-base lg:tw-text-xl tw-text-white">Whether hiking in the Himalayas or backcountry camping in the Gates of the Arctic, Yoshino’s high energy density has plenty of juice for your essentials and survival.</p>
-        </div>
+        {%- if section.settings.hero_header != blank -%}
+          <h1 
+            class="
+            tw-text-white 
+            tw-hxl"
+          >
+            {{ section.settings.hero_header }}
+          </h1>
+        {%- endif -%}
+        {%- if section.settings.hero_text != blank -%}
+          <div class="tw-space-y-4 tw-text-base lg:tw-text-xl tw-text-white">
+            {{ section.settings.hero_text }}
+          </div>
+        {%- endif -%}
       </div>
       <div class="tw-order-1 lg:tw-order-2">
         <img src="https://via.placeholder.com/1040x660" alt="">
@@ -49,6 +53,16 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "hero_header",
+      "label": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Copy"
+    },
     {
       "type": "number",
       "id": "padding_top",
