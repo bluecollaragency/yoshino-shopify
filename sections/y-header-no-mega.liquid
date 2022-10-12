@@ -139,7 +139,7 @@
         >
           
           {%- for link in section.settings.menu.links -%}
-            <div x-data x-popover class="{% unless forloop.index == section.settings.shop_position %}tw-relative {% endunless %}tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
+            <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
               {%- if link.links != blank -%}
               <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
                 {{ link.title | escape }}         
@@ -153,90 +153,10 @@
                 x-popover:panel x-cloak x-transition.origin.top.left
                 class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-bg-bee-green-200 tw-z-10 tw-w-full"
                 >
-                {%- if forloop.index == section.settings.shop_position -%}
-                  <div class="tw-hidden lg:tw-block tw-w-full tw-bg-white tw-border-t-2 tw-border-bee-green-200">
-                    <span class="tw-block tw-absolute tw-w-full tw-left-0 tw-right-0 bg-gray-gradient-1 tw-h-[250px] tw-z-0"></span>
-                    <div class="tw-max-w-screen-xxl tw-px-4 tw-mx-auto tw-z-10 tw-relative tw-py-16">
-                      <div class="tw-grid tw-grid-cols-3 tw-gap-8">
-                        <div>
-                          <img src="https://via.placeholder.com/333x165" alt="" class="tw-mx-auto">
-                          <h2 class="tw-mt-10">Portable Power</h2>
-                          <div class="tw-grid tw-grid-cols-2 tw-mt-4 tw-gap-8">
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Portable Power <br/>Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Hi-Capacity Power Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <img src="https://via.placeholder.com/333x165" alt="" class="tw-mx-auto">
-                          <h2 class="tw-mt-10">Solar Panels</h2>
-                          <div class="tw-grid tw-grid-cols-2 tw-mt-4 tw-gap-8">
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Portable Power <br/>Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Hi-Capacity Power Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                        <div>
-                          <img src="https://via.placeholder.com/333x165" alt="" class="tw-mx-auto">
-                          <h2 class="tw-mt-10">Accessories</h2>
-                          <div class="tw-grid tw-grid-cols-2 tw-mt-4 tw-gap-8">
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Portable Power <br/>Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                            <div>
-                              <a href="#" class="tw-text-gray-800 tw-text-sm tw-font-semibold tw-border-b-2 tw-border-bee-green-200 tw-pb-2 tw-block">Hi-Capacity Power Stations</a>
-                              <ul class="tw-mt-4">
-                                <li><a href="#">P330</a></li>
-                                <li><a href="#">P660</a></li>
-                                <li><a href="#">P2200</a></li>
-                                <li><a href="#">P3000</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                {%- endif -%}
+                
                 <div 
                   class="tw-w-full lg:tw-w-60 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 
-                  {% if forloop.index == section.settings.shop_position %} lg:tw-hidden{% endif %}"
+                  "
                 >
                   {%- for childlink in link.links -%}
                     {%- if childlink.links == blank -%}
