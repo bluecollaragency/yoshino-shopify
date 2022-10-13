@@ -7,40 +7,11 @@
         "hero_text": "The B2000 SST delivers 2000 Watts of power at up to half the weight of the competition.",
         "button_link": "shopify:\/\/pages\/portable-power-stations",
         "button_cta": "Learn More",
+        "image_size": "large",
         "padding_top": 156,
         "padding_bottom": 156,
         "gradient_overlap_lg": 0,
         "gradient_overlap_sm": 0
-      }
-    },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Solid State Technology<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
-      "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 40
       }
     },
     "1664315491b5cb0a61": {
@@ -49,29 +20,33 @@
         "bf16f297-3278-4296-a325-5c07f9a5f65c": {
           "type": "column",
           "settings": {
-            "column_headline": "Lightweight",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/leaf.png",
+            "column_headline": "Lighter Weight",
+            "column_copy": "<p>Higher energy density means the same amount of power fits into a smaller, lighter package — up to half the weight per watt compared to traditional lithium-ion batteries.<\/p>"
           }
         },
         "4cbbf481-4467-4a18-8cc4-a88f3cdb30ac": {
           "type": "column",
           "settings": {
-            "column_headline": "Lightweight",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/shield-check.png",
+            "column_headline": "Safer",
+            "column_copy": "<p>Liquid electrolytes are highly flammable and can catch fire if a battery is damaged or overheated. By using a solid electrolyte, our SST batteries have greatly reduced risk.<\/p>"
           }
         },
         "39e5825d-ad51-4fcc-94ba-45fec9df0f1a": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/stopwatch.png",
+            "column_headline": "Fast Charging",
+            "column_copy": "<p>Solid-state technology allows for faster charging—up to 80% capacity in under an hour—giving you reliable, portable power that’s ready to go whenever you are.<\/p>"
           }
         },
         "8bd2a4f5-7397-4665-b590-f1b9c963cb55": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/battery-full.png",
+            "column_headline": "More Power",
+            "column_copy": "<p>Solid-state batteries provide up to twice the power per pound of traditional lithium-ion batteries, meaning you can carry more power with you to tackle bigger tasks.<\/p>"
           }
         }
       },
@@ -82,13 +57,14 @@
         "8bd2a4f5-7397-4665-b590-f1b9c963cb55"
       ],
       "settings": {
-        "intro_headline": "",
+        "intro_headline": "Why Solid State Technology?",
         "headline_size": "3",
-        "intro_text": "",
+        "intro_text": "Yoshino batteries are built around a state-of-the-art solid electrolyte in place of the bulky and highly-flammable liquid electrolyte found in traditional lithium-ion batteries. This improves performance in practically every way and represents a giant leap forward for battery technology.",
         "intro_text_size": "base",
-        "button_link": "shopify:\/\/pages\/contact",
-        "button_cta": "Click Me",
-        "content_align": "middle"
+        "image": "shopify:\/\/shop_images\/hp-zone-1.png",
+        "button_link": "",
+        "button_cta": "",
+        "content_align": "top"
       }
     },
     "1664388421889fc26b": {
@@ -197,7 +173,6 @@
   },
   "order": [
     "00f315d0-1e18-4f9e-8d68-796680cf0791",
-    "rich_text",
     "1664315491b5cb0a61",
     "1664388421889fc26b",
     "16643898014cfaebbe",
