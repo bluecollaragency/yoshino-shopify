@@ -1812,3 +1812,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     color: rgb(64 168 40 / var(--tw-text-opacity));
   }
 }
+
+@media (min-width: 1280px) {
+  .xl\:tw-w-2\/3 {
+    width: 66.666667%;
+  }
+
+  .xl\:tw-max-w-full {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xxl\:tw-max-w-screen-xxl {
+    max-width: 1440px;
+  }
+}

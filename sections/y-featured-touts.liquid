@@ -1,9 +1,19 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="featured-touts tw-relative tw-block tw-overflow-hidden y-page-section-{{ section.id }}-padding">
 
-<div class="featured-touts tw-relative tw-block tw-overflow-hidden">
-
-  <div class="tw-max-w-screen-xxl tw-mx-auto -mx-4">
+  <div class="tw-container xl:max-w-screen-xl xxl:tw-max-w-screen-xxl tw-mx-auto -mx-4">
+    {%- if section.settings.intro_headline != blank -%}
+      <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
+        <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
+      </div>
+    {%- endif -%}
     <slider-component class="">
       <div class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--tablet !tw-scroll-pl-0" id="Slider-template--featured-touter" role="list">
 
@@ -34,7 +44,52 @@
     "name": "Featured Touts",
     "class": "section",
     "settings": [
-  
+      {
+        "id": "intro_headline",
+        "type": "text",
+        "label": "Intro Headline",
+        "default": "Featured Products"
+      },
+      {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "options": [
+          {
+            "value": "2",
+            "label": "Headline 2"
+          },
+          {
+            "value": "3",
+            "label": "Headline 3"
+          },
+          {
+            "value": "4",
+            "label": "Headline 4"
+          },
+          {
+            "value": "5",
+            "label": "Headline 5"
+          },
+          {
+            "value": "6",
+            "label": "Headline 6"
+          }
+        ],
+        "default": "3"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
     ],
     "blocks": [
       {
@@ -88,7 +143,7 @@
             "id": "tout_copy",
             "type": "richtext",
             "label": "Tout Copy",
-            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<p>"
+            "default": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>"
           },
           {
             "id": "button_link",

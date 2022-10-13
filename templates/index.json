@@ -7,9 +7,10 @@
         "hero_text": "The B2000 SST delivers 2000 Watts of power at up to half the weight of the competition.",
         "button_link": "shopify:\/\/pages\/portable-power-stations",
         "button_cta": "Learn More",
+        "image": "shopify:\/\/shop_images\/home-hero-placeholder.png",
         "image_size": "large",
-        "padding_top": 156,
-        "padding_bottom": 156,
+        "padding_top": 68,
+        "padding_bottom": 96,
         "gradient_overlap_lg": 0,
         "gradient_overlap_sm": 0
       }
@@ -64,30 +65,9 @@
         "image": "shopify:\/\/shop_images\/hp-zone-1.png",
         "button_link": "",
         "button_cta": "",
-        "content_align": "top"
-      }
-    },
-    "1664388421889fc26b": {
-      "type": "rich-text",
-      "blocks": {
-        "16643884215cf9929d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Featured Products<\/p>",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "16643884215cf9929d-0"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "content_align": "top",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "16643898014cfaebbe": {
@@ -98,9 +78,10 @@
           "settings": {
             "tout_width": "1\/2",
             "tout_height": "380px",
-            "tout_headline": "A headline",
-            "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
-            "button_link": "#",
+            "tout_image": "shopify:\/\/shop_images\/b330-sst-inhand.jpg",
+            "tout_headline": "B330 SST",
+            "tout_copy": "<p>Go anywhere, charge everything.<\/p>",
+            "button_link": "shopify:\/\/products\/b330-sst",
             "button_cta": "Learn More"
           }
         },
@@ -109,9 +90,10 @@
           "settings": {
             "tout_width": "1\/2",
             "tout_height": "380px",
-            "tout_headline": "Headline 4",
-            "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
-            "button_link": "",
+            "tout_image": "shopify:\/\/shop_images\/b4000-sst-ontrail.jpg",
+            "tout_headline": "B4000 SST",
+            "tout_copy": "<p>Industry-leading power-to-weight ratio for your home, RV, or work vehicle.<\/p>",
+            "button_link": "shopify:\/\/collections\/all",
             "button_cta": "Learn More"
           }
         },
@@ -120,9 +102,10 @@
           "settings": {
             "tout_width": "full",
             "tout_height": "760px",
-            "tout_headline": "Headline 4",
-            "tout_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>",
-            "button_link": "",
+            "tout_image": "shopify:\/\/shop_images\/b2000-sst-onjob.jpg",
+            "tout_headline": "B2000 SST",
+            "tout_copy": "<p>Portable power whenever you need it. Fast charges up to 80% in one hour.<\/p>",
+            "button_link": "#",
             "button_cta": "Learn More"
           }
         }
@@ -133,50 +116,16 @@
         "fa2e2b72-338e-4f50-801a-98fdddd9685a"
       ],
       "settings": {
-      }
-    },
-    "41570371-1614-4c6c-a777-232746d02b22": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>From the Blog<\/p>",
-            "heading_size": "h1"
-          }
-        },
-        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-0",
-        "template--15875757441190__41570371-1614-4c6c-a777-232746d02b22-1665009784af278c2f-1"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": false,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "f79034cd-39a7-4979-ae80-773e720f8734": {
-      "type": "y-blog-slider",
-      "settings": {
+        "intro_headline": "Featured Products",
+        "headline_size": "3",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
   "order": [
     "00f315d0-1e18-4f9e-8d68-796680cf0791",
     "1664315491b5cb0a61",
-    "1664388421889fc26b",
-    "16643898014cfaebbe",
-    "41570371-1614-4c6c-a777-232746d02b22",
-    "f79034cd-39a7-4979-ae80-773e720f8734"
+    "16643898014cfaebbe"
   ]
 }

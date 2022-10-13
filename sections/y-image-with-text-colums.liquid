@@ -1,10 +1,21 @@
 {{ 'y-section-image-text-column.css' | asset_url | stylesheet_tag }}
-
-<div class="image-w-text-cols tw-relative tw-block">
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="image-w-text-cols tw-relative tw-block y-page-section-{{ section.id }}-padding">
 
   <div class="tw-container tw-mx-auto">
     {%- if section.settings.intro_headline or section.settings.intro_text  != blank -%}
-    <div class="lg:tw-max-w-full lg:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
+    <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
       {%- if section.settings.intro_headline != blank -%}
         <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
       {%- endif -%}
@@ -158,6 +169,18 @@
           }
         ],
         "default": "top"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
       }
     ],
     "blocks": [
