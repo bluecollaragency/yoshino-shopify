@@ -39,6 +39,9 @@
             {{ section.settings.hero_text }}
           </div>
         {%- endif -%}
+        {%- if section.settings.button_link != blank -%}
+          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+        {%- endif -%}
       </div>
       <div class="tw-order-1 lg:tw-order-2">
         <img src="https://via.placeholder.com/1040x660" alt="">
@@ -62,6 +65,16 @@
       "type": "textarea",
       "id": "hero_text",
       "label": "Copy"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "Button Link"
+    },
+    {
+      "id": "button_cta",
+      "type": "text",
+      "label": "Button CTA"
     },
     {
       "type": "number",

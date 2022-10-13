@@ -141,13 +141,15 @@
     "f38deb56-1af6-4e14-ba70-b64df95f4e19": {
       "type": "y-full-width-image",
       "settings": {
-        "bg_color": "#000",
-        "button_link": "",
-        "button_cta": "",
+        "bg_color": "#000000",
+        "headline": "Safe, reliable, longer lasting power from Yoshino.",
+        "copy": "<p>Thanks to solid state technology our portable power stations are safer, lighter, and more reliable than traditional lithium based portable power stations.<\/p>",
+        "button_link": "#",
+        "button_cta": "Learn More",
         "content_align_y": "end",
-        "content_align_x": "start",
+        "content_align_x": "end",
         "text_align": "left",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     }

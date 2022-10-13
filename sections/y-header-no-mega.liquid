@@ -141,67 +141,76 @@
           {%- for link in section.settings.menu.links -%}
             <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
               {%- if link.links != blank -%}
-              <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
-                {{ link.title | escape }}         
-                <!-- Heroicon: chevron-down -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-fill-current" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </button>
+                <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
+                  {{ link.title | escape }}
+                          
+                  <!-- Heroicon: chevron-down -->
+                  <svg xmlns="http://www.w3.org/2000/svg" class="tw-h-5 tw-w-5 tw-fill-current" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                  </svg>
+                </button>
 
-              <div
-                x-popover:panel x-cloak x-transition.origin.top.left
-                class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-bg-bee-green-200 tw-z-10 tw-w-full"
+                <div
+                  x-popover:panel x-cloak x-transition.origin.top.left
+                  class="tw-relative lg:tw-absolute tw-left-0 tw-mt-2 tw-bg-bee-green-200 tw-z-10 tw-w-full"
                 >
-                
-                <div 
-                  class="tw-w-full lg:tw-w-60 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 
-                  "
-                >
-                  {%- for childlink in link.links -%}
-                    {%- if childlink.links == blank -%}
-                      <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-text-bee-green-200 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
-                        {{ childlink.title | escape }}
-                      </a>
-                    {%- else -%}
-                      <div x-data="{ active: 0 }" class="tw-mx-auto">
-                        <div 
-                          x-data="{
-                            id: {{ forloop.index }},
-                            get expanded() {
-                            return this.active === this.id
-                            },
-                            set expanded(value) {
-                            this.active = value ? this.id : null
-                            },
-                          }" 
-                          role="region" 
-                        >
-                          <button
-                            x-on:click="expanded = !expanded"
-                            :aria-expanded="expanded"
-                            class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                  
+                  <div 
+                    class="tw-w-full lg:tw-w-60 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 
+                    "
+                  >
+                    {%- for childlink in link.links -%}
+                      {%- if childlink.links == blank -%}
+                        <a href="{{ childlink.url }}" class="tw-block tw-w-full tw-px-4 tw-py-2.5 tw-text-left lg:hover:tw-text-bee-green-200 disabled:tw-text-gray-500 tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-font-semibold" {% if childlink.current %} aria-current="page"{% endif %}>
+                          {{ childlink.title | escape }}
+                        </a>
+                      {%- else -%}
+                        <div x-data="{ active: 0 }" class="tw-mx-auto">
+                          <div 
+                            x-data="{
+                              id: {{ forloop.index }},
+                              get expanded() {
+                              return this.active === this.id
+                              },
+                              set expanded(value) {
+                              this.active = value ? this.id : null
+                              },
+                            }" 
+                            role="region" 
                           >
-                            <span>{{ childlink.title | escape }}</span>
-                            <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
-                            <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
-                          </button>
-                          <div x-show="expanded" x-collapse>
-                            <div class="tw-px-4 tw-pb-4">
-                              <ul>
-                                {%- for grandchildlink in childlink.links -%}
-                                <li><a class="tw-text-white lg:tw-text-gray-800" href="{{ grandchildlink.url }}" {% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title | escape }}</a></li>
-                                {%- endfor -%}
-                              </ul>
+                            <button
+                              x-on:click="expanded = !expanded"
+                              :aria-expanded="expanded"
+                              class="tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-2.5 tw-font-semibold tw-text-white lg:tw-text-gray-800 tw-text-2xl lg:tw-text-sm tw-text-left"
+                            >
+                              <span>{{ childlink.title | escape }}</span>
+                              <span x-show="expanded" aria-hidden="true" class="tw-ml-4">&minus;</span>
+                              <span x-show="!expanded" aria-hidden="true" class="tw-ml-4">&plus;</span>
+                            </button>
+                            <div x-show="expanded" x-collapse>
+                              <div class="tw-px-4 tw-pb-4">
+                                <ul>
+                                  {%- for grandchildlink in childlink.links -%}
+                                  <li><a class="tw-text-white lg:tw-text-gray-800" href="{{ grandchildlink.url }}" {% if grandchildlink.current %} aria-current="page"{% endif %}>{{ grandchildlink.title | escape }}</a></li>
+                                  {%- endfor -%}
+                                </ul>
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    {%- endif -%}
-                  {%- endfor -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                  
                 </div>
-                
-              </div>
+              {%- else -%}
+                <a 
+                  href="{{ link.url }}" 
+                  {% if link.current %} aria-current="page"{% endif %}
+                  class="tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg"
+                >
+                  {{ link.title | escape }}
+                </a>
               {%- endif -%}
             </div>
           {%- endfor -%}
