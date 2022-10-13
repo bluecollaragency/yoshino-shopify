@@ -139,9 +139,10 @@
         >
           
           {%- for link in section.settings.menu.links -%}
-            <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
-              {%- if link.links != blank -%}
-                <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
+            {%- if link.links != blank -%}
+              <div x-data x-popover class="tw-relative tw-flex lg:tw-block tw-flex-col tw-items-start tw-z-10">
+              
+                <button x-popover:button type="button" class="tw-flex tw-flex-row tw-items-center tw-text-left tw-gap-2 tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg">
                   {{ link.title | escape }}
                           
                   <!-- Heroicon: chevron-down -->
@@ -203,16 +204,18 @@
                   </div>
                   
                 </div>
-              {%- else -%}
-                <a 
-                  href="{{ link.url }}" 
-                  {% if link.current %} aria-current="page"{% endif %}
-                  class="tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg"
-                >
-                  {{ link.title | escape }}
-                </a>
-              {%- endif -%}
-            </div>
+              
+              
+              </div>
+            {%- else -%}
+              <a 
+                href="{{ link.url }}" 
+                {% if link.current %} aria-current="page"{% endif %}
+                class="tw-px-4 tw-py-2.5 tw-text-white lg:tw-text-gray-800 lg:hover:tw-text-bee-green-200 lg:focus:tw-text-bee-green-200 tw-font-bold lg:tw-font-semibold tw-text-5xl lg:tw-text-lg"
+              >
+                {{ link.title | escape }}
+              </a>
+            {%- endif -%}
           {%- endfor -%}
         </div>
       </div>
