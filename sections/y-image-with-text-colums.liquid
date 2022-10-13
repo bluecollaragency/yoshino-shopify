@@ -2,9 +2,9 @@
 
 <div class="image-w-text-cols tw-relative tw-block">
 
-  <div class="tw-container tw-mx-auto tw-px-6 lg:tw-px-4">
-    {%- unless section.settings.intro_headline and section.settings.intro_text  == blank -%}
-    <div class="tw-max-w-prose tw-mb-16">
+  <div class="tw-container tw-mx-auto">
+    {%- if section.settings.intro_headline or section.settings.intro_text  != blank -%}
+    <div class="lg:tw-max-w-full lg:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
       {%- if section.settings.intro_headline != blank -%}
         <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
       {%- endif -%}
@@ -14,21 +14,46 @@
         </div>
       {%- endif -%}
     </div>
-    {%- endunless -%}
-    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
+    {%- endif -%}
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 lg:tw-px-4 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
 
-      <div>
-        <img src="https://via.placeholder.com/800x800" alt="">
+      <div class="tw-text-center lg:tw-text-left">
+        {%- if section.settings.image != blank -%}
+          <img
+            srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+            src="{{ section.settings.image | image_url: width: 688 }}"
+            sizes="(min-width: 990px) {{ section.settings.image.width | divided_by: 2 }}px, 100vw"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="tw-mx-auto lg:tw-mx-0"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
       </div>
 
-      <div>
-        <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-8">
+      <div class="tw-px-6 lg:tw-px-0">
+        <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-x-8 tw-gap-y-12">
 
           {% for block in section.blocks %}  
             {% case block.type %}
               {% when 'column' %}
               <div class="tw-space-y-4">
-                <img src="https://via.placeholder.com/50x50" alt="{{ block.settings.columns_image.alt }}">
+                <img 
+                  src="{{ block.settings.column_image | image_url }}" 
+                  alt="{{ block.settings.columns_image.alt | escape }}" 
+                  width="{{ block.settings.column_image.width | divided_by: 2 }}"
+                  height="{{ block.settings.column_image.height | divided_by: 2 }}"
+                  loading="lazy"
+                >
                 <h3 class="tw-text-2xl">{{ block.settings.column_headline | escape }}</h3>
                 {{ block.settings.column_copy }}
               </div>

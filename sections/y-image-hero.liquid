@@ -20,10 +20,12 @@
 {%- endstyle -%}
 <div class="y-page-hero tw-relative tw-w-full y-page-hero-{{ section.id }}-padding">
   <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-1 tw-w-full y-hero-{{ section.id }}-gradient-overlap tw-min-h-full"></span>
-  <div class="tw-container tw-relative tw-z-10 tw-px-6 lg:tw-px-4">
-    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 tw-items-center">
+  <div class="tw-max-w-screen-xxl tw-mx-auto tw-relative tw-z-10 tw-px-6 lg:tw-px-4">
+    <div 
+      class="tw-grid tw-grid-cols-12 tw-gap-8 tw-items-center"
+    >
       <div 
-        class="tw-text-left tw-space-y-4 tw-order-2 lg:tw-order-1"
+        class="tw-text-left tw-space-y-4 tw-order-2 lg:tw-order-1 tw-col-span-12 {% if section.settings.image_size == 'medium' %} lg:tw-col-span-6 {% else %} lg:tw-col-span-5{% endif %}"
       >
         {%- if section.settings.hero_header != blank -%}
           <h1 
@@ -40,10 +42,12 @@
           </div>
         {%- endif -%}
         {%- if section.settings.button_link != blank -%}
-          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+          <a href="#" class="tw-btn tw-btn-green tw-mt-12">{{ section.settings.button_cta | escape }}</a>
         {%- endif -%}
       </div>
-      <div class="tw-order-1 lg:tw-order-2">
+      <div 
+        class="tw-order-1 lg:tw-order-2 tw-col-span-12 {% if section.settings.image_size == 'medium' %} lg:tw-col-span-6 {% else %} lg:tw-col-span-7{% endif %}"
+      >
         <img src="https://via.placeholder.com/1040x660" alt="">
       </div>
     </div>
@@ -75,6 +79,22 @@
       "id": "button_cta",
       "type": "text",
       "label": "Button CTA"
+    },
+    {
+      "id": "image_size",
+      "type": "select",
+      "label": "Image Size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
     },
     {
       "type": "number",
