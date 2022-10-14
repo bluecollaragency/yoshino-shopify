@@ -13,12 +13,32 @@
 {%- endstyle -%}
 <div class="tw-relative y-page-section-{{ section.id }}-padding">
   <div class="tw-container tw-px-6 lg:tw-px-4">
-    <div class="tw-grid tw-grid-cols-{{ section.settings.grid_cols_sm }} lg:tw-grid-cols-{{ section.settings.grid_cols_lg }} tw-gap-8">
+    {%- if section.settings.intro_headline or section.settings.intro_text  != blank -%}
+      <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
+        {%- if section.settings.intro_headline != blank -%}
+          <h2 class="tw-h{{ section.settings.intro_headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro_text != blank -%}
+          <div class="tw-text-{{ section.settings.intro_text_size }} tw-space-y-4 tw-mt-4">
+            {{ section.settings.intro_text }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="tw-grid tw-grid-cols-{{ section.settings.grid_cols_sm }} lg:tw-grid-cols-{{ section.settings.grid_cols_lg }} tw-gap-x-8 tw-gap-y-12">
       {% for block in section.blocks %}  
         {% case block.type %}
           {% when 'column' %}
           <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }}">
-            <img src="https://via.placeholder.com/50x50" alt="">
+            {%- if block.settings.column_image -%}
+            <img 
+              src="{{ block.settings.column_image | image_url }}" 
+              alt="{{ block.settings.columns_image.alt | escape }}" 
+              width="{{ block.settings.column_image.width | divided_by: 2 }}"
+              height="{{ block.settings.column_image.height | divided_by: 2 }}"
+              loading="lazy"
+            >
+            {%- endif -%}
             <h3 
               class="tw-h{{ section.settings.headline_size }}"
             >
@@ -38,6 +58,60 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "id": "intro_headline",
+      "type": "text",
+      "label": "Intro Headline"
+    },
+    {
+      "type": "select",
+      "id": "intro_headline_size",
+      "label": "Intro Headline Size",
+      "options": [
+        {
+          "value": "2",
+          "label": "Headline 2"
+        },
+        {
+          "value": "3",
+          "label": "Headline 3"
+        },
+        {
+          "value": "4",
+          "label": "Headline 4"
+        },
+        {
+          "value": "5",
+          "label": "Headline 5"
+        },
+        {
+          "value": "6",
+          "label": "Headline 6"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "id": "intro_text",
+      "type": "textarea",
+      "label": "Intro Text"
+    },
+    {
+      "type": "select",
+      "id": "intro_text_size",
+      "label": "Intro Text Size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "base",
+          "label": "Medium"
+        }
+      ],
+      "default": "base"
+    },
     {
       "type": "number",
       "id": "padding_top",
@@ -71,7 +145,7 @@
     {
       "type": "select",
       "id": "headline_size",
-      "label": "Headline Size",
+      "label": "Columns Headline Size",
       "options": [
           {
             "value": "5",
@@ -87,7 +161,7 @@
     {
       "type": "select",
       "id": "paragraph_size",
-      "label": "Paragraph Size",
+      "label": "Columns Paragraph Size",
       "options": [
           {
             "value": "sm",

@@ -15,16 +15,16 @@
 
   <div class="tw-container tw-mx-auto">
     {%- if section.settings.intro_headline or section.settings.intro_text  != blank -%}
-    <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
-      {%- if section.settings.intro_headline != blank -%}
-        <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
-      {%- endif -%}
-      {%- if section.settings.intro_text != blank -%}
-        <div class="tw-text-{{ section.settings.intro_text_size }} tw-space-y-4 tw-mt-4">
-          {{ section.settings.intro_text }}
-        </div>
-      {%- endif -%}
-    </div>
+      <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
+        {%- if section.settings.intro_headline != blank -%}
+          <h2 class="tw-h{{ section.settings.headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro_text != blank -%}
+          <div class="tw-text-{{ section.settings.intro_text_size }} tw-space-y-4 tw-mt-4">
+            {{ section.settings.intro_text }}
+          </div>
+        {%- endif -%}
+      </div>
     {%- endif -%}
     <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 lg:tw-px-4 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}">
 

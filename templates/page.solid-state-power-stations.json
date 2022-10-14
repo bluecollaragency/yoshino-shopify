@@ -3,9 +3,13 @@
     "hero": {
       "type": "y-image-hero",
       "settings": {
-        "hero_header": "Solid State Power",
-        "hero_text": "Maecenas sed diam eget risus varius sit amet non magna.",
-        "padding_top": 156,
+        "hero_header": "Solid State Power Stations",
+        "hero_text": "Power beyond limits with lighter, safer, more powerful solid-state technology.",
+        "button_link": "",
+        "button_cta": "",
+        "image": "shopify:\/\/shop_images\/ssps-lander-hero.png",
+        "image_size": "medium",
+        "padding_top": 126,
         "padding_bottom": 156,
         "gradient_overlap_lg": 0,
         "gradient_overlap_sm": 0
@@ -17,29 +21,33 @@
         "325360d1-ea04-4470-9fdd-7e4cb84e11c3": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/leaf.png",
+            "column_headline": "Maximum Portability",
+            "column_copy": "<p>With a higher energy density, our SST power stations deliver up to twice the power per pound compared to traditional lithium-ion batteries. This means more power in a smaller, lighter package.<\/p>"
           }
         },
         "32def4e1-59df-4e3c-8850-7da05a11568f": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/shield-check.png",
+            "column_headline": "Safety First",
+            "column_copy": "<p>Made without a flammable liquid electrolyte, the solid-state batteries in our power stations pose a much lower risk of fire, and smart internal monitoring ensures they stay within safe operating temperatures.<\/p>"
           }
         },
         "846dc3e1-d04f-4ee7-bb3f-8582b6025a38": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/charge.png",
+            "column_headline": "Many Ways to Charge",
+            "column_copy": "<p>Our power stations can be recharged using both AC and DC inputs, portable solar panels, and even USB-C on supported models. Charging times are incredibly fast, with some power stations able to reach 80% capacity in just one hour.<\/p>"
           }
         },
         "61321690-2797-437d-a9bb-988a8e2aae68": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 3",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/decibels.png",
+            "column_headline": "Advantages Over Generators",
+            "column_copy": "<p>With nearly silent operation and no exhaust fumes, Yoshino power stations can be safely used indoors or out and at times when the loud noise of a gasoline-powered generator would be inappropriate.<\/p>"
           }
         }
       },
@@ -52,11 +60,14 @@
       "settings": {
         "intro_headline": "What is a portable power station?",
         "headline_size": "3",
-        "intro_text": "Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
+        "intro_text": "Battery power stations can charge and power all manner of electronic devices, from phones to power tools, thanks to AC, DC, and USB outputs. And, unlike gas-powered generators, they are quiet and safe for use indoors and out.",
         "intro_text_size": "base",
+        "image": "shopify:\/\/shop_images\/portable-power-station-in-hand-hex.png",
         "button_link": "",
         "button_cta": "",
-        "content_align": "top"
+        "content_align": "top",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "9877bc10-ed1f-40d6-925e-696f2f94702c": {
@@ -65,57 +76,65 @@
         "12654ee8-240e-4eca-854a-2d521b5fae53": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/leaf.png",
+            "column_headline": "Lightweight",
+            "column_copy": "<p>High energy density for more power in a smaller package.<\/p>"
           }
         },
         "ea0061b4-4af8-4242-9416-d40ca15a5dd2": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/shield-check.png",
+            "column_headline": "Safer",
+            "column_copy": "<p>Smart temperature control, no flammable liquid electrolyte.<\/p>"
           }
         },
         "66d7752e-b140-4280-962d-dc201b08ab6f": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/power.png",
+            "column_headline": "Higher Power",
+            "column_copy": "<p>More power-per-pound than traditional lithium-ion batteries.<\/p>"
           }
         },
         "3e523a39-67d2-42f9-a9ca-09fe0bbfc34a": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/clock.png",
+            "column_headline": "Long Lasting",
+            "column_copy": "<p>Solid-state batteries can handle more charge cycles before they degrade.<\/p>"
           }
         },
         "755bb149-e414-4a1d-9050-5abd02aa9f54": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/usb.png",
+            "column_headline": "USB A and C",
+            "column_copy": "<p>Keep your personal devices charged.<\/p>"
           }
         },
         "2f767db7-ce9a-4636-b19a-61330e282f3d": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/ac-dc.png",
+            "column_headline": "AC and DC Output",
+            "column_copy": "<p>Connect all kinds of power tools, equipment, and appliances.<\/p>"
           }
         },
         "93de314c-33d9-44cc-80cd-1a2f33c11d05": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/sun.png",
+            "column_headline": "Solar Charging",
+            "column_copy": "<p>Optional solar panels can charge power stations with 100% green energy.<\/p>"
           }
         },
         "2683b819-705c-479d-8c0c-7930d7fd120b": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
+            "column_image": "shopify:\/\/shop_images\/led-light.png",
+            "column_headline": "LED Light",
+            "column_copy": "<p>The unique built-in lamp makes it easy to find the right port, even in the dark.<\/p>"
           }
         }
       },
@@ -130,12 +149,16 @@
         "2683b819-705c-479d-8c0c-7930d7fd120b"
       ],
       "settings": {
+        "intro_headline": "Why Yoshino?",
+        "intro_headline_size": "3",
+        "intro_text": "",
+        "intro_text_size": "base",
         "padding_top": 96,
         "padding_bottom": 0,
         "grid_cols_lg": 4,
         "grid_cols_sm": 2,
-        "headline_size": "5",
-        "paragraph_size": "base"
+        "headline_size": "6",
+        "paragraph_size": "sm"
       }
     },
     "f38deb56-1af6-4e14-ba70-b64df95f4e19": {

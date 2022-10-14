@@ -1,0 +1,158 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    {%- if section.settings.intro_headline or section.settings.intro_text  != blank -%}
+      <div class="lg:tw-max-w-full lg:max-w-prose xl:tw-w-2/3 tw-mb-16 tw-px-6 lg:tw-px-4 tw-text-center tw-mx-auto">
+        {%- if section.settings.intro_headline != blank -%}
+          <h2 class="tw-h{{ section.settings.intro_headline_size }} tw-text-gray-800">{{ section.settings.intro_headline }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro_text != blank -%}
+          <div class="tw-text-{{ section.settings.intro_text_size }} tw-space-y-4 tw-mt-4">
+            {{ section.settings.intro_text }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-x-8 tw-gap-y-12">
+      {%- for product in section.settings.collection.products -%}
+        <div>
+          <div class="tw-relative tw-aspect-[16/10]">
+            {%- if product.featured_media != blank -%}
+              <img
+                srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+                src="{{ product.featured_media | image_url: width: 533 }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                alt="{{ product.featured_media.alt | escape }}"
+                class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-contain tw-z-0"
+                {% unless lazy_load == false %}loading="lazy"{% endunless %}
+                width="{{ product.featured_media.width }}"
+                height="{{ product.featured_media.height }}"
+              >
+            {%- endif -%}
+          </div>
+          <div class="tw-mt-4">
+            <h3 class="tw-h6 tw-text-gray-800">{{ product.title | escape }}</h3>
+            <span class="tw-block tw-font-medium tw-text-gray-800">
+              {%- render 'y-price-small', product: product, use_variant: true, show_badges: true, price_class: 'tw-text-gray-800' -%}
+            </span>
+          </div>
+          <a href="{{ product.url }}" class="blog-card-link tw-mt-4">Details</a>
+        </div>
+      {%- endfor -%}
+      <div>
+        <div class="tw-relative tw-aspect-video tw-bg-black">
+          <img src="https://via.placeholder.com/1280x720" alt="" class="tw-absolute tw-inset-0 tw-w-full tw-h-full tw-object-cover tw-z-0">
+        </div>
+        <div class="tw-mt-4">
+          <h3 class="tw-h6 tw-text-gray-800">Product Name</h3>
+          <span class="tw-block tw-font-medium tw-text-gray-800">$9999</span>
+        </div>
+        <a href="#" class="blog-card-link tw-mt-4">Details</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Collection Grid",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "id": "intro_headline",
+      "type": "text",
+      "label": "Intro Headline"
+    },
+    {
+      "type": "select",
+      "id": "intro_headline_size",
+      "label": "Intro Headline Size",
+      "options": [
+        {
+          "value": "2",
+          "label": "Headline 2"
+        },
+        {
+          "value": "3",
+          "label": "Headline 3"
+        },
+        {
+          "value": "4",
+          "label": "Headline 4"
+        },
+        {
+          "value": "5",
+          "label": "Headline 5"
+        },
+        {
+          "value": "6",
+          "label": "Headline 6"
+        }
+      ],
+      "default": "3"
+    },
+    {
+      "id": "intro_text",
+      "type": "textarea",
+      "label": "Intro Text"
+    },
+    {
+      "type": "select",
+      "id": "intro_text_size",
+      "label": "Intro Text Size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "base",
+          "label": "Medium"
+        }
+      ],
+      "default": "base"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Select a collection"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default":  0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Grid"
+    }
+  ]
+}
+{% endschema %}

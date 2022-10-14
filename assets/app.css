@@ -981,6 +981,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.tw-aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.tw-aspect-\[16\/10\] {
+  aspect-ratio: 16 / 10;
+}
+
+.tw-aspect-\[16\/12\] {
+  aspect-ratio: 16 / 12;
+}
+
 .tw-h-6 {
   height: 2.4000000000000004rem;
 }
@@ -1321,12 +1333,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .tw-bg-cover {
   background-size: cover;
 }
 
 .tw-fill-current {
   fill: currentColor;
+}
+
+.tw-object-contain {
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .tw-object-cover {
@@ -1336,6 +1358,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-p-10 {
   padding: 4rem;
+}
+
+.tw-p-8 {
+  padding: 3.2rem;
 }
 
 .tw-px-6 {
@@ -1381,6 +1407,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-px-2 {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+}
+
+.tw-px-8 {
+  padding-left: 3.2rem;
+  padding-right: 3.2rem;
 }
 
 .tw-pb-2 {
@@ -1452,6 +1483,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.tw-font-medium {
+  font-weight: 500;
+}
+
 .tw-uppercase {
   text-transform: uppercase;
 }
@@ -1488,6 +1523,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-text-gray-300 {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.tw-text-inherit {
+  color: inherit;
 }
 
 .tw-underline {
