@@ -108,11 +108,6 @@
         "padding_bottom": 70
       }
     },
-    "21c53cbe-d175-4f47-96e9-c6c36c239f69": {
-      "type": "y-product-subnav",
-      "settings": {
-      }
-    },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
       "type": "y-product-page-features-hero",
       "blocks": {
@@ -144,6 +139,7 @@
         "b431a8be-67cc-4ee4-bb04-0094e9c7467d"
       ],
       "settings": {
+        "custom_id": "overview",
         "padding_top": 0,
         "padding_bottom": 0,
         "headline_size": "5",
@@ -153,7 +149,10 @@
     "1db5e708-62cc-46aa-88e6-c01752fa696b": {
       "type": "y-product-full-width-image",
       "settings": {
+        "custom_id": "",
         "bg_color": "#000000",
+        "headline": "Headline 3",
+        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
@@ -163,18 +162,13 @@
         "padding_bottom": 0
       }
     },
-    "6bf7f3cf-3958-40fe-9255-136f11be0fda": {
-      "type": "y-product-ideal-for",
-      "settings": {
-        "bg_color": "#40a828"
-      }
-    },
     "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
       "type": "y-product-scroll-images",
       "settings": {
         "section_headline": "Headline 4",
         "padding_top": 96,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "custom_id": ""
       }
     },
     "product-recommendations": {
@@ -194,61 +188,22 @@
         "padding_bottom": 28
       }
     },
-    "628d1e14-12d7-47ac-b23a-eb98ca0a4664": {
-      "type": "y-product-comparison",
-      "settings": {
-        "section_headline": "Product Comparison",
-        "padding_top": 96,
-        "padding_bottom": 0
-      }
-    },
-    "6dbc3dab-bad3-4256-9a75-db4d64e47775": {
-      "type": "y-faq-accordion",
-      "blocks": {
-        "58851671-29e8-46a5-9846-f1e0ce6e478f": {
-          "type": "faq",
-          "settings": {
-            "faq_title": "Sed posuere consectetur est at lobortis?",
-            "faq_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
-          }
-        },
-        "655ef157-0bab-4e13-9e49-1c5938823121": {
-          "type": "faq",
-          "settings": {
-            "faq_title": "Sed posuere consectetur est at lobortis?",
-            "faq_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "58851671-29e8-46a5-9846-f1e0ce6e478f",
-        "655ef157-0bab-4e13-9e49-1c5938823121"
-      ],
-      "settings": {
-        "section_headline": "FAQs",
-        "padding_top": 96,
-        "padding_bottom": 0
-      }
-    },
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
       "type": "y-product-tech-specs",
       "settings": {
         "padding_top": 96,
-        "padding_bottom": 96
+        "padding_bottom": 96,
+        "custom_id": "tech-specs"
       }
     }
   },
   "order": [
     "main",
     "d3a10749-c424-402b-82ce-fc660a33a1ff",
-    "21c53cbe-d175-4f47-96e9-c6c36c239f69",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "1db5e708-62cc-46aa-88e6-c01752fa696b",
-    "6bf7f3cf-3958-40fe-9255-136f11be0fda",
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",
     "product-recommendations",
-    "628d1e14-12d7-47ac-b23a-eb98ca0a4664",
-    "6dbc3dab-bad3-4256-9a75-db4d64e47775",
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
   ]
 }

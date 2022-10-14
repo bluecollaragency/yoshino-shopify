@@ -104,25 +104,36 @@
           </ul>
           <ul class="footer-social-links tw-flex tw-items-center tw-w-full md:tw-w-auto tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold tw-mt-16 md:tw-mt-0">
             <li>
-              <a href="{{ settings.social_twitter_link }}" class="social-icon-link tw-text-gray-900" >
+              <a 
+                href="{{ settings.social_twitter_link }}" class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-1.5 tw-transition-all hover:tw-text-gray-200"
+              >
                 {%- render 'icon-twitter' -%}
                 <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
               </a>
             </li>
             <li>
-              <a href="{{ settings.social_facebook_link }}" class="social-icon-link tw-text-gray-900" >
-                {%- render 'icon-facebook' -%}
+              <a 
+                href="{{ settings.social_twitter_link }}"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+              >
+                {%- render 'icon-facebook-f' -%}
                 <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
               </a>
             </li>
             <li>
-              <a href="{{ settings.social_linkedin_link }}" class="social-icon-link tw-text-gray-900" >
+              <a 
+                href="{{ settings.social_twitter_link }}"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+              >
                 {%- render 'icon-linkedin' -%}
                 <span class="visually-hidden">{{ 'general.social.links.linkedin' | t }}</span>
               </a>
             </li>
             <li>
-              <a href="{{ settings.social_youtube_link }}" class="social-icon-link tw-text-gray-900" >
+              <a 
+                href="{{ settings.social_twitter_link }}"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+              >
                 {%- render 'icon-youtube' -%}
                 <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
               </a>

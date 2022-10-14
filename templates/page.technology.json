@@ -3,6 +3,11 @@
     "9f37aee0-aa0a-44a5-b92e-35e01244b08f": {
       "type": "y-image-hero",
       "settings": {
+        "hero_header": "Solid State Technology",
+        "hero_text": "The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and highly flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.",
+        "button_link": "",
+        "button_cta": "",
+        "image_size": "medium",
         "padding_top": 156,
         "padding_bottom": 156,
         "gradient_overlap_lg": 96,
@@ -15,22 +20,25 @@
         "33cb80b5-e316-40dc-bdbd-f6a5ea958662": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/battery-full.png",
+            "column_headline": "Solid Sate Battery",
+            "column_copy": "<p>A solid electrolyte is used in place of the traditional liquid electrolyte, cutting down bulk and increasing the power-to-weight ratio up to 2X. Get more power at the same weight, or less weight for the same power.<\/p>"
           }
         },
         "30a8a0f1-c106-4682-b855-99fc80201cfa": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/shield-check.png",
+            "column_headline": "Increased Safety",
+            "column_copy": "<p>Liquid electrolytes are flammable and can leak or cause a short circuit if the battery is damaged. Solid-state batteries, despite having much higher energy densities, are actually safer, both in use and during storage or transport.<\/p>"
           }
         },
         "235130c0-4163-4428-9d27-1c9a1f4fbd03": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/stopwatch.png",
+            "column_headline": "Fast Charge",
+            "column_copy": "<p>Faster charging is a positive side-effect of increased safety. Larger power stations charge nearly as quickly as smaller ones by safely drawing more power from the wall. In fact, all Yoshino power stations can fast-charge to 80% in an hour or less.<\/p>"
           }
         }
       },
@@ -40,6 +48,10 @@
         "235130c0-4163-4428-9d27-1c9a1f4fbd03"
       ],
       "settings": {
+        "intro_headline": "",
+        "intro_headline_size": "3",
+        "intro_text": "",
+        "intro_text_size": "base",
         "padding_top": 0,
         "padding_bottom": 0,
         "grid_cols_lg": 3,
@@ -51,8 +63,8 @@
     "6529620e-f725-465b-9184-9d92ab06b0ba": {
       "type": "y-image-with-text",
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 96,
+        "padding_bottom": 96,
         "image_position": "left",
         "button_link": "",
         "button_cta": "",
@@ -62,7 +74,9 @@
     "839b77a3-7b9c-4b79-b046-a18de4fccf51": {
       "type": "y-full-width-image",
       "settings": {
-        "bg_color": "#000",
+        "bg_color": "#000000",
+        "headline": "Headline 3",
+        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
@@ -76,6 +90,8 @@
       "type": "y-full-width-image",
       "settings": {
         "bg_color": "#40a828",
+        "headline": "Headline 3",
+        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
@@ -96,27 +112,9 @@
         "content_align": "middle"
       }
     },
-    "359ef085-06a1-4797-a426-40876cd2dfd7": {
-      "type": "rich-text",
-      "blocks": {
-        "template--15900875948198__359ef085-06a1-4797-a426-40876cd2dfd7-16650849261f836495-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Packed with Tech<\/p>",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "template--15900875948198__359ef085-06a1-4797-a426-40876cd2dfd7-16650849261f836495-0"
-      ],
+    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14": {
+      "type": "y-scroll-images",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "5c8c4dd1-7149-468b-8f31-5000668ff774": {
@@ -125,57 +123,65 @@
         "0317c8e0-ff84-4e23-9c45-b47c3cdc11b7": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/leaf.png",
+            "column_headline": "Lightweight",
+            "column_copy": "<p>High energy density for more power in a smaller package.<\/p>"
           }
         },
         "9e3d1db5-13f8-4fd6-bd42-a17b2dd85e1b": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/shield-check.png",
+            "column_headline": "Safer",
+            "column_copy": "<p>Smart temperature control, no flammable liquid electrolyte.<\/p><p><\/p>"
           }
         },
         "3ff6e4d8-2f96-400a-8f6c-9610e81e6e26": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/power.png",
+            "column_headline": "Higher Power",
+            "column_copy": "<p>More power-per-pound than traditional lithium-ion batteries.<\/p>"
           }
         },
         "a951f19d-ce81-4154-9748-1f0f7628f4dc": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/clock.png",
+            "column_headline": "Long Lasting",
+            "column_copy": "<p>Solid-state batteries can handle more charge cycles before they degrade.<\/p>"
           }
         },
         "e01a917a-2e16-4a64-bd69-b27d463a3778": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/usb.png",
+            "column_headline": "USB A and C",
+            "column_copy": "<p>Keep your personal devices charged.<\/p>"
           }
         },
         "f1170557-ed8f-4799-9631-a59bf6f1ba88": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/ac-dc.png",
+            "column_headline": "AC and DC Output",
+            "column_copy": "<p>Connect all kinds of power tools, equipment, and appliances.<\/p>"
           }
         },
         "991dc35e-9ec8-4272-8f82-f1934c6bf14d": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p><p><\/p>"
+            "column_image": "shopify:\/\/shop_images\/sun.png",
+            "column_headline": "Solar Charging",
+            "column_copy": "<p>Optional solar panels can charge power stations with 100% green energy.<\/p>"
           }
         },
         "4e0330ad-9297-4f94-9f34-6dc3e2a22a81": {
           "type": "column",
           "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<p>"
+            "column_image": "shopify:\/\/shop_images\/led-light.png",
+            "column_headline": "LED Light",
+            "column_copy": "<p>The unique built-in lamp makes it easy to find the right port, even in the dark.<\/p>"
           }
         }
       },
@@ -190,17 +196,16 @@
         "4e0330ad-9297-4f94-9f34-6dc3e2a22a81"
       ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "intro_headline": "The Advantages Are Clear",
+        "intro_headline_size": "4",
+        "intro_text": "",
+        "intro_text_size": "base",
+        "padding_top": 96,
+        "padding_bottom": 96,
         "grid_cols_lg": 4,
         "grid_cols_sm": 2,
         "headline_size": "6",
         "paragraph_size": "sm"
-      }
-    },
-    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14": {
-      "type": "y-scroll-images",
-      "settings": {
       }
     }
   },
@@ -211,8 +216,7 @@
     "839b77a3-7b9c-4b79-b046-a18de4fccf51",
     "8e7c9ebe-58d2-419a-80d6-0b6628559637",
     "987ff771-a8ac-4630-8674-73380cc2bcbd",
-    "359ef085-06a1-4797-a426-40876cd2dfd7",
-    "5c8c4dd1-7149-468b-8f31-5000668ff774",
-    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14"
+    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14",
+    "5c8c4dd1-7149-468b-8f31-5000668ff774"
   ]
 }

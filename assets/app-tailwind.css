@@ -67,7 +67,7 @@
     @apply tw-shadow-none tw-border-b-b-green-100;
   }
   .y-newsletter-form__field-wrapper .field__input {
-    @apply tw-p-0;
+    @apply tw-p-0 tw-bg-white;
   }
   .y-newsletter-form__field-wrapper .field__input:focus,
   .y-newsletter-form__field-wrapper .field__input:not(:placeholder-shown) {
@@ -84,7 +84,7 @@
   }
 
   .footer-social-links .social-icon-link svg {
-    @apply tw-w-6 tw-h-auto;
+    @apply tw-w-auto tw-h-5;
   }
   .footer-contact-list-item {
     @apply tw-flex tw-w-full tw-py-3 tw-gap-x-4;
