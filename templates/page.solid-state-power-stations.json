@@ -188,6 +188,36 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9": {
+      "type": "y-full-width-image",
+      "settings": {
+        "bg_color": "#000",
+        "headline": "Safety",
+        "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
+        "button_link": "shopify:\/\/pages\/technology",
+        "button_cta": "Learn More",
+        "content_align_y": "end",
+        "content_align_x": "end",
+        "text_align": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "8f2f01c8-94b5-4227-bb85-23af1a3e31db": {
+      "type": "y-full-width-image",
+      "settings": {
+        "bg_color": "#323333",
+        "headline": "Portability",
+        "copy": "<p>With a power-to-weight ratio up to double what’s possible with traditional lithium-ion batteries, Yoshino SST power stations are built to go anywhere.<\/p>",
+        "button_link": "shopify:\/\/pages\/technology",
+        "button_cta": "Learn More",
+        "content_align_y": "end",
+        "content_align_x": "end",
+        "text_align": "left",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -195,6 +225,8 @@
     "1b87908a-96b7-4496-ba6b-9cee52b96385",
     "9877bc10-ed1f-40d6-925e-696f2f94702c",
     "f38deb56-1af6-4e14-ba70-b64df95f4e19",
-    "3728893c-59af-4247-b5e0-6c45ba5a7c89"
+    "3728893c-59af-4247-b5e0-6c45ba5a7c89",
+    "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9",
+    "8f2f01c8-94b5-4227-bb85-23af1a3e31db"
   ]
 }
