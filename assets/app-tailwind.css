@@ -87,7 +87,7 @@
     @apply tw-w-auto tw-h-5;
   }
   .footer-contact-list-item {
-    @apply tw-flex tw-w-full tw-py-3 tw-gap-x-4;
+    @apply tw-flex tw-w-full tw-py-3 tw-gap-x-4 tw-text-gray-800;
   }
   .footer-contact-list-item .item-title {
     @apply tw-w-1/2 tw-font-semibold;

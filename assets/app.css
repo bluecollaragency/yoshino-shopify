@@ -790,6 +790,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   column-gap: 1.6rem;
   padding-top: 1.2000000000000002rem;
   padding-bottom: 1.2000000000000002rem;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .footer-contact-list-item .item-title {
@@ -1564,19 +1566,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: linear-gradient(180deg, #525e5a 0%, #7f8b87 60.09%, #fafafa 100%);
 }
 
-.hover\:tw-bg-gray-50:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
-}
-
 .hover\:tw-bg-bee-green-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 132 37 / var(--tw-bg-opacity));
 }
 
-.hover\:tw-text-gray-200:hover {
+.hover\:tw-bg-gray-50:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+
+.hover\:tw-text-bee-green-300:hover {
   --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
+  color: rgb(66 132 37 / var(--tw-text-opacity));
 }
 
 .hover\:tw-no-underline:hover {

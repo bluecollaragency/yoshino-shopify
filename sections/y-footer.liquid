@@ -97,15 +97,15 @@
       <div class="lg:tw-col-start-4 lg:tw-col-span-9">
         <span class="tw-h6 tw-font-semibold tw-text-gray-800">&copy; {{ 'now' | date: "%Y" }}, {{ shop.name | link_to: routes.root_url }}</span>
         <div class="tw-flex tw-flex-wrap md:tw-flex-nowrap tw-justify-between tw-items-center tw-mt-6">
-          <ul class="footer-links tw-w-full md:tw-w-auto tw-flex tw-flex-wrap tw-gap-4 tw-text-gray-800 tw-text-sm tw-font-semibold">
+          <ul class="footer-links tw-w-full md:tw-w-auto tw-flex tw-flex-wrap tw-gap-4">
             {%- for link in linklists.footer.links -%}
-              <li>{{ link.title | link_to: link.url }}</li>
+              <li>{{ link.title | link_to: link.url, class: 'tw-text-gray-800 tw-text-sm tw-font-semibold tw-transition-all hover:tw-text-bee-green-300' }}</li>
             {%- endfor -%}
           </ul>
           <ul class="footer-social-links tw-flex tw-items-center tw-w-full md:tw-w-auto tw-space-x-4 tw-text-gray-800 tw-text-sm tw-font-semibold tw-mt-16 md:tw-mt-0">
             <li>
               <a 
-                href="{{ settings.social_twitter_link }}" class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-1.5 tw-transition-all hover:tw-text-gray-200"
+                href="{{ settings.social_twitter_link }}" class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-1.5 tw-transition-all hover:tw-bg-bee-green-300"
               >
                 {%- render 'icon-twitter' -%}
                 <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
@@ -114,7 +114,7 @@
             <li>
               <a 
                 href="{{ settings.social_twitter_link }}"
-                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-bg-bee-green-300"
               >
                 {%- render 'icon-facebook-f' -%}
                 <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
@@ -123,7 +123,7 @@
             <li>
               <a 
                 href="{{ settings.social_twitter_link }}"
-                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-bg-bee-green-300"
               >
                 {%- render 'icon-linkedin' -%}
                 <span class="visually-hidden">{{ 'general.social.links.linkedin' | t }}</span>
@@ -132,7 +132,7 @@
             <li>
               <a 
                 href="{{ settings.social_twitter_link }}"
-                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-text-gray-200"
+                class="social-icon-link tw-relative tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-900 tw-text-white tw-flex tw-justify-center tw-items-center tw-p-2 tw-transition-all hover:tw-bg-bee-green-300"
               >
                 {%- render 'icon-youtube' -%}
                 <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
