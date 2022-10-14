@@ -25,15 +25,15 @@
         {% endfor %}
 
       </div>
-      <div class="slider-buttons no-js-hidden large-up-hide">
-        <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-        <div class="slider-counter caption">
+      <div class="slider-buttons no-js-hidden large-up-hide tw-space-x-8 tw-mt-8">
+        <button type="button" class="slider-button--prev tw-text-gray-800" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-arrow-left' %}</button>
+        <div class="slider-counter tw-text-gray-800 tw-font-semibold tw-text-sm">
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
           <span class="slider-counter--total"></span>
         </div>
-        <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
+        <button type="button" class="slider-button--next tw-text-gray-800" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-arrow-right' %}</button>
       </div>
     </slider-component>
   </div>

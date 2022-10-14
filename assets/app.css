@@ -965,6 +965,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.tw-mt-8 {
+  margin-top: 3.2rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -1250,6 +1254,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: calc(9.600000000000001rem * var(--tw-space-y-reverse));
 }
 
+.tw-space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3.2rem * var(--tw-space-x-reverse));
+  margin-left: calc(3.2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .tw-divide-y > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-y-reverse: 0;
   border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
@@ -1529,6 +1539,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-text-inherit {
   color: inherit;
+}
+
+.tw-text-gray-900 {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .tw-underline {
