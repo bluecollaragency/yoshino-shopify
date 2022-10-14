@@ -164,15 +164,28 @@
     "f38deb56-1af6-4e14-ba70-b64df95f4e19": {
       "type": "y-full-width-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/power-beyond.jpg",
         "bg_color": "#000000",
-        "headline": "Safe, reliable, longer lasting power from Yoshino.",
-        "copy": "<p>Thanks to solid state technology our portable power stations are safer, lighter, and more reliable than traditional lithium based portable power stations.<\/p>",
-        "button_link": "#",
+        "headline": "Power Beyond",
+        "copy": "<p>Solid-state technology makes Yoshino power stations more powerful, more portable, and safer than those powered by traditional lithium-ion batteries.<\/p>",
+        "button_link": "shopify:\/\/pages\/technology",
         "button_cta": "Learn More",
         "content_align_y": "end",
-        "content_align_x": "end",
+        "content_align_x": "start",
         "text_align": "left",
         "padding_top": 96,
+        "padding_bottom": 0
+      }
+    },
+    "3728893c-59af-4247-b5e0-6c45ba5a7c89": {
+      "type": "y-collection-grid",
+      "settings": {
+        "intro_headline": "All Portable Power Stations",
+        "intro_headline_size": "4",
+        "intro_text": "",
+        "intro_text_size": "base",
+        "collection": "portable-power-stations",
+        "padding_top": 0,
         "padding_bottom": 0
       }
     }
@@ -181,6 +194,7 @@
     "hero",
     "1b87908a-96b7-4496-ba6b-9cee52b96385",
     "9877bc10-ed1f-40d6-925e-696f2f94702c",
-    "f38deb56-1af6-4e14-ba70-b64df95f4e19"
+    "f38deb56-1af6-4e14-ba70-b64df95f4e19",
+    "3728893c-59af-4247-b5e0-6c45ba5a7c89"
   ]
 }
