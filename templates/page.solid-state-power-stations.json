@@ -1,16 +1,13 @@
 {
   "sections": {
-    "hero": {
-      "type": "y-image-hero",
+    "3fa35fef-e35b-44ab-a810-da54f9fd2981": {
+      "type": "y-image-hero-centered",
       "settings": {
-        "hero_header": "Solid State Power Stations",
-        "hero_text": "Power beyond limits with lighter, safer, more powerful solid-state technology.",
-        "button_link": "",
-        "button_cta": "",
-        "image": "shopify:\/\/shop_images\/ssps-lander-hero.png",
-        "image_size": "medium",
-        "padding_top": 126,
-        "padding_bottom": 156,
+        "hero_header": "",
+        "hero_text": "",
+        "image": "shopify:\/\/shop_images\/solid-state-power-hero.png",
+        "padding_top": 96,
+        "padding_bottom": 0,
         "gradient_overlap_lg": 0,
         "gradient_overlap_sm": 0
       }
@@ -66,7 +63,7 @@
         "button_link": "",
         "button_cta": "",
         "content_align": "top",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     },
@@ -192,7 +189,7 @@
     "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9": {
       "type": "y-full-width-image",
       "settings": {
-        "bg_color": "#000",
+        "bg_color": "#000000",
         "headline": "Safety",
         "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
         "button_link": "shopify:\/\/pages\/technology",
@@ -221,7 +218,7 @@
     }
   },
   "order": [
-    "hero",
+    "3fa35fef-e35b-44ab-a810-da54f9fd2981",
     "1b87908a-96b7-4496-ba6b-9cee52b96385",
     "9877bc10-ed1f-40d6-925e-696f2f94702c",
     "f38deb56-1af6-4e14-ba70-b64df95f4e19",
