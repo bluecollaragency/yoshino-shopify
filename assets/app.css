@@ -1801,6 +1801,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 83.333333%;
   }
 
+  .lg\:tw-w-full {
+    width: 100%;
+  }
+
   .lg\:tw-max-w-full {
     max-width: 100%;
   }
