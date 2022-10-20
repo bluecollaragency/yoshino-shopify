@@ -949,6 +949,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 6.4rem;
 }
 
+.tw-mt-8 {
+  margin-top: 3.2rem;
+}
+
 .tw-mt-2 {
   margin-top: 0.8rem;
 }
@@ -963,10 +967,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-ml-auto {
   margin-left: auto;
-}
-
-.tw-mt-8 {
-  margin-top: 3.2rem;
 }
 
 .tw-block {
@@ -987,6 +987,22 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-aspect-\[16\/10\] {
   aspect-ratio: 16 / 10;
+}
+
+.tw-aspect-\[2\/1\] {
+  aspect-ratio: 2 / 1;
+}
+
+.tw-aspect-\[1\.89\/1\] {
+  aspect-ratio: 1.89 / 1;
+}
+
+.tw-aspect-\[3\/1\] {
+  aspect-ratio: 3 / 1;
+}
+
+.tw-aspect-\[16\/9\] {
+  aspect-ratio: 16 / 9;
 }
 
 .tw-h-8 {
@@ -1019,6 +1035,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-h-\[167px\] {
   height: 167px;
+}
+
+.tw-h-auto {
+  height: auto;
 }
 
 .tw-min-h-full {
@@ -1075,6 +1095,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-w-8\/12 {
   width: 66.666667%;
+}
+
+.tw-w-auto {
+  width: auto;
 }
 
 .tw-max-w-screen-xxl {
@@ -1242,6 +1266,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: calc(1.6rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.tw-space-x-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(3.2rem * var(--tw-space-x-reverse));
+  margin-left: calc(3.2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .tw-space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.4000000000000004rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1252,12 +1282,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-y-reverse: 0;
   margin-top: calc(9.600000000000001rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(9.600000000000001rem * var(--tw-space-y-reverse));
-}
-
-.tw-space-x-8 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(3.2rem * var(--tw-space-x-reverse));
-  margin-left: calc(3.2rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .tw-divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -1455,6 +1479,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.6rem;
 }
 
+.tw-pt-24 {
+  padding-top: 9.600000000000001rem;
+}
+
 .tw-text-left {
   text-align: left;
 }
@@ -1539,11 +1567,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-text-inherit {
   color: inherit;
-}
-
-.tw-text-gray-900 {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .tw-underline {
@@ -1646,6 +1669,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     position: relative;
   }
 
+  .lg\:tw-inset-0 {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+
   .lg\:tw-order-1 {
     order: 1;
   }
@@ -1695,6 +1725,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 9.600000000000001rem;
   }
 
+  .lg\:tw-ml-auto {
+    margin-left: auto;
+  }
+
+  .lg\:tw-mr-0 {
+    margin-right: 0px;
+  }
+
   .lg\:tw-block {
     display: block;
   }
@@ -1711,8 +1749,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .lg\:tw-aspect-\[2\/1\] {
+    aspect-ratio: 2 / 1;
+  }
+
   .lg\:tw-h-auto {
     height: auto;
+  }
+
+  .lg\:tw-h-full {
+    height: 100%;
   }
 
   .lg\:tw-min-h-\[380px\] {
@@ -1749,6 +1795,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:tw-w-10\/12 {
+    width: 83.333333%;
   }
 
   .lg\:tw-max-w-full {
@@ -1801,6 +1851,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   }
 
+  .lg\:tw-object-contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+  }
+
   .lg\:tw-p-0 {
     padding: 0px;
   }
@@ -1817,6 +1872,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-pr-\[8\.333\%\] {
     padding-right: 8.333%;
+  }
+
+  .lg\:tw-pl-4 {
+    padding-left: 1.6rem;
   }
 
   .lg\:tw-text-left {

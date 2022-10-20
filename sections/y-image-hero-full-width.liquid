@@ -1,0 +1,180 @@
+{%- style -%}
+  .y-page-hero-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .y-hero-{{ section.id }}-gradient-overlap {
+    height: calc( 100% + {{ section.settings.gradient_overlap_sm }}px );
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-hero-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .y-hero-{{ section.id }}-gradient-overlap {
+      height: calc( 100% + {{ section.settings.gradient_overlap_lg }}px );
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative tw-w-full lg:tw-aspect-[2/1] tw-bg-bee-green-200">
+  <div class="lg:tw-absolute tw-w-full tw-h-full tw-inset-0 tw-pt-24">
+    <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-1 tw-w-full y-hero-{{ section.id }}-gradient-overlap tw-min-h-full"></span>
+    <div class="tw-max-w-screen-xxl tw-h-full tw-mx-auto tw-relative tw-z-10">
+      <div 
+        class="tw-grid tw-grid-cols-12 tw-gap-8"
+      >
+        <div 
+          class="
+            tw-text-left 
+            tw-space-y-4 
+            tw-col-span-12 
+            tw-px-6
+            lg:tw-pl-4
+            tw-z-10
+            {% if section.settings.image_size == 'medium' %} lg:tw-col-span-6 
+            {% else %} 
+            lg:tw-col-span-5
+            {% endif %}
+          "
+        >
+          {%- if section.settings.hero_header != blank -%}
+            <h1 
+              class="
+              tw-text-white 
+              tw-hxl"
+            >
+              {{ section.settings.hero_header }}
+            </h1>
+          {%- endif -%}
+          {%- if section.settings.hero_text != blank -%}
+            <div class="tw-space-y-4 tw-text-base lg:tw-text-xl tw-text-white">
+              {{ section.settings.hero_text }}
+            </div>
+          {%- endif -%}
+          {%- if section.settings.button_link != blank -%}
+            <a href="#" class="tw-btn tw-btn-green tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+          {%- endif -%}
+        </div>
+        <div class="
+          tw-relative 
+          lg:tw-absolute 
+          lg:tw-inset-0 
+          tw-w-full 
+          tw-h-full 
+          tw-flex 
+          tw-justify-end 
+          tw-items-end
+          tw-col-span-12
+          tw-z-0
+          "
+        >
+          {% comment %} <img src="https://via.placeholder.com/2400x1357" alt="" class="tw-w-full tw-h-auto lg:tw-w-auto lg:tw-h-full lg:tw-object-contain lg:tw-ml-auto lg:tw-mr-0"> {% endcomment %}
+          {%- if section.settings.image != blank -%}
+            <img
+              srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {%- if section.settings.image.width >= 2400 -%}{{ section.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+              src="{{ section.settings.image | image_url: width: 1500 }}"
+              sizes="100vw"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              class="tw-w-full tw-h-auto lg:tw-w-auto lg:tw-h-full lg:tw-object-contain lg:tw-ml-auto lg:tw-mr-0"
+            >
+          {%- else -%}
+            {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-auto lg:tw-w-auto lg:tw-h-full lg:tw-object-contain lg:tw-ml-auto lg:tw-mr-0' }}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Image Hero",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_header",
+      "label": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Copy"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "Button Link"
+    },
+    {
+      "id": "button_cta",
+      "type": "text",
+      "label": "Button CTA"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "id": "image_size",
+      "type": "select",
+      "label": "Image Size",
+      "options": [
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 156
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 156
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_lg",
+      "label": "Gradient overlap desktop",
+      "default": 96
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_sm",
+      "label": "Gradient overlap mobile",
+      "default": 320
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Image Hero"
+    }
+  ]
+}
+{% endschema %}
