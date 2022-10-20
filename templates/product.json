@@ -44,11 +44,13 @@
         },
         "6500f609-d5f5-499b-8a93-df18955fa7cf": {
           "type": "product_features_list",
+          "disabled": true,
           "settings": {
           }
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
           }
@@ -74,38 +76,6 @@
         "enable_video_looping": false,
         "padding_top": 96,
         "padding_bottom": 12
-      }
-    },
-    "d3a10749-c424-402b-82ce-fc660a33a1ff": {
-      "type": "y-product-page-touts",
-      "blocks": {
-        "6ec70669-eda7-49ed-bc22-045586873648": {
-          "type": "column",
-          "settings": {
-            "column_text": "2 Year Warranty"
-          }
-        },
-        "6581739f-e61c-43ba-914c-f5c2c05b54d7": {
-          "type": "column",
-          "settings": {
-            "column_text": "2 Year Warranty"
-          }
-        },
-        "2f0c896f-6124-4519-8811-a1e65a67b8e5": {
-          "type": "column",
-          "settings": {
-            "column_text": "2 Year Warranty"
-          }
-        }
-      },
-      "block_order": [
-        "6ec70669-eda7-49ed-bc22-045586873648",
-        "6581739f-e61c-43ba-914c-f5c2c05b54d7",
-        "2f0c896f-6124-4519-8811-a1e65a67b8e5"
-      ],
-      "settings": {
-        "padding_top": 70,
-        "padding_bottom": 70
       }
     },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
@@ -150,14 +120,16 @@
       "type": "y-product-full-width-image",
       "settings": {
         "custom_id": "",
+        "image": "shopify:\/\/shop_images\/app-image.jpg",
         "bg_color": "#000000",
-        "headline": "Headline 3",
-        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
+        "headline": "",
+        "copy": "",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
         "content_align_x": "start",
         "text_align": "left",
+        "hide_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -165,7 +137,7 @@
     "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
       "type": "y-product-scroll-images",
       "settings": {
-        "section_headline": "Headline 4",
+        "section_headline": "Multiple Ways to Charge",
         "padding_top": 96,
         "padding_bottom": 0,
         "custom_id": ""
@@ -199,7 +171,6 @@
   },
   "order": [
     "main",
-    "d3a10749-c424-402b-82ce-fc660a33a1ff",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "1db5e708-62cc-46aa-88e6-c01752fa696b",
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",

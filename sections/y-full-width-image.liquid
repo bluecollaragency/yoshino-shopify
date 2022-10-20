@@ -13,7 +13,13 @@
     }
   }
 {%- endstyle -%}
-<div class="tw-relative y-page-section-{{ section.id }}-padding">
+<div 
+  class="
+    tw-relative 
+    y-page-section-{{ section.id }}-padding
+    {% if section.settings.hide_mobile == true %} tw-hidden lg:tw-block{% endif %}
+  "
+>
   <div class="tw-relative tw-block tw-h-[640px] tw-min-h-full">
     <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full y-page-section-{{ section.id }}-bg-color tw-z-0">
       {%- if section.settings.image != blank -%}
@@ -38,6 +44,7 @@
           {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-full tw-object-cover' }}
         {%- endif -%}
     </span>
+    {%- if section.settings.headline != blank or section.settings.copy != blank or section.settings.button_link != blank -%}
     <div class="tw-container tw-relative tw-block tw-px-6 lg:tw-px-4 tw-z-10 tw-h-full">
       <div 
         class="
@@ -59,6 +66,7 @@
         </div>
       </div>
     </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -159,6 +167,12 @@
           }
         ],
         "default": "left"
+      },
+      {
+        "type": "checkbox",
+        "id": "hide_mobile",
+        "label": "Hide on Mobile?",
+        "default": false
       },
       {
         "type": "number",

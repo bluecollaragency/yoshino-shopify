@@ -170,6 +170,7 @@
         "content_align_y": "end",
         "content_align_x": "start",
         "text_align": "left",
+        "hide_mobile": false,
         "padding_top": 96,
         "padding_bottom": 0
       }
@@ -197,6 +198,7 @@
         "content_align_y": "end",
         "content_align_x": "end",
         "text_align": "left",
+        "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -212,6 +214,24 @@
         "content_align_y": "end",
         "content_align_x": "end",
         "text_align": "left",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "78b6ec73-290c-4546-8e5f-e58e78fe41ca": {
+      "type": "y-full-width-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/app-image.jpg",
+        "bg_color": "#000000",
+        "headline": "",
+        "copy": "",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "end",
+        "content_align_x": "start",
+        "text_align": "left",
+        "hide_mobile": true,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -224,6 +244,7 @@
     "f38deb56-1af6-4e14-ba70-b64df95f4e19",
     "3728893c-59af-4247-b5e0-6c45ba5a7c89",
     "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9",
-    "8f2f01c8-94b5-4227-bb85-23af1a3e31db"
+    "8f2f01c8-94b5-4227-bb85-23af1a3e31db",
+    "78b6ec73-290c-4546-8e5f-e58e78fe41ca"
   ]
 }

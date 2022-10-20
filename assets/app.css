@@ -969,10 +969,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
-.tw-mt-20 {
-  margin-top: 8rem;
-}
-
 .tw-block {
   display: block;
 }
@@ -991,22 +987,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-aspect-\[16\/10\] {
   aspect-ratio: 16 / 10;
-}
-
-.tw-aspect-\[2\/1\] {
-  aspect-ratio: 2 / 1;
-}
-
-.tw-aspect-\[1\.89\/1\] {
-  aspect-ratio: 1.89 / 1;
-}
-
-.tw-aspect-\[3\/1\] {
-  aspect-ratio: 3 / 1;
-}
-
-.tw-aspect-\[16\/9\] {
-  aspect-ratio: 16 / 9;
 }
 
 .tw-h-8 {
@@ -1101,10 +1081,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
-.tw-w-auto {
-  width: auto;
-}
-
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -1123,10 +1099,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-full {
   max-width: 100%;
-}
-
-.tw-max-w-screen-lg {
-  max-width: 990px;
 }
 
 .tw-flex-none {
@@ -1806,16 +1778,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 33.333333%;
   }
 
-  .lg\:tw-w-1\/2 {
-    width: 50%;
+  .lg\:tw-w-full {
+    width: 100%;
   }
 
   .lg\:tw-w-10\/12 {
     width: 83.333333%;
   }
 
-  .lg\:tw-w-full {
-    width: 100%;
+  .lg\:tw-w-1\/2 {
+    width: 50%;
   }
 
   .lg\:tw-max-w-full {
