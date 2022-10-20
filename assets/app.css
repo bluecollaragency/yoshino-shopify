@@ -969,6 +969,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.tw-mt-20 {
+  margin-top: 8rem;
+}
+
 .tw-block {
   display: block;
 }
@@ -1119,6 +1123,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-full {
   max-width: 100%;
+}
+
+.tw-max-w-screen-lg {
+  max-width: 990px;
 }
 
 .tw-flex-none {
@@ -1721,6 +1729,11 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-right: 0px;
   }
 
+  .lg\:tw-mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .lg\:tw-mt-24 {
     margin-top: 9.600000000000001rem;
   }
@@ -1884,6 +1897,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-text-left {
     text-align: left;
+  }
+
+  .lg\:tw-text-center {
+    text-align: center;
   }
 
   .lg\:tw-text-lg {

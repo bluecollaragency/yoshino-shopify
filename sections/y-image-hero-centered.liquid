@@ -1,0 +1,108 @@
+{%- style -%}
+  .y-page-hero-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  .y-hero-{{ section.id }}-gradient-overlap {
+    height: calc( 100% + {{ section.settings.gradient_overlap_sm }}px );
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-hero-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    .y-hero-{{ section.id }}-gradient-overlap {
+      height: calc( 100% + {{ section.settings.gradient_overlap_lg }}px );
+    }
+  }
+{%- endstyle -%}
+
+<div class="tw-relative tw-w-full y-page-hero-{{ section.id }}-padding">
+  <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-1 tw-w-full y-hero-{{ section.id }}-gradient-overlap tw-min-h-full"></span>
+  <div class="tw-max-w-screen-xxl tw-mx-auto tw-relative tw-z-10 tw-px-6 lg:tw-px-4">
+    <div class="tw-text-left lg:tw-text-center tw-max-w-full lg:tw-w-10/12 lg:tw-mx-auto">
+      <h1 class="tw-hxl tw-text-white">Solid State Power Stations</h1>
+      <div class="tw-space-y-4 tw-text-base lg:tw-text-xl tw-text-white tw-mt-4">
+        Power beyond limits with lighter, safer, more powerful solid-state technology.
+      </div>
+      {%- if section.settings.image != blank -%}
+        <img
+          srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+          {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+          {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+          {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+          {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+          {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+          {%- if section.settings.image.width >= 2400 -%}{{ section.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
+          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+          src="{{ section.settings.image | image_url: width: 1500 }}"
+          sizes="100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          class="tw-w-full tw-h-auto tw-mt-16"
+        >
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: '' }}
+      {%- endif -%}
+    </div>
+    
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Centered Text Hero Image",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "hero_header",
+      "label": "Header"
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Copy"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 96
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_lg",
+      "label": "Gradient overlap desktop",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "gradient_overlap_sm",
+      "label": "Gradient overlap mobile",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Centered Text Hero Image"
+    }
+  ]
+}
+{% endschema %}

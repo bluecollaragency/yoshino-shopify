@@ -71,7 +71,6 @@
           tw-z-0
           "
         >
-          {% comment %} <img src="https://via.placeholder.com/2400x1357" alt="" class="tw-w-full tw-h-auto lg:tw-w-auto lg:tw-h-full lg:tw-object-contain lg:tw-ml-auto lg:tw-mr-0"> {% endcomment %}
           {%- if section.settings.image != blank -%}
             <img
               srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
