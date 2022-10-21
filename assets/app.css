@@ -1624,6 +1624,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: linear-gradient(180deg, #434f4b 0%, #7f8b87 67.77%, #fafafa 100%);
 }
 
+.bg-radial-gradient {
+  background: radial-gradient(
+    72.22% 64.83% at 50% 39.15%,
+    #95a6a0 11.11%,
+    #485551 43.86%,
+    #23312c 77.78%
+  );
+}
+
 .hover\:tw-bg-bee-green-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(66 132 37 / var(--tw-bg-opacity));
