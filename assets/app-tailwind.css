@@ -103,4 +103,12 @@
       #fafafa 100%
     );
   }
+  .bg-gray-gradient-2 {
+    background: linear-gradient(
+      180deg,
+      #434f4b 0%,
+      #7f8b87 67.77%,
+      #fafafa 100%
+    );
+  }
 }

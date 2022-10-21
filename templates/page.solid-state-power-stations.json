@@ -1,15 +1,23 @@
 {
   "sections": {
-    "3fa35fef-e35b-44ab-a810-da54f9fd2981": {
-      "type": "y-image-hero-centered",
+    "21384cbe-5457-47bf-8ae1-f89ef14cb5d3": {
+      "type": "y-full-width-image",
       "settings": {
-        "hero_header": "",
-        "hero_text": "",
-        "image": "shopify:\/\/shop_images\/solid-state-power-hero.png",
-        "padding_top": 96,
-        "padding_bottom": 0,
-        "gradient_overlap_lg": 0,
-        "gradient_overlap_sm": 0
+        "image": "shopify:\/\/shop_images\/b2000-sst-onjob.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/ssd-hero-mobile.jpg",
+        "bg_color": "#000000",
+        "headline": "SOLID STATE POWER STATIONS",
+        "headline_size": "xl",
+        "copy": "<p>Power beyond limits with lighter, safer, more powerful solid-state technology.<\/p>",
+        "copy_size": "xl",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "center",
+        "content_align_x": "start",
+        "text_align": "left",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "1b87908a-96b7-4496-ba6b-9cee52b96385": {
@@ -158,20 +166,42 @@
         "paragraph_size": "sm"
       }
     },
+    "a49e68e1-d42e-4eae-b52b-c0799a5cfdf9": {
+      "type": "y-full-width-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/go-anywhere.jpg",
+        "bg_color": "#000000",
+        "headline": "The power to go anywhere.",
+        "headline_size": "3",
+        "copy": "<p>For your tent, car, home, or RV, there’s a Yoshino power station built for your needs.<\/p>",
+        "copy_size": "base",
+        "button_link": "#all-portable-power",
+        "button_cta": "View All",
+        "content_align_y": "end",
+        "content_align_x": "start",
+        "text_align": "left",
+        "hide_mobile": false,
+        "padding_top": 96,
+        "padding_bottom": 0
+      }
+    },
     "f38deb56-1af6-4e14-ba70-b64df95f4e19": {
       "type": "y-full-width-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/power-beyond.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/ssd-hero-mobile.jpg",
         "bg_color": "#000000",
-        "headline": "Power Beyond",
+        "headline": "Power Beyond.",
+        "headline_size": "3",
         "copy": "<p>Solid-state technology makes Yoshino power stations more powerful, more portable, and safer than those powered by traditional lithium-ion batteries.<\/p>",
+        "copy_size": "base",
         "button_link": "shopify:\/\/pages\/technology",
         "button_cta": "Learn More",
         "content_align_y": "end",
         "content_align_x": "start",
         "text_align": "left",
         "hide_mobile": false,
-        "padding_top": 96,
+        "padding_top": 0,
         "padding_bottom": 0
       }
     },
@@ -183,32 +213,38 @@
         "intro_text": "",
         "intro_text_size": "base",
         "collection": "portable-power-stations",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     },
     "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9": {
       "type": "y-full-width-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/safety.jpg",
         "bg_color": "#000000",
         "headline": "Safety",
+        "headline_size": "3",
         "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
+        "copy_size": "base",
         "button_link": "shopify:\/\/pages\/technology",
         "button_cta": "Learn More",
         "content_align_y": "end",
         "content_align_x": "end",
         "text_align": "left",
         "hide_mobile": false,
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     },
     "8f2f01c8-94b5-4227-bb85-23af1a3e31db": {
       "type": "y-full-width-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/portability.jpg",
         "bg_color": "#323333",
         "headline": "Portability",
+        "headline_size": "3",
         "copy": "<p>With a power-to-weight ratio up to double what’s possible with traditional lithium-ion batteries, Yoshino SST power stations are built to go anywhere.<\/p>",
+        "copy_size": "base",
         "button_link": "shopify:\/\/pages\/technology",
         "button_cta": "Learn More",
         "content_align_y": "end",
@@ -218,33 +254,16 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "78b6ec73-290c-4546-8e5f-e58e78fe41ca": {
-      "type": "y-full-width-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/app-image.jpg",
-        "bg_color": "#000000",
-        "headline": "",
-        "copy": "",
-        "button_link": "",
-        "button_cta": "",
-        "content_align_y": "end",
-        "content_align_x": "start",
-        "text_align": "left",
-        "hide_mobile": true,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
     }
   },
   "order": [
-    "3fa35fef-e35b-44ab-a810-da54f9fd2981",
+    "21384cbe-5457-47bf-8ae1-f89ef14cb5d3",
     "1b87908a-96b7-4496-ba6b-9cee52b96385",
     "9877bc10-ed1f-40d6-925e-696f2f94702c",
+    "a49e68e1-d42e-4eae-b52b-c0799a5cfdf9",
     "f38deb56-1af6-4e14-ba70-b64df95f4e19",
     "3728893c-59af-4247-b5e0-6c45ba5a7c89",
     "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9",
-    "8f2f01c8-94b5-4227-bb85-23af1a3e31db",
-    "78b6ec73-290c-4546-8e5f-e58e78fe41ca"
+    "8f2f01c8-94b5-4227-bb85-23af1a3e31db"
   ]
 }

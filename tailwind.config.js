@@ -47,6 +47,8 @@ module.exports = {
     'lg:tw-grid-cols-2',
     'lg:tw-grid-cols-3',
     'lg:tw-grid-cols-4',
+    'lg:tw-pr-[8.33333%]',
+    'lg:tw-pl-[8.33333%]',
   ],
   theme: {
     borderRadius: rem2rem(defaultTheme.borderRadius),

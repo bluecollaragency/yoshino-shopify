@@ -8,6 +8,8 @@
         "button_link": "shopify:\/\/pages\/solid-state-power-stations",
         "button_cta": "Learn More",
         "image": "shopify:\/\/shop_images\/home-hero_8f2bfd24-8fda-4dfb-94b7-fe6b8de91b3d.png",
+        "medium_image": "shopify:\/\/shop_images\/home-hero-md.png",
+        "mobile_image": "shopify:\/\/shop_images\/home-hero-sm.png",
         "image_size": "medium",
         "padding_top": 156,
         "padding_bottom": 156,
@@ -66,7 +68,7 @@
         "button_link": "",
         "button_cta": "",
         "content_align": "top",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0
       }
     },

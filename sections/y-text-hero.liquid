@@ -1,0 +1,65 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+  .y-page-section-{{ section.id }}-bg-color {
+    background-color: {{ section.settings.bg_color }}
+  }
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="tw-relative tw-w-full y-page-section-{{ section.id }}-padding tw-overflow-hidden">
+  <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-2 tw-w-full tw-h-full"></span>
+  <div class="lg:tw-h-[600px] tw-container tw-relative tw-px-6 lg:tw-px-4 tw-z-10 tw-flex tw-items-stretch tw-py-24">
+    <span class="tw-inline-block tw-absolute tw-top-24 tw--left-[114px] lg:tw-left-[8.333%] tw-z--10 tw-opacity-20">
+      <svg xmlns="http://www.w3.org/2000/svg" width="327" height="328" fill="none" viewBox="0 0 327 328">
+        <path fill="#B4C0BC" d="M163.481 0 83 46.02v91.999L163.481 184 244 138.019v-92L163.481 0Z"/>
+        <path fill="#525E5A" d="M246.481 144 166 190.019v92L246.481 328 327 282.019v-92L246.481 144Z"/>
+        <path fill="#7F8B87" d="M80.48 143 0 189.019v92L80.48 327 161 281.019v-92L80.48 143Z"/>
+      </svg>
+    </span>
+    <span class="tw-inline-block tw-absolute tw-bottom-24 tw--right-[114px] lg:tw-right-[8.333%] tw-z--10 tw-opacity-20">
+      <svg xmlns="http://www.w3.org/2000/svg" width="329" height="327" fill="none" viewBox="0 0 329 327">
+        <path fill="#B4C0BC" d="m164.571 142.866-80.283 46.052v92.068L164.57 327l80.323-46.014v-92.068l-80.323-46.052Z"/>
+        <path fill="#525E5A" d="m247.882.334-80.283 46.053v92.067l80.283 46.015 80.323-46.015V46.387L247.882.334Z"/>
+        <path fill="#7F8B87" d="M81.016.334.732 46.387v92.067l80.284 46.015 80.322-46.015V46.387L81.016.334Z"/>
+      </svg>
+    </span>
+    <div class="tw-flex tw-w-full lg:tw-w-9/12 lg:tw-mx-auto tw-h-full tw-justify-center tw-items-center tw-text-center tw-z-10">
+      <div>
+        <h1 class="tw-hxl tw-text-uppercase tw-text-white">Solid-State Technology</h1>
+        <p class="tw-text-white tw-mt-8 tw-text-base lg:tw-text-xl">The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and highly flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Custom Text Hero",
+    "class": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Text Hero"
+      }
+    ]
+  }
+{% endschema %}

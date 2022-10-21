@@ -1,17 +1,10 @@
 {
   "sections": {
-    "9f37aee0-aa0a-44a5-b92e-35e01244b08f": {
-      "type": "y-image-hero",
+    "f5317c66-415d-49c2-868e-af7386cf2dc2": {
+      "type": "y-text-hero",
       "settings": {
-        "hero_header": "Solid State Technology",
-        "hero_text": "The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and highly flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.",
-        "button_link": "",
-        "button_cta": "",
-        "image_size": "medium",
-        "padding_top": 156,
-        "padding_bottom": 156,
-        "gradient_overlap_lg": 96,
-        "gradient_overlap_sm": 320
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "a0942f04-b8a7-4c0e-89e8-680c754d15e6": {
@@ -63,25 +56,32 @@
     "6529620e-f725-465b-9184-9d92ab06b0ba": {
       "type": "y-image-with-text",
       "settings": {
-        "padding_top": 96,
-        "padding_bottom": 96,
+        "headline": "Sem Inceptos",
+        "copy": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.",
+        "image": "shopify:\/\/shop_images\/portable-power-station-in-hand-hex.png",
         "image_position": "left",
         "button_link": "",
         "button_cta": "",
-        "content_align": "middle"
+        "content_align": "middle",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "839b77a3-7b9c-4b79-b046-a18de4fccf51": {
       "type": "y-full-width-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/safety.jpg",
         "bg_color": "#000000",
-        "headline": "Headline 3",
-        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
+        "headline": "Safety",
+        "headline_size": "3",
+        "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
+        "copy_size": "base",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
-        "content_align_x": "start",
+        "content_align_x": "end",
         "text_align": "left",
+        "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -89,14 +89,18 @@
     "8e7c9ebe-58d2-419a-80d6-0b6628559637": {
       "type": "y-full-width-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/portability.jpg",
         "bg_color": "#40a828",
-        "headline": "Headline 3",
-        "copy": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.<\/p>",
+        "headline": "Portability",
+        "headline_size": "3",
+        "copy": "<p>With a power-to-weight ratio up to double what’s possible with traditional lithium-ion batteries, Yoshino SST power stations are built to go anywhere.<\/p>",
+        "copy_size": "base",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
         "content_align_x": "end",
         "text_align": "left",
+        "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -104,12 +108,15 @@
     "987ff771-a8ac-4630-8674-73380cc2bcbd": {
       "type": "y-image-with-text",
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "headline": "Sem Inceptos",
+        "copy": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.",
+        "image": "shopify:\/\/shop_images\/portable-power-station-in-hand-hex.png",
         "image_position": "right",
         "button_link": "",
         "button_cta": "",
-        "content_align": "middle"
+        "content_align": "middle",
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     },
     "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14": {
@@ -210,7 +217,7 @@
     }
   },
   "order": [
-    "9f37aee0-aa0a-44a5-b92e-35e01244b08f",
+    "f5317c66-415d-49c2-868e-af7386cf2dc2",
     "a0942f04-b8a7-4c0e-89e8-680c754d15e6",
     "6529620e-f725-465b-9184-9d92ab06b0ba",
     "839b77a3-7b9c-4b79-b046-a18de4fccf51",

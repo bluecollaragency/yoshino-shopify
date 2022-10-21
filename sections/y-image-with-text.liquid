@@ -8,17 +8,40 @@
   <div class="tw-container tw-mx-auto lg:tw-px-4">
     <div 
       class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-8 
-      {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}"
+      lg:tw-px-4 {% if section.settings.content_align == 'middle' %}tw-items-center{% endif %}"
     >
       <div class="{% if section.settings.image_position == 'right' %} tw-order-1 lg:tw-order-2{% endif %}">
-        <img src="https://via.placeholder.com/800x800" alt="">
+        {%- if section.settings.image != blank -%}
+          <img
+            srcset="{%- if section.settings.image.width >= 165 -%}{{ section.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+              {%- if section.settings.image.width >= 360 -%}{{ section.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+              {%- if section.settings.image.width >= 535 -%}{{ section.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+              {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+              {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+              {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w"
+            src="{{ section.settings.image | image_url: width: 688 }}"
+            sizes="(min-width: 990px) {{ section.settings.image.width | divided_by: 2 }}px, 100vw"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="lazy"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="tw-mx-auto lg:tw-mx-0"
+          >
+        {%- else -%}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
       </div>
       <div class="tw-px-6 lg:tw-p-0 {% if section.settings.image_position == 'right' %} tw-order-2 lg:tw-order-1{% endif %}">
-        <h2 class="tw-text-bee-green-200 tw-h2">Sem Inceptos</h2>
-        <p class="tw-mt-4">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.</p>
-        {%- if section.settings.button_link != blank -%}
-          <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
-        {%- endif -%}
+        <div class="{% if section.settings.image_position == 'right' %}lg:tw-pr-[8.33333%] {% else %} lg:tw-pl-[8.33333%] {% endif %}">
+          <h2 class="tw-text-bee-green-200 tw-h2">{{ section.settings.headline }}</h2>
+          <div class="tw-mt-4">
+            {{ section.settings.copy }}
+          </div>
+          {%- if section.settings.button_link != blank -%}
+            <a href="#" class="button tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+          {%- endif -%}
+        </div>
       </div>
     </div>
   </div>
@@ -30,16 +53,14 @@
     "class": "section",
     "settings": [
       {
-        "type": "number",
-        "id": "padding_top",
-        "label": "t:sections.all.padding.padding_top",
-        "default": 0
+        "id": "headline",
+        "type": "text",
+        "label": "Headline"
       },
       {
-        "type": "number",
-        "id": "padding_bottom",
-        "label": "t:sections.all.padding.padding_bottom",
-        "default":  0
+        "id": "copy",
+        "type": "textarea",
+        "label": "Copy"
       },
       {
         "id": "image",
@@ -87,6 +108,18 @@
           }
         ],
         "default": "middle"
+      },
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
       }
     ],
     "presets": [
