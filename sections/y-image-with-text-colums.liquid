@@ -1,14 +1,8 @@
 {{ 'y-section-image-text-column.css' | asset_url | stylesheet_tag }}
 {%- style -%}
   .y-page-section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
-  }
-  @media screen and (min-width: 990px) {
-    .y-page-section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+     padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 {%- endstyle -%}
 <div class="image-w-text-cols tw-relative tw-block y-page-section-{{ section.id }}-padding">

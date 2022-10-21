@@ -1033,6 +1033,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 540px;
 }
 
+.tw-min-h-\[700px\] {
+  min-height: 700px;
+}
+
+.tw-min-h-\[800px\] {
+  min-height: 800px;
+}
+
 .tw-w-full {
   width: 100%;
 }
@@ -1079,6 +1087,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-w-8\/12 {
   width: 66.666667%;
+}
+
+.tw-w-\[110\%\] {
+  width: 110%;
 }
 
 .tw-max-w-screen-xxl {
@@ -1182,6 +1194,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-items-center {
   align-items: center;
+}
+
+.tw-justify-start {
+  justify-content: flex-start;
 }
 
 .tw-justify-end {
@@ -1619,6 +1635,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: 0px;
   }
 
+  .md\:tw-h-full {
+    height: 100%;
+  }
+
   .md\:tw-w-6\/12 {
     width: 50%;
   }
@@ -1629,6 +1649,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:tw-w-1\/2 {
     width: 50%;
+  }
+
+  .md\:tw-w-full {
+    width: 100%;
   }
 
   .md\:tw-grid-cols-2 {
@@ -1754,6 +1778,14 @@ Ensure the default browser behavior of the `hidden` attribute.
     min-height: 760px;
   }
 
+  .lg\:tw-min-h-\[800px\] {
+    min-height: 800px;
+  }
+
+  .lg\:tw-min-h-\[820px\] {
+    min-height: 820px;
+  }
+
   .lg\:tw-w-3\/12 {
     width: 25%;
   }
@@ -1818,8 +1850,16 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-wrap: nowrap;
   }
 
+  .lg\:tw-items-end {
+    align-items: flex-end;
+  }
+
   .lg\:tw-items-center {
     align-items: center;
+  }
+
+  .lg\:tw-justify-end {
+    justify-content: flex-end;
   }
 
   .lg\:tw-border-t-2 {
@@ -1925,6 +1965,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1280px) {
+  .xl\:tw-min-h-\[800px\] {
+    min-height: 800px;
+  }
+
   .xl\:tw-w-2\/3 {
     width: 66.666667%;
   }

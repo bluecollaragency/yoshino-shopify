@@ -100,6 +100,8 @@
         <div class="tw-px-4">
           {%- if request.page_type == 'index' -%}
             <h1 class="header__heading">
+          {%- else -%}
+            <div class="header__heading">
           {%- endif -%}
               <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
                 {%- if section.settings.logo != blank -%}
@@ -118,6 +120,8 @@
               </a>
           {%- if request.page_type == 'index' -%}
             </h1>
+          {%- else -%}
+            </div>
           {%- endif -%}
         </div>
         <button class="lg:tw-hidden tw-rounded-lg focus:tw-outline-none focus:tw-shadow-outline tw-text-gray-800 tw-px-4" @click="open = !open" @keyup.escape.window="open = false">

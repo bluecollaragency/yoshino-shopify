@@ -48,17 +48,17 @@
     <div class="tw-container tw-relative tw-block tw-px-6 lg:tw-px-4 tw-z-10 tw-h-full">
       <div 
         class="
-          tw-flex tw-h-full tw-justify-{{ section.settings.content_align_x }} tw-items-{{ section.settings.content_align_y }}
+          tw-flex tw-h-full tw-justify-start lg:tw-justify-{{ section.settings.content_align_x }} tw-items-end lg:tw-items-{{ section.settings.content_align_y }}
         "
       >
         <div 
           class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6 tw-text-{{ section.settings.text_align }}"
         >
           {%- if section.settings.headline != blank -%}
-          <h2 class="tw-h3 tw-text-white">{{ section.settings.headline | escape }}</h2>
+          <h2 class="tw-h{{ section.settings.headline_size }} tw-text-white">{{ section.settings.headline | escape }}</h2>
           {%- endif -%}
           {%- if section.settings.copy != blank -%}
-          {{ section.settings.copy }}
+          <div class="tw-text-{{ section.settings.copy_size }}">{{ section.settings.copy }}</div>
           {%- endif -%}
           {%- if section.settings.button_cta and section.settings.button_link != blank -%}
             <a href="{{ section.settings.button_link }}" class="tw-btn tw-btn-green tw-mt-12">{{ section.settings.button_cta | escape }}</a>
@@ -93,10 +93,42 @@
         "default": "Headline 3"
       },
       {
+        "type": "select",
+        "id": "headline_size",
+        "label": "Headline Size",
+        "options": [
+            {
+              "value": "3",
+              "label": "Headline 3"
+            },
+            {
+              "value": "xl",
+              "label": "Display 1"
+            }
+          ],
+          "default": "3"
+      },
+      {
         "id": "copy",
         "type": "richtext",
         "label": "Copy",
         "default": "<p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis.</p>"
+      },
+      {
+        "type": "select",
+        "id": "copy_size",
+        "label": "Copy Size",
+        "options": [
+            {
+              "value": "base",
+              "label": "Base"
+            },
+            {
+              "value": "xl",
+              "label": "Large"
+            }
+          ],
+          "default": "base"
       },
       {
         "id": "button_link",
