@@ -101,6 +101,26 @@
         "custom_id": "",
         "image": "{{ product.metafields.pps.zone_2a_image.value }}",
         "bg_color": "#000000",
+        "headline": "{{ product.metafields.pps.zone_2a_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2a_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409": {
+      "type": "y-product-zone2b",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2b_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2b_image_mobile.value }}",
+        "bg_color": "#000",
+        "headline": "{{ product.metafields.pps.zone_2b_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2b_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -146,6 +166,7 @@
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "28850191-11d8-4339-a10b-11b3a2bb824b",
     "7493c56d-8df1-4c93-9751-731c624f1f72",
+    "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409",
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",
     "product-recommendations",
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
