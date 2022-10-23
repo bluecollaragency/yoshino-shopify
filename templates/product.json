@@ -80,34 +80,6 @@
     },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
       "type": "y-product-page-features-hero",
-      "blocks": {
-        "7ee97f6c-c572-4364-9194-9f7b87eff384": {
-          "type": "column",
-          "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
-          }
-        },
-        "0e5a7c65-81b7-4214-b6cd-68c771916daa": {
-          "type": "column",
-          "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
-          }
-        },
-        "b431a8be-67cc-4ee4-bb04-0094e9c7467d": {
-          "type": "column",
-          "settings": {
-            "column_headline": "Headline 6",
-            "column_copy": "<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "7ee97f6c-c572-4364-9194-9f7b87eff384",
-        "0e5a7c65-81b7-4214-b6cd-68c771916daa",
-        "b431a8be-67cc-4ee4-bb04-0094e9c7467d"
-      ],
       "settings": {
         "custom_id": "overview",
         "padding_top": 0,
@@ -116,20 +88,20 @@
         "paragraph_size": "base"
       }
     },
-    "1db5e708-62cc-46aa-88e6-c01752fa696b": {
-      "type": "y-product-full-width-image",
+    "28850191-11d8-4339-a10b-11b3a2bb824b": {
+      "type": "y-yoshino-app",
+      "settings": {
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "7493c56d-8df1-4c93-9751-731c624f1f72": {
+      "type": "y-product-zone2a",
       "settings": {
         "custom_id": "",
-        "image": "shopify:\/\/shop_images\/app-image.jpg",
+        "image": "{{ product.metafields.pps.zone_2a_image.value }}",
         "bg_color": "#000000",
-        "headline": "",
-        "copy": "",
-        "button_link": "",
-        "button_cta": "",
-        "content_align_y": "end",
-        "content_align_x": "start",
-        "text_align": "left",
-        "hide_mobile": true,
+        "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -172,7 +144,8 @@
   "order": [
     "main",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
-    "1db5e708-62cc-46aa-88e6-c01752fa696b",
+    "28850191-11d8-4339-a10b-11b3a2bb824b",
+    "7493c56d-8df1-4c93-9751-731c624f1f72",
     "4833f036-f2ec-4e18-8eed-bcf8299703a9",
     "product-recommendations",
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
