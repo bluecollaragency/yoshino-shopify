@@ -111,12 +111,29 @@
       #fafafa 100%
     );
   }
-  .bg-radial-gradient {
+  .bg-product-features-hero {
     background: radial-gradient(
-      72.22% 64.83% at 50% 39.15%,
-      #95a6a0 11.11%,
-      #485551 43.86%,
-      #23312c 77.78%
+      732.38% 75.15% at 50.13% 21.5%,
+      #95a6a0 0.64%,
+      #485551 9.51%,
+      #23312c 98.44%
     );
+  }
+  @media (min-width: 640px) {
+    .bg-product-features-hero {
+      background: radial-gradient(
+        72.22% 64.83% at 50% 39.15%,
+        #95a6a0 11.11%,
+        #485551 43.86%,
+        #23312c 77.78%
+      );
+    }
+  }
+
+  .y-product-features-icon {
+    @apply tw-flex tw-items-center tw-w-16 tw-h-16 tw-text-bee-green-200;
+  }
+  .y-product-features-icon svg {
+    @apply tw-w-auto tw-h-full tw-max-w-[64px];
   }
 }

@@ -895,6 +895,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-column: span 12 / span 12;
 }
 
+.tw-col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
+.tw-col-span-6 {
+  grid-column: span 6 / span 6;
+}
+
 .tw-col-start-1 {
   grid-column-start: 1;
 }
@@ -1624,13 +1632,39 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: linear-gradient(180deg, #434f4b 0%, #7f8b87 67.77%, #fafafa 100%);
 }
 
-.bg-radial-gradient {
+.bg-product-features-hero {
   background: radial-gradient(
-    72.22% 64.83% at 50% 39.15%,
-    #95a6a0 11.11%,
-    #485551 43.86%,
-    #23312c 77.78%
+    732.38% 75.15% at 50.13% 21.5%,
+    #95a6a0 0.64%,
+    #485551 9.51%,
+    #23312c 98.44%
   );
+}
+
+@media (min-width: 640px) {
+  .bg-product-features-hero {
+    background: radial-gradient(
+      72.22% 64.83% at 50% 39.15%,
+      #95a6a0 11.11%,
+      #485551 43.86%,
+      #23312c 77.78%
+    );
+  }
+}
+
+.y-product-features-icon {
+  display: flex;
+  height: 6.4rem;
+  width: 6.4rem;
+  align-items: center;
+  --tw-text-opacity: 1;
+  color: rgb(64 168 40 / var(--tw-text-opacity));
+}
+
+.y-product-features-icon svg {
+  height: 100%;
+  width: auto;
+  max-width: 64px;
 }
 
 .hover\:tw-bg-bee-green-300:hover {
@@ -1751,6 +1785,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-col-start-8 {
     grid-column-start: 8;
+  }
+
+  .lg\:tw-col-start-6 {
+    grid-column-start: 6;
   }
 
   .lg\:tw-mx-0 {

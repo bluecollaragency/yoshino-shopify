@@ -1,0 +1,56 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+     padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="y-yoshino-app y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-grid tw-grid-cols-2 lg:tw-grid-cols-12 tw-items-center tw-gap-x-8">
+      <div class="lg:tw-col-start-2 tw-col-span-4 tw-order-2 lg:tw-order-1">
+        <h2 class="tw-h3">Yoshino App</h2>
+        <p class="tw-mt-4">Read about how solid-state technology brings a new level of safety to portable battery power.</p>
+      </div>
+      <div class="lg:tw-col-start-6 tw-col-span-6 tw-order-1 lg:tw-order-2">
+        <img 
+          srcset="
+          {{ 'yoshino-app.png' | asset_img_url: '612x' }} 612w,
+          {{ 'yoshino-app.png' | asset_img_url: '1224x' }} 1224w
+          "
+          src="{{ 'yoshino-app.png' | asset_img_url: '612x' }}" 
+          sizes="(min-width: 990px) 50vw, 100vw"
+          loading="lazy"
+          width="612"
+          height="530"
+          alt="Yoshino Power station and phone with app displayed"
+          class="lg:tw-mx-auto"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Yoshino App",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Yoshino App"
+      }
+    ]
+  }
+{% endschema %}

@@ -15,10 +15,9 @@
 {%- endstyle -%}
 
 <div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative y-page-section-{{ section.id }}-padding">
-  <div class="tw-bg-[#23312C] tw-py-24 bg-radial-gradient">
+  <div class="tw-bg-[#23312C] tw-py-24 bg-product-features-hero">
     <div class="tw-container tw-px-6 lg:tw-px-4 ">
       <div class="tw-flex tw-items-center tw-justify-center">
-        {% comment %} <img src="{{ product.metafields.pps.zone_1_product_image | img_url: 'master' }}" alt=""> {% endcomment %}
         <img
           srcset="
             {{ product.metafields.pps.zone_1_product_image | img_url: '600x' }} 600w,
@@ -32,15 +31,43 @@
         >
       </div>
       <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-8 tw-mt-12">
+        
         <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }} tw-text-white">
-          <img src="https://via.placeholder.com/50x50" alt="">
+          <div class="y-product-features-icon">
+            {% render 'y-icon-battery' %}
+          </div>
           <h3 
             class="tw-text-white tw-h{{ section.settings.headline_size }}"
           >
             {{ product.metafields.pps.zone_1a_headline }}
           </h3>
-          {{ product.metafields.pps.zone_1a_copy }}
+          <div>{{ product.metafields.pps.zone_1a_copy }}</div>
         </div>
+
+        <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }} tw-text-white">
+          <div class="y-product-features-icon">
+            {% render 'y-icon-bolt' %}
+          </div>
+          <h3 
+            class="tw-text-white tw-h{{ section.settings.headline_size }}"
+          >
+            {{ product.metafields.pps.zone_1b_headline }}
+          </h3>
+          <div>{{ product.metafields.pps.zone_1b_copy }}</div>
+        </div>
+
+        <div class="tw-space-y-4 tw-text-{{ section.settings.paragraph_size }} tw-text-white">
+          <div class="y-product-features-icon">
+            {% render 'y-icon-stopwatch' %}
+          </div>
+          <h3 
+            class="tw-text-white tw-h{{ section.settings.headline_size }}"
+          >
+            {{ product.metafields.pps.zone_1c_headline }}
+          </h3>
+          <div>{{ product.metafields.pps.zone_1c_copy }}</div>
+        </div>
+
       </div>
     </div>
   </div>
