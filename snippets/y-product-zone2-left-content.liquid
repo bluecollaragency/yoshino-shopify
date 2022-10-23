@@ -1,0 +1,52 @@
+<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="tw-relative tw-block tw-h-[640px] tw-min-h-full y-page-section-{{ section.id }}-padding {% if section.settings.hide_mobile == true %} tw-hidden lg:tw-block{% endif %}">
+  <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full y-page-section-{{ section.id }}-bg-color tw-z-0">
+    {%- if section.settings.image != blank -%}
+      <picture>
+        <source 
+          media="(min-width:640px)" 
+          srcset="
+            {%- if section.settings.image.width >= 750 -%}{{ section.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+            {%- if section.settings.image.width >= 1070 -%}{{ section.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+            {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {%- if section.settings.image.width >= 2400 -%}{{ section.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
+            {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+          "
+        >
+        <img
+        {% if section.settings.mobile_image != blank %}
+          src="{{ section.settings.mobile_image | image_url: width: 1280 }}"
+        {% else %}
+          src="{{ section.settings.image | image_url: width: 1280 }}"
+        {% endif %}
+          sizes="100vw"
+          alt="{{ section.settings.image.alt | escape }}"
+          loading="lazy"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          class="tw-w-full tw-h-full tw-object-cover"
+        >
+      </picture>
+    {%- endif -%}
+  </span>
+  <div class="tw-container tw-relative tw-block tw-px-6 lg:tw-px-4 tw-z-10 tw-h-full">
+    <div 
+      class="
+        tw-flex tw-h-full tw-justify-end tw-items-end
+      "
+    >
+      <div 
+        class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6 tw-text-left"
+      >
+        {%- if section.settings.headline != blank -%}
+          <h2 class="tw-h3 tw-text-white">{{ section.settings.headline | escape }}</h2>
+        {%- endif -%}
+        {%- if section.settings.copy != blank -%}
+          {{ section.settings.copy }}
+        {%- endif -%}
+        {%- if section.settings.button_cta and section.settings.button_link != blank -%}
+          <a href="{{ section.settings.button_link }}" class="tw-btn tw-btn-green tw-mt-12">{{ section.settings.button_cta | escape }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
