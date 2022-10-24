@@ -71,11 +71,11 @@
         "enable_sticky_info": true,
         "gallery_layout": "thumbnail_slider",
         "media_size": "medium",
-        "mobile_thumbnails": "show",
+        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
         "padding_top": 96,
-        "padding_bottom": 12
+        "padding_bottom": 96
       }
     },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
@@ -116,7 +116,7 @@
         "custom_id": "",
         "image": "{{ product.metafields.pps.zone_2b_image.value }}",
         "mobile_image": "{{ product.metafields.pps.zone_2b_image_mobile.value }}",
-        "bg_color": "#000",
+        "bg_color": "#000000",
         "headline": "{{ product.metafields.pps.zone_2b_headline.value }}",
         "headline_size": "3",
         "copy": "<p>{{ product.metafields.pps.zone_2b_copy | metafield_tag }}<\/p>",
@@ -126,13 +126,49 @@
         "padding_bottom": 0
       }
     },
-    "4833f036-f2ec-4e18-8eed-bcf8299703a9": {
-      "type": "y-product-scroll-images",
+    "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90": {
+      "type": "y-product-zone2c",
       "settings": {
-        "section_headline": "Multiple Ways to Charge",
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2c_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2c_image_mobile.value }}",
+        "bg_color": "#000",
+        "headline": "{{ product.metafields.pps.zone_2c_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2c_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "a9cac2f4-62c6-480f-abc0-4112ed3d7555": {
+      "type": "y-product-zone2d",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2d_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2d_image_mobile.value }}",
+        "bg_color": "#000",
+        "headline": "{{ product.metafields.pps.zone_2d_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2d_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d59a0955-d106-4eda-a1f7-ba359756ca0d": {
+      "type": "y-ways-to-charge",
+      "settings": {
+      }
+    },
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
+      "type": "y-product-tech-specs",
+      "settings": {
         "padding_top": 96,
-        "padding_bottom": 0,
-        "custom_id": ""
+        "padding_bottom": 96,
+        "custom_id": "tech-specs"
       }
     },
     "product-recommendations": {
@@ -151,14 +187,6 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
-      "type": "y-product-tech-specs",
-      "settings": {
-        "padding_top": 96,
-        "padding_bottom": 96,
-        "custom_id": "tech-specs"
-      }
     }
   },
   "order": [
@@ -167,8 +195,10 @@
     "28850191-11d8-4339-a10b-11b3a2bb824b",
     "7493c56d-8df1-4c93-9751-731c624f1f72",
     "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409",
-    "4833f036-f2ec-4e18-8eed-bcf8299703a9",
-    "product-recommendations",
-    "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
+    "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90",
+    "a9cac2f4-62c6-480f-abc0-4112ed3d7555",
+    "d59a0955-d106-4eda-a1f7-ba359756ca0d",
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f",
+    "product-recommendations"
   ]
 }
