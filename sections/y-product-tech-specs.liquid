@@ -30,66 +30,88 @@
         <ul class="y-prod-spec-list">
           <li class="y-prod-tech-spec !tw-border-t-0">
             <h6 class="y-spec-title tw-h7">Net Weight</h6>
-            40 lbs
+            {{ product.variants.first.weight | weight_with_unit }}
           </li>
+          {%- if product.metafields.pps.ts_power.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Power</h6>
-            40 lbs
+            {{ product.metafields.pps.ts_power.value | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_wifi_bluetooth.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">WiFi & Bluetooth</h6>
-            40 lbs
+            {{ product.metafields.pps.ts_wifi_bluetooth | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_user_manual.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">User Manual</h6>
-            <a href="#" class="tw-underline hover:tw-no-underline">Download here</a>
+            <a href="{{ product.metafields.pps.ts_user_manual }}" class="tw-underline hover:tw-no-underline">Download here</a>
           </li>
+          {%- endif -%}
         </ul>
       </div>
       <div>
         <ul class="y-prod-spec-list">
+          {%- if product.metafields.pps.ts_dimensions.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Dimensions</h6>
-            15.7 x 8.3 x 10.6 in (40 x 21 x 27 cm)
+             {{ product.metafields.pps.ts_dimensions | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_cell.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Cell</h6>
-            SST Solid State NCM
+            {{ product.metafields.pps.ts_cell | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_full_recharge_time.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Full Recharge Time</h6>
-            1.6 Hours (AC) 13.5 Hours (12/24V Car Adaptor) 4-8 Hours (Using 4x 110W Solar Panels in parallel) 3.5-7 Hours (Using 3x 160W Solar Panels) 4-8 Hours (Using 1x400W Solar Panel)
+             {{ product.metafields.pps.ts_full_recharge_time | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_in_the_box.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">In the Box</h6>
-            1.6 Hours (AC) 13.5 Hours (12/24V Car Adaptor) 4-8 Hours (Using 4x 110W Solar Panels in parallel) 3.5-7 Hours (Using 3x 160W Solar Panels) 4-8 Hours (Using 1x400W Solar Panel)
+            {{ product.metafields.pps.ts_in_the_box | escape }}
           </li>
+          {%- endif -%}
         </ul>
       </div>
       <div>
         <ul class="y-prod-spec-list">
+           {%- if product.metafields.pps.ts_capacity.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Capacity</h6>
-            2400Wh
+            {{ product.metafields.pps.ts_capacity | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_cycles.value != blank -%}
           <li class="y-prod-tech-spec">
-            <h6 class="y-spec-title tw-h7">Cycle</h6>
-            1000 cycles to 80% capacity
+            <h6 class="y-spec-title tw-h7">Cycles</h6>
+            {{ product.metafields.pps.ts_cycles | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_rv30a.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">RV 30A</h6>
-            Yes
+            {{ product.metafields.pps.ts_rv30a | escape }}
           </li>
+          {%- endif -%}
+          {%- if product.metafields.pps.ts_warranty.value != blank -%}
           <li class="y-prod-tech-spec">
             <h6 class="y-spec-title tw-h7">Warranty</h6>
-            24 Months
+            {{ product.metafields.pps.ts_warranty | escape }}
           </li>
+          {%- endif -%}
         </ul>
       </div>
     </div>
-    <div class="tw-text-center tw-mt-12">
+    {% comment %} <div class="tw-text-center tw-mt-12">
       <a href="#" class="tw-btn tw-btn-hollow tw-btn-hollow-green tw-uppercase">View All Specs</a>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 
