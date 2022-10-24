@@ -30,8 +30,8 @@
           "type": "column",
           "settings": {
             "column_image": "shopify:\/\/shop_images\/stopwatch.png",
-            "column_headline": "Fast Charge",
-            "column_copy": "<p>Faster charging is a positive side-effect of increased safety. Larger power stations charge nearly as quickly as smaller ones by safely drawing more power from the wall. In fact, all Yoshino power stations can fast-charge to 80% in an hour or less.<\/p>"
+            "column_headline": "Multiple Ways to Charge",
+            "column_copy": "<p>You’ll find at least three ways to charge every Yoshino power station: AC, DC, USB-C, or solar. And thanks to the increased safety of solid-state batteries, larger power stations can draw up to 1,800 watts to fast-charge to 80% in an hour or less.<\/p>"
           }
         }
       },
@@ -53,16 +53,9 @@
         "paragraph_size": "base"
       }
     },
-    "6529620e-f725-465b-9184-9d92ab06b0ba": {
-      "type": "y-image-with-text",
+    "f9199626-667a-4324-b039-f9356bb9e7bf": {
+      "type": "y-yoshino-app",
       "settings": {
-        "headline": "Sem Inceptos",
-        "copy": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.",
-        "image": "shopify:\/\/shop_images\/portable-power-station-in-hand-hex.png",
-        "image_position": "left",
-        "button_link": "",
-        "button_cta": "",
-        "content_align": "middle",
         "padding_top": 96,
         "padding_bottom": 96
       }
@@ -70,58 +63,21 @@
     "839b77a3-7b9c-4b79-b046-a18de4fccf51": {
       "type": "y-full-width-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/safety.jpg",
+        "image": "shopify:\/\/shop_images\/lighter-desktop.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/lighter-sm.jpg",
         "bg_color": "#000000",
-        "headline": "Safety",
+        "headline": "Weighs Less so You Can Do More",
         "headline_size": "3",
-        "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
+        "copy": "<p>The higher energy density of Yoshino solid-state batteries puts more capacity in a smaller, lighter form factor for truly portable power.<\/p>",
         "copy_size": "base",
         "button_link": "",
         "button_cta": "",
         "content_align_y": "end",
-        "content_align_x": "end",
+        "content_align_x": "start",
         "text_align": "left",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
-      }
-    },
-    "8e7c9ebe-58d2-419a-80d6-0b6628559637": {
-      "type": "y-full-width-image",
-      "settings": {
-        "image": "shopify:\/\/shop_images\/portability.jpg",
-        "bg_color": "#40a828",
-        "headline": "Portability",
-        "headline_size": "3",
-        "copy": "<p>With a power-to-weight ratio up to double what’s possible with traditional lithium-ion batteries, Yoshino SST power stations are built to go anywhere.<\/p>",
-        "copy_size": "base",
-        "button_link": "",
-        "button_cta": "",
-        "content_align_y": "end",
-        "content_align_x": "end",
-        "text_align": "left",
-        "hide_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "987ff771-a8ac-4630-8674-73380cc2bcbd": {
-      "type": "y-image-with-text",
-      "settings": {
-        "headline": "Sem Inceptos",
-        "copy": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.",
-        "image": "shopify:\/\/shop_images\/portable-power-station-in-hand-hex.png",
-        "image_position": "right",
-        "button_link": "",
-        "button_cta": "",
-        "content_align": "middle",
-        "padding_top": 96,
-        "padding_bottom": 96
-      }
-    },
-    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14": {
-      "type": "y-scroll-images",
-      "settings": {
       }
     },
     "5c8c4dd1-7149-468b-8f31-5000668ff774": {
@@ -214,16 +170,21 @@
         "headline_size": "6",
         "paragraph_size": "sm"
       }
+    },
+    "70907132-0b6d-42ae-8c33-b2d5dde45301": {
+      "type": "y-ways-to-charge",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 96
+      }
     }
   },
   "order": [
     "f5317c66-415d-49c2-868e-af7386cf2dc2",
     "a0942f04-b8a7-4c0e-89e8-680c754d15e6",
-    "6529620e-f725-465b-9184-9d92ab06b0ba",
+    "f9199626-667a-4324-b039-f9356bb9e7bf",
     "839b77a3-7b9c-4b79-b046-a18de4fccf51",
-    "8e7c9ebe-58d2-419a-80d6-0b6628559637",
-    "987ff771-a8ac-4630-8674-73380cc2bcbd",
-    "9f0f77ce-45e1-4ebc-ac2e-b05977a15e14",
-    "5c8c4dd1-7149-468b-8f31-5000668ff774"
+    "5c8c4dd1-7149-468b-8f31-5000668ff774",
+    "70907132-0b6d-42ae-8c33-b2d5dde45301"
   ]
 }

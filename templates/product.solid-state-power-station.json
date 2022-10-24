@@ -100,6 +100,7 @@
       "settings": {
         "custom_id": "",
         "image": "{{ product.metafields.pps.zone_2a_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2a_image_mobile.value }}",
         "bg_color": "#000000",
         "headline": "{{ product.metafields.pps.zone_2a_headline.value }}",
         "headline_size": "3",
