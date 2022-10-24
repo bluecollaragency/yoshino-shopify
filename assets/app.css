@@ -1113,16 +1113,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
-.tw-w-11\/12 {
-  width: 91.666667%;
-}
-
 .tw-w-\[95\%\] {
   width: 95%;
-}
-
-.tw-w-\[33px\] {
-  width: 33px;
 }
 
 .tw-max-w-screen-xxl {
@@ -1642,6 +1634,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-gray-gradient-2 {
   background: linear-gradient(180deg, #434f4b 0%, #7f8b87 67.77%, #fafafa 100%);
+}
+
+.bg-product-main {
+  background: linear-gradient(180deg, #434f4b 0%, #7f8b87 67.77%, #a3aba8 100%);
+}
+
+@media (min-width: 990px) {
+  .bg-product-main {
+    background: linear-gradient(
+      180deg,
+      #525e5a 0%,
+      #7f8b87 60.09%,
+      #fafafa 100%
+    );
+  }
 }
 
 .bg-product-features-hero {

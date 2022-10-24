@@ -111,6 +111,24 @@
       #fafafa 100%
     );
   }
+  .bg-product-main {
+    background: linear-gradient(
+      180deg,
+      #434f4b 0%,
+      #7f8b87 67.77%,
+      #a3aba8 100%
+    );
+  }
+  @media (min-width: 990px) {
+    .bg-product-main {
+      background: linear-gradient(
+        180deg,
+        #525e5a 0%,
+        #7f8b87 60.09%,
+        #fafafa 100%
+      );
+    }
+  }
   .bg-product-features-hero {
     background: radial-gradient(
       732.38% 75.15% at 50.13% 21.5%,

@@ -74,8 +74,8 @@
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 96,
-        "padding_bottom": 96
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "c5597ab6-4f04-47d7-8683-0567a93299c3": {
@@ -105,6 +105,8 @@
         "headline_size": "3",
         "copy": "<p>{{ product.metafields.pps.zone_2a_copy | metafield_tag }}<\/p>",
         "copy_size": "base",
+        "button_link": "{{ product.metafields.pps.zone_2a_link.value }}",
+        "button_cta": "{{ product.metafields.pps.zone_2a_cta.value }}",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -121,6 +123,8 @@
         "headline_size": "3",
         "copy": "<p>{{ product.metafields.pps.zone_2b_copy | metafield_tag }}<\/p>",
         "copy_size": "base",
+        "button_link": "{{ product.metafields.pps.zone_2b_link.value }}",
+        "button_cta": "{{ product.metafields.pps.zone_2b_cta.value }}",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -132,11 +136,13 @@
         "custom_id": "",
         "image": "{{ product.metafields.pps.zone_2c_image.value }}",
         "mobile_image": "{{ product.metafields.pps.zone_2c_image_mobile.value }}",
-        "bg_color": "#000",
+        "bg_color": "#000000",
         "headline": "{{ product.metafields.pps.zone_2c_headline.value }}",
         "headline_size": "3",
         "copy": "<p>{{ product.metafields.pps.zone_2c_copy | metafield_tag }}<\/p>",
         "copy_size": "base",
+        "button_link": "{{ product.metafields.pps.zone_2c_link.value }}",
+        "button_cta": "{{ product.metafields.pps.zone_2c_cta.value }}",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -148,11 +154,13 @@
         "custom_id": "",
         "image": "{{ product.metafields.pps.zone_2d_image.value }}",
         "mobile_image": "{{ product.metafields.pps.zone_2d_image_mobile.value }}",
-        "bg_color": "#000",
+        "bg_color": "#000000",
         "headline": "{{ product.metafields.pps.zone_2d_headline.value }}",
         "headline_size": "3",
         "copy": "<p>{{ product.metafields.pps.zone_2d_copy | metafield_tag }}<\/p>",
         "copy_size": "base",
+        "button_link": "{{ product.metafields.pps.zone_2d_link.value }}",
+        "button_cta": "{{ product.metafields.pps.zone_2d_cta.value }}",
         "hide_mobile": false,
         "padding_top": 0,
         "padding_bottom": 0
@@ -161,6 +169,8 @@
     "d59a0955-d106-4eda-a1f7-ba359756ca0d": {
       "type": "y-ways-to-charge",
       "settings": {
+        "padding_top": 96,
+        "padding_bottom": 0
       }
     },
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
