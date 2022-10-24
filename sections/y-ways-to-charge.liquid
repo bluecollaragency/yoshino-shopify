@@ -1,0 +1,96 @@
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  .slider--desktop .slider__slide:first-child {
+    margin: 0 !important;
+    scroll-margin-left: 0 !important;
+  }
+</style>
+<div class="ways-to-charge-slider y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-text-center">
+    <h2 class="tw-h4">Multiple Ways to Charge</h2>
+  </div>
+    <slider-component class="tw-mt-12">
+      <div class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--desktop slider--tablet !tw-scroll-pl-0" id="Slider-template--ways-to-charge-slider" role="list">
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-1">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-2">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-3">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-4">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-5">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-slider-6">
+          <div class="tw-w-full tw-bg-white">
+            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-buttons no-js-hidden">
+        <button type="button" class="slider-button slider-button--prev disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-arrow-left' %}</button>
+        <div class="slider-counter caption">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">4</span>
+        </div>
+        <button type="button" class="slider-button slider-button--next disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-arrow-right' %}</button>
+      </div>
+    </slider-component>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Ways to charge",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 96
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ways to charge"
+      }
+    ]
+  }
+{% endschema %}

@@ -1113,6 +1113,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 66.666667%;
 }
 
+.tw-w-11\/12 {
+  width: 91.666667%;
+}
+
+.tw-w-\[95\%\] {
+  width: 95%;
+}
+
+.tw-w-\[33px\] {
+  width: 33px;
+}
+
 .tw-max-w-screen-xxl {
   max-width: 1440px;
 }
@@ -1692,9 +1704,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
+.disabled\:tw-cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
 .disabled\:tw-text-gray-500:disabled {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.disabled\:tw-opacity-50:disabled {
+  opacity: 0.5;
 }
 
 @media (min-width: 750px) {
