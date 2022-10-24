@@ -1,0 +1,186 @@
+{
+  "sections": {
+    "main": {
+      "type": "y-main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "a79e161a-e5c9-4e01-a331-31fe6fc3ba5c": {
+          "type": "product_type",
+          "settings": {
+          }
+        },
+        "caption": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "0e171c1d-3c81-4893-bff4-2ad417f98f31": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "6500f609-d5f5-499b-8a93-df18955fa7cf": {
+          "type": "product_features_list",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "a79e161a-e5c9-4e01-a331-31fe6fc3ba5c",
+        "caption",
+        "price",
+        "0e171c1d-3c81-4893-bff4-2ad417f98f31",
+        "buy_buttons",
+        "description",
+        "6500f609-d5f5-499b-8a93-df18955fa7cf",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "thumbnail_slider",
+        "media_size": "medium",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "c5597ab6-4f04-47d7-8683-0567a93299c3": {
+      "type": "y-product-page-features-hero",
+      "settings": {
+        "custom_id": "overview",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "headline_size": "5",
+        "paragraph_size": "base"
+      }
+    },
+    "28850191-11d8-4339-a10b-11b3a2bb824b": {
+      "type": "y-yoshino-app",
+      "settings": {
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "7493c56d-8df1-4c93-9751-731c624f1f72": {
+      "type": "y-product-zone2a",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2a_image.value }}",
+        "bg_color": "#000000",
+        "headline": "{{ product.metafields.pps.zone_2a_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2a_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409": {
+      "type": "y-product-zone2b",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2b_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2b_image_mobile.value }}",
+        "bg_color": "#000000",
+        "headline": "{{ product.metafields.pps.zone_2b_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2b_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90": {
+      "type": "y-product-zone2c",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2c_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2c_image_mobile.value }}",
+        "bg_color": "#000",
+        "headline": "{{ product.metafields.pps.zone_2c_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2c_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "a9cac2f4-62c6-480f-abc0-4112ed3d7555": {
+      "type": "y-product-zone2d",
+      "settings": {
+        "custom_id": "",
+        "image": "{{ product.metafields.pps.zone_2d_image.value }}",
+        "mobile_image": "{{ product.metafields.pps.zone_2d_image_mobile.value }}",
+        "bg_color": "#000",
+        "headline": "{{ product.metafields.pps.zone_2d_headline.value }}",
+        "headline_size": "3",
+        "copy": "<p>{{ product.metafields.pps.zone_2d_copy | metafield_tag }}<\/p>",
+        "copy_size": "base",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "d59a0955-d106-4eda-a1f7-ba359756ca0d": {
+      "type": "y-ways-to-charge",
+      "settings": {
+      }
+    },
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f": {
+      "type": "y-product-tech-specs",
+      "settings": {
+        "padding_top": 96,
+        "padding_bottom": 96,
+        "custom_id": "tech-specs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c5597ab6-4f04-47d7-8683-0567a93299c3",
+    "28850191-11d8-4339-a10b-11b3a2bb824b",
+    "7493c56d-8df1-4c93-9751-731c624f1f72",
+    "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409",
+    "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90",
+    "a9cac2f4-62c6-480f-abc0-4112ed3d7555",
+    "d59a0955-d106-4eda-a1f7-ba359756ca0d",
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
+  ]
+}
