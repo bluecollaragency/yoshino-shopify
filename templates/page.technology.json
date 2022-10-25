@@ -171,11 +171,43 @@
         "paragraph_size": "sm"
       }
     },
-    "70907132-0b6d-42ae-8c33-b2d5dde45301": {
+    "022c18e6-751c-47bb-9c89-2a656163f7d8": {
       "type": "y-ways-to-charge",
+      "blocks": {
+        "e0fa9ecb-fa81-4a0c-84f9-87017190a820": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_32.jpg"
+          }
+        },
+        "6355e6b3-1a56-473e-808e-cb48d7605b1b": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_31-1_ebd3a30e-8f9e-4cf5-8e6b-0d58499f3806.jpg"
+          }
+        },
+        "4f370021-9774-428a-8b66-16ce912e3f97": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_33.jpg"
+          }
+        },
+        "93a4247e-1aeb-4d92-9143-11bad4b086bd": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_32-1_a88ed11d-b2e3-4a4e-bbea-7e1fa6cec1dc.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e0fa9ecb-fa81-4a0c-84f9-87017190a820",
+        "6355e6b3-1a56-473e-808e-cb48d7605b1b",
+        "4f370021-9774-428a-8b66-16ce912e3f97",
+        "93a4247e-1aeb-4d92-9143-11bad4b086bd"
+      ],
       "settings": {
-        "padding_top": 0,
-        "padding_bottom": 96
+        "padding_top": 96,
+        "padding_bottom": 0
       }
     }
   },
@@ -185,6 +217,6 @@
     "f9199626-667a-4324-b039-f9356bb9e7bf",
     "839b77a3-7b9c-4b79-b046-a18de4fccf51",
     "5c8c4dd1-7149-468b-8f31-5000668ff774",
-    "70907132-0b6d-42ae-8c33-b2d5dde45301"
+    "022c18e6-751c-47bb-9c89-2a656163f7d8"
   ]
 }

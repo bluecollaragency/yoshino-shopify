@@ -31,36 +31,33 @@
   </div>
     <slider-component class="tw-mt-12">
       <div class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--desktop slider--tablet !tw-scroll-pl-0" id="Slider-template--ways-to-charge-{{section.id}}-slider" role="list">
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-1">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-2">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-3">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-4">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-5">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640/bada55" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
-        <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-6">
-          <div class="tw-w-full tw-bg-white">
-            <img src="https://via.placeholder.com/1512x640" alt="" class="tw-w-full tw-h-auto">
-          </div>
-        </div>
+        {% for block in section.blocks %}  
+          {% case block.type %}
+          {%- when 'images' -%}
+            <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-{{ forloop.index }}">
+              <div class="tw-w-full tw-bg-white">
+                <img
+                  srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
+                  {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                  {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                  {%- if block.settings.image.width >= 2400 -%}{{ block.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
+                  {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
+                  src="{{ block.settings.image | image_url: width: 1500 }}"
+                  sizes="100vw"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                  class="tw-w-full tw-h-auto"
+                >
+              </div>
+            </div>
+          {% endcase %} 
+        {% endfor %}
+        
       </div>
 
       <div class="slider-buttons no-js-hidden">
@@ -92,6 +89,19 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default": 0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "images",
+        "name": "Images",
+        "settings": [
+          {
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image"
+          }
+        ]
       }
     ],
     "presets": [
