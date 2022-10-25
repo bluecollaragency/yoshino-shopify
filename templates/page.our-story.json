@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "26eda084-b665-4277-a80a-b765f7a9487d": {
+      "type": "y-full-width-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/our-story-hero.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/our-story-hero-sm.jpg",
+        "bg_color": "#000",
+        "headline": "Our Story",
+        "headline_size": "xl",
+        "copy": "",
+        "copy_size": "base",
+        "button_link": "",
+        "button_cta": "",
+        "content_align_y": "center",
+        "content_align_x": "start",
+        "text_align": "left",
+        "hide_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "506a81d2-abac-418d-ab9c-ee5bf0072367": {
+      "type": "rich-text",
+      "blocks": {
+        "template--15932523806886__506a81d2-abac-418d-ab9c-ee5bf0072367-16667050114face105-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At Yoshino, we believe that progress and sustainability go hand in hand,and we strive to develop new solutions to meet the energy needs of individualsand families everywhere. Our innovative solid state battery technology makesfor longer-lasting products that are lighter, safer, and greener than traditional lithium-ion batteries. Designed with cleaner energy in mind, our products provide reliable power on the go, keeping people more connected wherever they are. That’s Power Beyond.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--15932523806886__506a81d2-abac-418d-ab9c-ee5bf0072367-16667050114face105-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26eda084-b665-4277-a80a-b765f7a9487d",
+    "506a81d2-abac-418d-ab9c-ee5bf0072367"
+  ]
+}

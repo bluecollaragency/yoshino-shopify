@@ -4,7 +4,8 @@
       "type": "y-full-width-image",
       "settings": {
         "image": "shopify:\/\/shop_images\/contact-hero.jpg",
-        "bg_color": "#000",
+        "mobile_image": "shopify:\/\/shop_images\/contact-hero-sm.jpg",
+        "bg_color": "#000000",
         "headline": "CONTACT US",
         "headline_size": "xl",
         "copy": "",
@@ -31,8 +32,6 @@
       "type": "y-contact-form",
       "settings": {
         "heading": "Contact",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
         "padding_top": 100,
         "padding_bottom": 100
       }
