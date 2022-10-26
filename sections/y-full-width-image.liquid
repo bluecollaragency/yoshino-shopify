@@ -20,7 +20,7 @@
     {% if section.settings.hide_mobile == true %} tw-hidden lg:tw-block{% endif %}
   "
 >
-  <div class="tw-relative tw-block tw-h-[640px] tw-min-h-full">
+  <div class="tw-relative tw-block tw-h-[640px] tw-min-h-full {% if section.settings.tall == true %} lg:tw-h-[800px]{% endif %}">
     <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full y-page-section-{{ section.id }}-bg-color tw-z-0">
       {%- if section.settings.image != blank -%}
         <picture>
@@ -83,6 +83,12 @@
     "name": "Custom Full Width Image",
     "class": "section",
     "settings": [
+      {
+        "id": "tall",
+        "type": "checkbox",
+        "label": "Hero Image?",
+        "default": false
+      },
       {
         "id": "image",
         "type": "image_picker",

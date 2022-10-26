@@ -35,7 +35,7 @@
           {% case block.type %}
           {%- when 'images' -%}
             <div class="tw-w-[95%] slider__slide" id="Slide-template--ways-to-charge-{{section.id}}--slider-{{ forloop.index }}">
-              <div class="tw-w-full tw-bg-white">
+              <div class="tw-relative tw-w-full tw-pb-[50%] tw-bg-white">
                 <img
                   srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
                   {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
@@ -48,10 +48,10 @@
                   src="{{ block.settings.image | image_url: width: 1500 }}"
                   sizes="100vw"
                   alt="{{ block.settings.image.alt | escape }}"
-                  loading="lazy"
+                  loading="eager"
                   width="{{ block.settings.image.width }}"
                   height="{{ block.settings.image.height }}"
-                  class="tw-w-full tw-h-auto"
+                  class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
                 >
               </div>
             </div>

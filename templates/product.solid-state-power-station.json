@@ -33,6 +33,7 @@
         },
         "buy_buttons": {
           "type": "buy_buttons",
+          "disabled": true,
           "settings": {
             "show_dynamic_checkout": true
           }
@@ -169,6 +170,38 @@
     },
     "d59a0955-d106-4eda-a1f7-ba359756ca0d": {
       "type": "y-ways-to-charge",
+      "blocks": {
+        "e9f09cef-74fd-4144-8f59-6b011b76cc3d": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_32-1_a88ed11d-b2e3-4a4e-bbea-7e1fa6cec1dc.jpg"
+          }
+        },
+        "b034cffe-be30-43c8-a51a-3c97625daea4": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_33_f92423d4-c93a-49f5-9b5d-6799939acdd3.jpg"
+          }
+        },
+        "189edc74-0ac2-472e-aa25-84e4ec4d0b4c": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_31-1_ebd3a30e-8f9e-4cf5-8e6b-0d58499f3806.jpg"
+          }
+        },
+        "a8e293a5-4d41-4d25-b17b-215e78041535": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_32.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e9f09cef-74fd-4144-8f59-6b011b76cc3d",
+        "b034cffe-be30-43c8-a51a-3c97625daea4",
+        "189edc74-0ac2-472e-aa25-84e4ec4d0b4c",
+        "a8e293a5-4d41-4d25-b17b-215e78041535"
+      ],
       "settings": {
         "padding_top": 96,
         "padding_bottom": 0

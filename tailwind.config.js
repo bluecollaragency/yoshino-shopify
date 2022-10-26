@@ -40,6 +40,8 @@ module.exports = {
     'tw-justify-end',
     'tw-grid-cols-1',
     'tw-grid-cols-2',
+    'tw-h-[640px]',
+    'lg:tw-h-[800px]',
     'lg:tw-col-span-6',
     'lg:tw-min-h-[380px]',
     'lg:tw-min-h-[760px]',
