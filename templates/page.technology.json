@@ -189,36 +189,50 @@
     "022c18e6-751c-47bb-9c89-2a656163f7d8": {
       "type": "y-ways-to-charge",
       "blocks": {
-        "e0fa9ecb-fa81-4a0c-84f9-87017190a820": {
+        "fb7f500a-5eac-4c8d-9b30-6c4338a2aebb": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_32.jpg"
+            "image": "shopify:\/\/shop_images\/Rectangle_32-1_68b64c29-774e-467f-9cf0-34e169a48fed.jpg"
           }
         },
-        "6355e6b3-1a56-473e-808e-cb48d7605b1b": {
+        "93c31815-7d98-4039-9e5f-f3ed015e0a71": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_31-1_ebd3a30e-8f9e-4cf5-8e6b-0d58499f3806.jpg"
+            "image": "shopify:\/\/shop_images\/Rectangle_31_1701f03c-2d46-49f2-8bba-d1fc4f7152d7.jpg"
           }
         },
-        "4f370021-9774-428a-8b66-16ce912e3f97": {
+        "8b90769d-7167-4ec4-8e66-f914210b0d06": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_33.jpg"
+            "image": "shopify:\/\/shop_images\/Rectangle_32_73cf3b75-7c7f-465e-8937-ace7307858b3.jpg"
           }
         },
-        "93a4247e-1aeb-4d92-9143-11bad4b086bd": {
+        "6342e011-ca42-48eb-a2ba-e7b3111f5c12": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_32-1_a88ed11d-b2e3-4a4e-bbea-7e1fa6cec1dc.jpg"
+            "image": "shopify:\/\/shop_images\/Rectangle_31-1_1f349f19-ab44-4f00-a970-2c364f75fa01.jpg"
+          }
+        },
+        "e0528d1d-e531-41cb-9da4-f7ca617bbbe2": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_34_64b14144-9045-4f15-9dc4-a6de3f7822f8.jpg"
+          }
+        },
+        "c0d6c167-5fb2-436a-bacb-62acab07069d": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_33_99c6ff2d-f1ec-4689-9fa0-1d6f9052d635.jpg"
           }
         }
       },
       "block_order": [
-        "e0fa9ecb-fa81-4a0c-84f9-87017190a820",
-        "6355e6b3-1a56-473e-808e-cb48d7605b1b",
-        "4f370021-9774-428a-8b66-16ce912e3f97",
-        "93a4247e-1aeb-4d92-9143-11bad4b086bd"
+        "fb7f500a-5eac-4c8d-9b30-6c4338a2aebb",
+        "93c31815-7d98-4039-9e5f-f3ed015e0a71",
+        "8b90769d-7167-4ec4-8e66-f914210b0d06",
+        "6342e011-ca42-48eb-a2ba-e7b3111f5c12",
+        "e0528d1d-e531-41cb-9da4-f7ca617bbbe2",
+        "c0d6c167-5fb2-436a-bacb-62acab07069d"
       ],
       "settings": {
         "padding_top": 96,
