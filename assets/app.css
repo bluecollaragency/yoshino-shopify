@@ -1538,6 +1538,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 50%;
 }
 
+.tw-pb-\[80\%\] {
+  padding-bottom: 80%;
+}
+
 .tw-text-left {
   text-align: left;
 }
@@ -2078,6 +2082,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-pr-\[8\.33333\%\] {
     padding-right: 8.33333%;
+  }
+
+  .lg\:tw-pb-\[50\%\] {
+    padding-bottom: 50%;
   }
 
   .lg\:tw-text-left {

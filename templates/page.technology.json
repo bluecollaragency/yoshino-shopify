@@ -53,6 +53,20 @@
         "paragraph_size": "base"
       }
     },
+    "bcf09971-b421-4123-8085-0365d459a783": {
+      "type": "y-image-with-text",
+      "settings": {
+        "headline": "Power Beyond Innovation",
+        "copy": "Just as the original lithium-ion battery ushered in a new era for portable power, our solid-state power stations are changing the world by helping people stay connected wherever they are: while traveling, on a job site, or at home during a blackout.",
+        "image": "shopify:\/\/shop_images\/sst-technology.png",
+        "image_position": "left",
+        "button_link": "",
+        "button_cta": "",
+        "content_align": "middle",
+        "padding_top": 96,
+        "padding_bottom": 0
+      }
+    },
     "f9199626-667a-4324-b039-f9356bb9e7bf": {
       "type": "y-yoshino-app",
       "settings": {
@@ -63,6 +77,7 @@
     "839b77a3-7b9c-4b79-b046-a18de4fccf51": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/lighter-desktop.jpg",
         "mobile_image": "shopify:\/\/shop_images\/lighter-sm.jpg",
         "bg_color": "#000000",
@@ -214,6 +229,7 @@
   "order": [
     "f5317c66-415d-49c2-868e-af7386cf2dc2",
     "a0942f04-b8a7-4c0e-89e8-680c754d15e6",
+    "bcf09971-b421-4123-8085-0365d459a783",
     "f9199626-667a-4324-b039-f9356bb9e7bf",
     "839b77a3-7b9c-4b79-b046-a18de4fccf51",
     "5c8c4dd1-7149-468b-8f31-5000668ff774",
