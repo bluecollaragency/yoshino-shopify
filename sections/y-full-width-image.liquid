@@ -46,6 +46,7 @@
             width="{{ section.settings.image.width }}"
             height="{{ section.settings.image.height }}"
             class="tw-w-full tw-h-full tw-object-cover"
+            style="object-position: {{ section.settings.image_align_x }}% {{ section.settings.image_align_y }}%"
           >
         </picture>
       {%- else -%}
@@ -93,6 +94,24 @@
         "id": "image",
         "type": "image_picker",
         "label": "Image"
+      },
+      {
+        "id": "image_align_x",
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Image align X",
+        "default": 50
+      },
+      {
+        "id": "image_align_y",
+        "type": "range",
+        "min": 0,
+        "max": 100,
+        "step": 1,
+        "label": "Image align Y",
+        "default": 50
       },
       {
         "id": "mobile_image",

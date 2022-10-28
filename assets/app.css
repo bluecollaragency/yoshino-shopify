@@ -429,10 +429,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .tw-hxl {
-  font-size: 5.6rem;
+  font-size: 4.6rem;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 4.6rem;
+  line-height: 4rem;
   letter-spacing: -0.025em;
 }
 
@@ -456,7 +456,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .tw-h3 {
-  font-size: 5.6rem;
+  font-size: 4rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.025em;
@@ -1432,6 +1432,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   object-fit: cover;
 }
 
+.tw-object-right {
+  -o-object-position: right;
+  object-position: right;
+}
+
 .tw-p-1\.5 {
   padding: 0.6000000000000001rem;
 }
@@ -1528,14 +1533,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-pt-24 {
   padding-top: 9.600000000000001rem;
-}
-
-.tw-pb-\[56\.25\%\] {
-  padding-bottom: 56.25%;
-}
-
-.tw-pb-\[50\%\] {
-  padding-bottom: 50%;
 }
 
 .tw-pb-\[80\%\] {
@@ -2080,12 +2077,12 @@ Ensure the default browser behavior of the `hidden` attribute.
     padding-left: 1.6rem;
   }
 
-  .lg\:tw-pr-\[8\.33333\%\] {
-    padding-right: 8.33333%;
-  }
-
   .lg\:tw-pb-\[50\%\] {
     padding-bottom: 50%;
+  }
+
+  .lg\:tw-pr-\[8\.33333\%\] {
+    padding-right: 8.33333%;
   }
 
   .lg\:tw-text-left {

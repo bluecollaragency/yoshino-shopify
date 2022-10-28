@@ -11,9 +11,12 @@
     "26eda084-b665-4277-a80a-b765f7a9487d": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/our-story-hero.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "mobile_image": "shopify:\/\/shop_images\/our-story-hero-sm.jpg",
-        "bg_color": "#000",
+        "bg_color": "#000000",
         "headline": "Our Story",
         "headline_size": "xl",
         "copy": "",
@@ -34,7 +37,7 @@
         "template--15932523806886__506a81d2-abac-418d-ab9c-ee5bf0072367-16667050114face105-1": {
           "type": "text",
           "settings": {
-            "text": "<p>At Yoshino, we believe that progress and sustainability go hand in hand,and we strive to develop new solutions to meet the energy needs of individualsand families everywhere. Our innovative solid state battery technology makesfor longer-lasting products that are lighter, safer, and greener than traditional lithium-ion batteries. Designed with cleaner energy in mind, our products provide reliable power on the go, keeping people more connected wherever they are. That’s Power Beyond.<\/p>"
+            "text": "<p>At Yoshino, we believe that progress and sustainability go hand in hand, and we strive to develop new solutions to meet the energy needs of individualsand families everywhere. Our innovative solid state battery technology makesfor longer-lasting products that are lighter, safer, and greener than traditional lithium-ion batteries. Designed with cleaner energy in mind, our products provide reliable power on the go, keeping people more connected wherever they are. That’s Power Beyond.<\/p>"
           }
         }
       },
