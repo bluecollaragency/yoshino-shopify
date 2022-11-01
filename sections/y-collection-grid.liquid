@@ -51,9 +51,9 @@
           </div>
           <div class="tw-mt-4">
             <h3 class="tw-h6 tw-text-gray-800">{{ product.title | escape }}</h3>
-            <span class="tw-block tw-font-medium tw-text-gray-800">
+            {% comment %} <span class="tw-block tw-font-medium tw-text-gray-800">
               {%- render 'y-price-small', product: product, use_variant: true, show_badges: true, price_class: 'tw-text-gray-800' -%}
-            </span>
+            </span> {% endcomment %}
           </div>
           <a href="{{ product.url }}" class="blog-card-link tw-mt-4">Details</a>
         </div>
