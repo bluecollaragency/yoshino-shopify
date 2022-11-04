@@ -34,15 +34,58 @@
     "506a81d2-abac-418d-ab9c-ee5bf0072367": {
       "type": "rich-text",
       "blocks": {
-        "template--15932523806886__506a81d2-abac-418d-ab9c-ee5bf0072367-16667050114face105-1": {
+        "47303feb-5e13-4157-a402-f5b3dfbd9cd3": {
+          "type": "caption",
+          "settings": {
+            "caption": "At Yoshino, we believe that progress and sustainability go hand in hand, and we strive to develop new solutions to meet the energy needs of individualsand families everywhere. Our innovative solid state battery technology makesfor longer-lasting products that are lighter, safer, and greener than traditional lithium-ion batteries. Designed with cleaner energy in mind, our products provide reliable power on the go, keeping people more connected wherever they are. That’s Power Beyond.",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "ceadb2d6-1770-4416-a486-5a77fe20b790": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Our Mission<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "908e4537-650e-417a-a578-fb82ca160ddb": {
+          "type": "caption",
+          "settings": {
+            "caption": "To improve lives by bringing advanced and sustainable power to everyday activities and contribute to a lower-carbon future.",
+            "text_style": "subtitle",
+            "text_size": "medium"
+          }
+        },
+        "90917657-b631-413a-af15-719a9a8b26f5": {
           "type": "text",
           "settings": {
-            "text": "<p>At Yoshino, we believe that progress and sustainability go hand in hand, and we strive to develop new solutions to meet the energy needs of individualsand families everywhere. Our innovative solid state battery technology makesfor longer-lasting products that are lighter, safer, and greener than traditional lithium-ion batteries. Designed with cleaner energy in mind, our products provide reliable power on the go, keeping people more connected wherever they are. That’s Power Beyond.<\/p>"
+            "text": ""
+          }
+        },
+        "bb5d5315-61ca-488d-9d73-050b9d680c54": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Our Vision<\/p>",
+            "heading_size": "h2"
+          }
+        },
+        "b47252dd-9b16-4e08-9cf8-be216e7bbb2c": {
+          "type": "caption",
+          "settings": {
+            "caption": "To be an innovator and a leader in making lives more efficient and enjoyable through Solid-State Power Solutions.",
+            "text_style": "subtitle",
+            "text_size": "medium"
           }
         }
       },
       "block_order": [
-        "template--15932523806886__506a81d2-abac-418d-ab9c-ee5bf0072367-16667050114face105-1"
+        "47303feb-5e13-4157-a402-f5b3dfbd9cd3",
+        "ceadb2d6-1770-4416-a486-5a77fe20b790",
+        "908e4537-650e-417a-a578-fb82ca160ddb",
+        "90917657-b631-413a-af15-719a9a8b26f5",
+        "bb5d5315-61ca-488d-9d73-050b9d680c54",
+        "b47252dd-9b16-4e08-9cf8-be216e7bbb2c"
       ],
       "settings": {
         "desktop_content_position": "center",

@@ -25,20 +25,20 @@
     "1664315491b5cb0a61": {
       "type": "y-image-with-text-colums",
       "blocks": {
-        "bf16f297-3278-4296-a325-5c07f9a5f65c": {
-          "type": "column",
-          "settings": {
-            "column_image": "shopify:\/\/shop_images\/leaf.png",
-            "column_headline": "Lighter Weight",
-            "column_copy": "<p>Higher energy density means the same amount of power fits into a smaller, lighter package — up to half the weight per watt compared to traditional lithium-ion batteries.<\/p>"
-          }
-        },
         "4cbbf481-4467-4a18-8cc4-a88f3cdb30ac": {
           "type": "column",
           "settings": {
             "column_image": "shopify:\/\/shop_images\/shield-check.png",
             "column_headline": "Safer",
             "column_copy": "<p>Liquid electrolytes are highly flammable and can catch fire if a battery is damaged or overheated. By using a solid electrolyte, our SST batteries have greatly reduced risk.<\/p>"
+          }
+        },
+        "bf16f297-3278-4296-a325-5c07f9a5f65c": {
+          "type": "column",
+          "settings": {
+            "column_image": "shopify:\/\/shop_images\/leaf.png",
+            "column_headline": "Lighter Weight",
+            "column_copy": "<p>Higher energy density means the same amount of power fits into a smaller, lighter package — up to half the weight per watt compared to traditional lithium-ion batteries.<\/p>"
           }
         },
         "39e5825d-ad51-4fcc-94ba-45fec9df0f1a": {
@@ -59,8 +59,8 @@
         }
       },
       "block_order": [
-        "bf16f297-3278-4296-a325-5c07f9a5f65c",
         "4cbbf481-4467-4a18-8cc4-a88f3cdb30ac",
+        "bf16f297-3278-4296-a325-5c07f9a5f65c",
         "39e5825d-ad51-4fcc-94ba-45fec9df0f1a",
         "8bd2a4f5-7397-4665-b590-f1b9c963cb55"
       ],
