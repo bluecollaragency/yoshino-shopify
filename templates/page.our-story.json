@@ -57,12 +57,6 @@
             "text_size": "medium"
           }
         },
-        "90917657-b631-413a-af15-719a9a8b26f5": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
         "bb5d5315-61ca-488d-9d73-050b9d680c54": {
           "type": "heading",
           "settings": {
@@ -83,7 +77,6 @@
         "47303feb-5e13-4157-a402-f5b3dfbd9cd3",
         "ceadb2d6-1770-4416-a486-5a77fe20b790",
         "908e4537-650e-417a-a578-fb82ca160ddb",
-        "90917657-b631-413a-af15-719a9a8b26f5",
         "bb5d5315-61ca-488d-9d73-050b9d680c54",
         "b47252dd-9b16-4e08-9cf8-be216e7bbb2c"
       ],
