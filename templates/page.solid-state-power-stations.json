@@ -3,7 +3,10 @@
     "21384cbe-5457-47bf-8ae1-f89ef14cb5d3": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/b2000-sst-onjob.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "mobile_image": "shopify:\/\/shop_images\/ssd-hero-mobile.jpg",
         "bg_color": "#000000",
         "headline": "SOLID STATE POWER STATIONS",
@@ -169,11 +172,14 @@
     "a49e68e1-d42e-4eae-b52b-c0799a5cfdf9": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/go-anywhere.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "bg_color": "#000000",
         "headline": "The power to go anywhere.",
         "headline_size": "3",
-        "copy": "<p>For your tent, car, home, or RV, there’s a Yoshino power station built for your needs.<\/p>",
+        "copy": "<p>Whether it’s for your tent, car, home, or RV, there's a Yoshino power station built for your needs.<\/p>",
         "copy_size": "base",
         "button_link": "#all-portable-power",
         "button_cta": "View All",
@@ -188,7 +194,10 @@
     "f38deb56-1af6-4e14-ba70-b64df95f4e19": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/power-beyond.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "mobile_image": "shopify:\/\/shop_images\/ssd-hero-mobile.jpg",
         "bg_color": "#000000",
         "headline": "Power Beyond.",
@@ -220,7 +229,10 @@
     "54cbb419-bdf5-4d19-bbdf-bd7dc9019ec9": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/safety.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "bg_color": "#000000",
         "headline": "Safety",
         "headline_size": "3",
@@ -239,7 +251,10 @@
     "8f2f01c8-94b5-4227-bb85-23af1a3e31db": {
       "type": "y-full-width-image",
       "settings": {
+        "tall": false,
         "image": "shopify:\/\/shop_images\/portability.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "bg_color": "#323333",
         "headline": "Portability",
         "headline_size": "3",
