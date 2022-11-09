@@ -30,7 +30,7 @@
           "settings": {
             "column_image": "shopify:\/\/shop_images\/shield-check.png",
             "column_headline": "Safer",
-            "column_copy": "<p>Liquid electrolytes are highly flammable and can catch fire if a battery is damaged or overheated. By using a solid electrolyte, our SST batteries have greatly reduced risk.<\/p>"
+            "column_copy": "<p>Liquid electrolytes are flammable and can catch fire if a battery is damaged or overheated. By using a solid electrolyte, our SST batteries have greatly reduced risk.<\/p>"
           }
         },
         "bf16f297-3278-4296-a325-5c07f9a5f65c": {
