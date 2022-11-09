@@ -14,7 +14,7 @@
           "type": "column",
           "settings": {
             "column_image": "shopify:\/\/shop_images\/battery-full.png",
-            "column_headline": "Solid Sate Battery",
+            "column_headline": "Solid-State Battery",
             "column_copy": "<p>A solid electrolyte is used in place of the traditional liquid electrolyte, cutting down bulk and increasing the power-to-weight ratio up to 2X. Get more power at the same weight, or less weight for the same power.<\/p>"
           }
         },
@@ -79,6 +79,8 @@
       "settings": {
         "tall": false,
         "image": "shopify:\/\/shop_images\/lighter-desktop.jpg",
+        "image_align_x": 50,
+        "image_align_y": 50,
         "mobile_image": "shopify:\/\/shop_images\/lighter-sm.jpg",
         "bg_color": "#000000",
         "headline": "Weighs Less so You Can Do More",
