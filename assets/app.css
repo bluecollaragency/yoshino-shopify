@@ -796,6 +796,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .footer-contact-list-item .item-title {
   width: 50%;
+  flex-shrink: 0;
   font-weight: 600;
 }
 
@@ -1430,11 +1431,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .tw-object-cover {
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.tw-object-right {
-  -o-object-position: right;
-  object-position: right;
 }
 
 .tw-p-1\.5 {
