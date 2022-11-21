@@ -1,0 +1,184 @@
+{{ 'component-slider.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 990px) {
+    .y-page-section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<style>
+  .slider--desktop .slider__slide:first-child {
+    margin: 0 !important;
+    scroll-margin-left: 0 !important;
+  }
+  @media screen and (min-width: 990px) {
+    .slider.slider--desktop .slider__slide:last-child {
+      margin-right: 0 !important;
+    }
+  }
+</style>
+{%- if product.metafields.pps.slider_zone_image_1 != blank -%}
+<div class="product-images-slider y-page-section-{{ section.id }}-padding">
+    <slider-component 
+      class="tw-mt-12"
+      role="region"
+      aria-roledescription="Image slider of product in use" aria-label="slider"
+    >
+      <div 
+        class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--desktop slider--tablet !tw-scroll-pl-0"  
+        id="Slider-{{section.id}}-slider" 
+        role="list"
+      >
+        {%- if product.metafields.pps.slider_zone_image_1 != empty -%}
+          {% assign slide_image = product.metafields.pps.slider_zone_image_1.value %}
+          <div 
+            class="tw-w-[95%] slider__slide" 
+            id="Slide-{{section.id}}-1"
+          >
+            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
+              <img
+                srcset="{%- if slide_image.width >= 165 -%}{{ slide_image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if slide_image.width >= 360 -%}{{ slide_image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if slide_image.width >= 560 -%}{{ slide_image | image_url: width: 560 }} 560w,{%- endif -%}
+                {%- if slide_image.width >= 1120 -%}{{ slide_image | image_url: width: 1120 }} 1120w,{%- endif -%}
+                {%- if slide_image.width >= 1800 -%}{{ slide_image | image_url: width: 1800 }} 1800w,{%- endif -%}
+                {%- if slide_image.width >= 2240 -%}{{ slide_image | image_url: width: 2240 }} 2240w,{%- endif -%}
+                {{ slide_image | image_url }} {{ slide_image.width }}w"
+                src="{{ slide_image | image_url: width: 1800 }}"
+                sizes="100vw"
+                alt="{{ slide_image.alt | escape }}"
+                loading="eager"
+                width="{{ slide_image.width }}"
+                height="{{ slide_image.height }}"
+                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+        {%- if product.metafields.pps.slider_zone_image_2 -%}
+          {% assign slide_image_2 = product.metafields.pps.slider_zone_image_2.value %}
+          <div 
+            class="tw-w-[95%] slider__slide" 
+            id="Slide-{{section.id}}-2"
+          >
+            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
+              <img
+                srcset="{%- if slide_image_2.width >= 165 -%}{{ slide_image_2 | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if slide_image_2.width >= 360 -%}{{ slide_image_2 | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if slide_image_2.width >= 560 -%}{{ slide_image_2 | image_url: width: 560 }} 560w,{%- endif -%}
+                {%- if slide_image_2.width >= 1120 -%}{{ slide_image_2 | image_url: width: 1120 }} 1120w,{%- endif -%}
+                {%- if slide_image_2.width >= 1800 -%}{{ slide_image_2 | image_url: width: 1800 }} 1800w,{%- endif -%}
+                {%- if slide_image_2.width >= 2240 -%}{{ slide_image_2 | image_url: width: 2240 }} 2240w,{%- endif -%}
+                {{ slide_image_2 | image_url }} {{ slide_image_2.width }}w"
+                src="{{ slide_image_2 | image_url: width: 1500 }}"
+                sizes="100vw"
+                alt="{{ slide_image_2.alt | escape }}"
+                loading="eager"
+                width="{{ slide_image_2.width }}"
+                height="{{ slide_image_2.height }}"
+                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+        {%- if product.metafields.pps.slider_zone_image_3 -%}
+          {% assign slide_image_3 = product.metafields.pps.slider_zone_image_3.value %}
+          <div 
+            class="tw-w-[95%] slider__slide" 
+            id="Slide-{{section.id}}-3"
+          >
+            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
+              <img
+                srcset="{%- if slide_image_3.width >= 165 -%}{{ slide_image_3 | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if slide_image_3.width >= 360 -%}{{ slide_image_3 | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if slide_image_3.width >= 560 -%}{{ slide_image_3 | image_url: width: 560 }} 560w,{%- endif -%}
+                {%- if slide_image_3.width >= 1120 -%}{{ slide_image_3 | image_url: width: 1120 }} 1120w,{%- endif -%}
+                {%- if slide_image_3.width >= 1800 -%}{{ slide_image_3 | image_url: width: 1800 }} 1800w,{%- endif -%}
+                {%- if slide_image_3.width >= 2240 -%}{{ slide_image_3 | image_url: width: 2240 }} 2240w,{%- endif -%}
+                {{ slide_image_3 | image_url }} {{ slide_image_3.width }}w"
+                src="{{ slide_image_3 | image_url: width: 1500 }}"
+                sizes="100vw"
+                alt="{{ slide_image_3.alt | escape }}"
+                loading="eager"
+                width="{{ slide_image_3.width }}"
+                height="{{ slide_image_3.height }}"
+                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+        {%- if product.metafields.pps.slider_zone_image_4 -%}
+          <div 
+            class="tw-w-[95%] slider__slide" 
+            id="Slide-{{section.id}}-4"
+          >
+            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
+              <img
+                srcset="{%- if product.metafields.pps.slider_zone_image_4.width >= 165 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if product.metafields.pps.slider_zone_image_4.width >= 360 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if product.metafields.pps.slider_zone_image_4.width >= 560 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 560 }} 560w,{%- endif -%}
+                {%- if product.metafields.pps.slider_zone_image_4.width >= 1120 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1120 }} 1120w,{%- endif -%}
+                {%- if product.metafields.pps.slider_zone_image_4.width >= 1800 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1800 }} 1800w,{%- endif -%}
+                {%- if product.metafields.pps.slider_zone_image_4.width >= 2240 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 2240 }} 2240w,{%- endif -%}
+                {{ product.metafields.pps.slider_zone_image_4 | image_url }} {{ product.metafields.pps.slider_zone_image_4.width }}w"
+                src="{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1500 }}"
+                sizes="100vw"
+                alt="{{ product.metafields.pps.slider_zone_image_4.alt | escape }}"
+                loading="eager"
+                width="{{ product.metafields.pps.slider_zone_image_4.width }}"
+                height="{{ product.metafields.pps.slider_zone_image_4.height }}"
+                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
+              >
+            </div>
+          </div>
+        {%- endif -%}
+
+        
+      </div>
+
+      <div class="slider-buttons no-js-hidden">
+        <button type="button" class="slider-button slider-button--prev tw-text-gray-800 disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-arrow-left' %}</button>
+        <div class="slider-counter caption">
+          <span class="slider-counter--current">1</span>
+          <span aria-hidden="true"> / </span>
+          <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
+          <span class="slider-counter--total">4</span>
+        </div>
+        <button type="button" class="slider-button slider-button--next tw-text-gray-800 disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-arrow-right' %}</button>
+      </div>
+    </slider-component>
+
+</div>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "Product Images Slider",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 96
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 0
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product Images Slider"
+      }
+    ]
+  }
+{% endschema %}
