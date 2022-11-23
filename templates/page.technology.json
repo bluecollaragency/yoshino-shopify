@@ -200,7 +200,7 @@
         "93c31815-7d98-4039-9e5f-f3ed015e0a71": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Rectangle_31_1701f03c-2d46-49f2-8bba-d1fc4f7152d7.jpg"
+            "image": "shopify:\/\/shop_images\/2000-slider-3-3.jpg"
           }
         },
         "8b90769d-7167-4ec4-8e66-f914210b0d06": {
@@ -218,7 +218,7 @@
         "e0528d1d-e531-41cb-9da4-f7ca617bbbe2": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Group_34_64b14144-9045-4f15-9dc4-a6de3f7822f8.jpg"
+            "image": "shopify:\/\/shop_images\/truck-bed-lifting.jpg"
           }
         },
         "c0d6c167-5fb2-436a-bacb-62acab07069d": {
@@ -237,8 +237,8 @@
         "c0d6c167-5fb2-436a-bacb-62acab07069d"
       ],
       "settings": {
-        "padding_top": 96,
-        "padding_bottom": 0
+        "padding_top": 72,
+        "padding_bottom": 96
       }
     }
   },
