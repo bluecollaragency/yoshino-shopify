@@ -26,10 +26,10 @@
   }
 </style>
 <div class="ways-to-charge-slider y-page-section-{{ section.id }}-padding">
-  <div class="tw-container tw-text-center">
+  {% comment %} <div class="tw-container tw-text-center">
     <h2 class="tw-h4">Choose your Power Options</h2>
-  </div>
-    <slider-component class="tw-mt-12">
+  </div> {% endcomment %}
+    <slider-component>
       <div class="tw-flex tw-flex-wrap tw-gap-y-8 slider slider--desktop slider--tablet !tw-scroll-pl-0" id="Slider-template--ways-to-charge-{{section.id}}-slider" role="list">
         {% for block in section.blocks %}  
           {% case block.type %}
