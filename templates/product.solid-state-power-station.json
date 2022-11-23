@@ -227,8 +227,15 @@
       "type": "y-product-tech-specs",
       "settings": {
         "padding_top": 96,
-        "padding_bottom": 96,
+        "padding_bottom": 0,
         "custom_id": "tech-specs"
+      }
+    },
+    "ca100651-c047-4cc4-bf2d-b66d37e744ca": {
+      "type": "y-product-images-slider",
+      "settings": {
+        "padding_top": 86,
+        "padding_bottom": 96
       }
     }
   },
@@ -241,6 +248,7 @@
     "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90",
     "a9cac2f4-62c6-480f-abc0-4112ed3d7555",
     "d59a0955-d106-4eda-a1f7-ba359756ca0d",
-    "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
+    "3dfe4b66-77fe-490d-9b1c-b6d92691086f",
+    "ca100651-c047-4cc4-bf2d-b66d37e744ca"
   ]
 }
