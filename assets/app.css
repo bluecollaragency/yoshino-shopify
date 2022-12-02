@@ -429,11 +429,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .tw-hxl {
-  font-size: 4.6rem;
+  font-size: 4.25rem;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 4rem;
+  line-height: 3.75rem;
   letter-spacing: -0.025em;
+}
+
+@media (min-width: 640px) {
+  .tw-hxl {
+    font-size: 4.6rem;
+    line-height: 4rem;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -1354,6 +1361,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.8rem;
 }
 
+.\!tw-border-0 {
+  border-width: 0px !important;
+}
+
 .tw-border-t-2 {
   border-top-width: 2px;
 }
@@ -1757,6 +1768,32 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .disabled\:tw-opacity-50:disabled {
   opacity: 0.5;
+}
+
+@media (min-width: 640px) {
+  .sm\:tw-items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:tw-items-end {
+    align-items: flex-end;
+  }
+
+  .sm\:tw-items-center {
+    align-items: center;
+  }
+
+  .sm\:tw-justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:tw-justify-end {
+    justify-content: flex-end;
+  }
+
+  .sm\:tw-justify-center {
+    justify-content: center;
+  }
 }
 
 @media (min-width: 750px) {

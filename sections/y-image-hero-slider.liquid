@@ -1,4 +1,5 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
+{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   .y-page-section-{{ section.id }}-padding {
@@ -26,111 +27,117 @@
   }
 </style>
 <div class="image-hero-slider y-page-section-{{ section.id }}-padding">
-    <slider-component class="">
-      <div 
-        class="tw-flex tw-flex-wrap slider slider--desktop slider--tablet !tw-scroll-pl-0"
-        id="Slider-{{section.id}}-slider" 
-        role="list"
-      >
-        {% for block in section.blocks %}  
-          {% case block.type %}
-          {%- when 'images' -%}
-            <div 
-              class="slider__slide tw-relative tw-block tw-w-full tw-h-[640px] lg:tw-h-[800px] tw-min-h-full"
-              id="Slide-{{section.id}}-{{ forloop.index }}"
-            >
-              <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full y-page-section-{{ section.id }}-bg-color tw-z-0">
-                {%- if block.settings.image != blank -%}
-                  <picture>
-                    <source 
-                      media="(min-width:640px)" 
-                      srcset="
-                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                        {%- if block.settings.image.width >= 2400 -%}{{ block.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
-                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
-                      "
-                    >
-                    <img
-                      {% if block.settings.mobile_image != blank %}
-                        src="{{ block.settings.mobile_image | image_url: width: 1280 }}"
-                      {% else %}
-                        src="{{ block.settings.image | image_url: width: 1280 }}"
-                      {% endif %}
-                      sizes="100vw"
-                      alt="{{ block.settings.image.alt | escape }}"
-                      loading="lazy"
-                      width="{{ block.settings.image.width }}"
-                      height="{{ block.settings.image.height }}"
-                      class="tw-w-full tw-h-full tw-object-cover"
-                      style="object-position: {{ block.settings.image_align_x }}% {{ block.settings.image_align_y }}%"
-                    >
-                  </picture>
-                {%- else -%}
-                  {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-full tw-object-cover' }}
-                {%- endif -%}
-              </span>
-              {%- if block.settings.headline != blank or block.settings.copy != blank or block.settings.button_link != blank -%}
-                <div class="tw-max-w-screen-xxl tw-mx-auto tw-relative tw-block tw-px-6 lg:tw-px-4 tw-z-10 tw-h-full">
-                  <div 
-                    class="
-                      tw-flex tw-h-full tw-justify-start lg:tw-justify-{{ block.settings.content_align_x }} tw-items-end lg:tw-items-{{ block.settings.content_align_y }}
-                    "
-                  >
-                    <div 
-                      class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6 tw-text-{{ block.settings.text_align }}"
-                    >
-                      {%- if block.settings.headline != blank -%}
-                      <h2 class="tw-h{{ block.settings.headline_size }} tw-text-white">{{ block.settings.headline }}</h2>
-                      {%- endif -%}
-                      {%- if block.settings.copy != blank -%}
-                      <div class="tw-text-{{ block.settings.copy_size }}">{{ block.settings.copy }}</div>
-                      {%- endif -%}
-                      {%- if block.settings.button_cta and block.settings.button_link != blank -%}
-                        <a href="{{ block.settings.button_link }}" class="tw-btn tw-btn-green tw-mt-12">{{ block.settings.button_cta | escape }}</a>
-                      {%- endif -%}
-                    </div>
-                  </div>
-                </div>
-                {%- endif -%}
-              {% comment %} <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
-                <img
-                  srcset="{%- if block.settings.image.width >= 165 -%}{{ block.settings.image | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if block.settings.image.width >= 360 -%}{{ block.settings.image | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if block.settings.image.width >= 535 -%}{{ block.settings.image | image_url: width: 535 }} 535w,{%- endif -%}
-                  {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
-                  {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
-                  {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
-                  {%- if block.settings.image.width >= 2400 -%}{{ block.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
-                  {{ block.settings.image | image_url }} {{ block.settings.image.width }}w"
-                  src="{{ block.settings.image | image_url: width: 1500 }}"
-                  sizes="100vw"
-                  alt="{{ block.settings.image.alt | escape }}"
-                  loading="eager"
-                  width="{{ block.settings.image.width }}"
-                  height="{{ block.settings.image.height }}"
-                  class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
-                >
-              </div> {% endcomment %}
-            </div>
-          {% endcase %} 
-        {% endfor %}
-        
-      </div>
+  <slideshow-component 
+    role="region" 
+    aria-roledescription="{{ 'sections.slideshow.carousel' | t }}" aria-label="{{ section.settings.accessibility_info | escape }}"
+  >
+    <div class="slideshow__controls slideshow__controls--top slider-buttons no-js-hidden{% if section.settings.show_text_below %} slideshow__controls--border-radius-mobile{% endif %} !tw-border-0">
+      <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'sections.slideshow.previous_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-arrow-left' %}</button>
+      <div class="slider-counter slider-counter--{{ section.settings.slider_visual }}{% if section.settings.slider_visual == 'counter' or section.settings.slider_visual == 'numbers' %} caption{% endif %}">
 
-      <div class="slider-buttons no-js-hidden">
-        <button type="button" class="slider-button slider-button--prev tw-text-gray-800 disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-arrow-left' %}</button>
-        <div class="slider-counter caption">
           <span class="slider-counter--current">1</span>
           <span aria-hidden="true"> / </span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-          <span class="slider-counter--total"></span>
-        </div>
-        <button type="button" class="slider-button slider-button--next tw-text-gray-800 disabled:tw-cursor-not-allowed disabled:tw-opacity-50" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-arrow-right' %}</button>
-      </div>
-    </slider-component>
+          <span class="slider-counter--total">{{ section.blocks.size }}</span>
 
+      </div>
+      <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'sections.slideshow.next_slideshow' | t }}" aria-controls="Slider-{{ section.id }}">{% render 'icon-arrow-right' %}</button>
+
+      {%- if section.settings.auto_rotate -%}
+        <button style="display:none;" type="button" class="slideshow__autoplay slider-button no-js-hidden{% if section.settings.auto_rotate == false %} slideshow__autoplay--paused{% endif %}" aria-label="{{ 'sections.slideshow.pause_slideshow' | t }}">
+          {%- render 'icon-pause' -%}
+          {%- render 'icon-play' -%}
+        </button>
+      {%- endif -%}
+    </div>
+    <noscript>
+      <div class="slider-buttons">
+        <div class="slider-counter">
+          {%- for block in section.blocks -%}
+            <a href="#Slide-{{ section.id }}-{{ forloop.index }}" class="slider-counter__link link" aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}">
+              {{ forloop.index }}
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    </noscript>
+    <div 
+      class="slideshow banner grid grid--1-col slider slider--everywhere tw-h-[640px] lg:tw-h-[800px]"
+      id="Slider-{{ section.id }}"
+      aria-live="polite"
+      aria-atomic="true"
+      data-autoplay="{{ section.settings.auto_rotate }}"
+      data-speed="{{ section.settings.change_slides_speed }}"
+    >
+      {%- for block in section.blocks -%}
+        <div 
+          class="slideshow__slide grid__item grid--1-col slider__slide"
+          id="Slide-{{ section.id }}-{{ forloop.index }}"
+          {{ block.shopify_attributes }}
+          role="group"
+          aria-roledescription="{{ 'sections.slideshow.slide' | t }}"
+          aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+          tabindex="-1"
+        >
+          <span class="tw-absolute tw-inset-0 tw-w-full tw-h-full y-page-section-{{ section.id }}-bg-color tw-z-0">
+            {%- if block.settings.image != blank -%}
+              <picture>
+                <source 
+                  media="(min-width:640px)" 
+                  srcset="
+                    {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1070 -%}{{ block.settings.image | image_url: width: 1070 }} 1070w,{%- endif -%}
+                    {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                    {%- if block.settings.image.width >= 2400 -%}{{ block.settings.image | image_url: width: 2400 }} 2400w,{%- endif -%}
+                    {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                  "
+                >
+                <img
+                  {% if block.settings.mobile_image != blank %}
+                    src="{{ block.settings.mobile_image | image_url: width: 1280 }}"
+                  {% else %}
+                    src="{{ block.settings.image | image_url: width: 1280 }}"
+                  {% endif %}
+                  sizes="100vw"
+                  alt="{{ block.settings.image.alt | escape }}"
+                  loading="lazy"
+                  width="{{ block.settings.image.width }}"
+                  height="{{ block.settings.image.height }}"
+                  class="tw-w-full tw-h-full tw-object-cover"
+                  style="object-position: {{ block.settings.image_align_x }}% {{ block.settings.image_align_y }}%"
+                >
+              </picture>
+            {%- else -%}
+              {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-full tw-object-cover' }}
+            {%- endif -%}
+          </span>
+          {%- if block.settings.headline != blank or block.settings.copy != blank or block.settings.button_link != blank -%}
+            <div class="tw-w-full tw-max-w-screen-xxl tw-mx-auto tw-relative tw-block tw-px-6 lg:tw-px-4 tw-z-10 tw-h-full">
+              <div 
+                class="
+                  tw-flex tw-h-full tw-justify-start sm:tw-justify-{{ block.settings.content_align_x }} tw-items-end sm:tw-items-{{ block.settings.content_align_y }}
+                "
+              >
+                <div 
+                  class="tw-max-w-prose tw-py-20 tw-text-white tw-space-y-6 tw-text-{{ block.settings.text_align }}"
+                >
+                  {%- if block.settings.headline != blank -%}
+                    <h2 class="tw-h{{ block.settings.headline_size }} tw-text-white">{{ block.settings.headline }}</h2>
+                  {%- endif -%}
+                  {%- if block.settings.copy != blank -%}
+                    <div class="tw-text-{{ block.settings.copy_size }}">{{ block.settings.copy }}</div>
+                  {%- endif -%}
+                  {%- if block.settings.button_cta and block.settings.button_link != blank -%}
+                    <a href="{{ block.settings.button_link }}" class="tw-btn tw-btn-green tw-mt-12">{{ block.settings.button_cta | escape }}</a>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </slideshow-component>
 </div>
 
 {% schema %}
@@ -148,6 +155,29 @@
         "id": "padding_bottom",
         "label": "t:sections.all.padding.padding_bottom",
         "default": 0
+      },
+      {
+        "type": "range",
+        "id": "change_slides_speed",
+        "min": 3,
+        "max": 9,
+        "step": 2,
+        "unit": "s",
+        "label": "t:sections.slideshow.settings.change_slides_speed.label",
+        "default": 5
+      },
+      {
+        "type": "checkbox",
+        "id": "auto_rotate",
+        "label": "t:sections.slideshow.settings.auto_rotate.label",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "accessibility_info",
+        "label": "t:sections.slideshow.settings.accessibility.label",
+        "info": "t:sections.slideshow.settings.accessibility.info",
+        "default": "Slideshow about our brand"
       }
     ],
     "blocks": [

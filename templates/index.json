@@ -1,25 +1,97 @@
 {
   "sections": {
-    "6600128f-33fb-4589-926d-1a8462800259": {
-      "type": "y-full-width-image",
+    "b23ec75d-384e-4740-9c94-2beaa9a4cef6": {
+      "type": "y-image-hero-slider",
+      "blocks": {
+        "d83a2f72-056a-4a7d-a51a-00a2c5072070": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/power-beyond-lg.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/power-beyond-sm.jpg",
+            "image_align_x": 50,
+            "image_align_y": 50,
+            "bg_color": "#000000",
+            "headline": "Power <br>Beyond <br>Adventure",
+            "headline_size": "xl",
+            "copy": "<p>All the wattage without the weight. The solid-state B330 SST can power all your devices on the go.<\/p>",
+            "copy_size": "xl",
+            "button_link": "shopify:\/\/products\/b330-sst",
+            "button_cta": "Learn More",
+            "content_align_y": "center",
+            "content_align_x": "start",
+            "text_align": "left"
+          }
+        },
+        "2c3a74fa-a672-4c16-9665-65b3aa5cc03d": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/leading-power-lg.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/leading-power-sm.jpg",
+            "image_align_x": 50,
+            "image_align_y": 50,
+            "bg_color": "#000000",
+            "headline": "Portable Power Revolution",
+            "headline_size": "xl",
+            "copy": "<p>Our advanced solid-state technology puts more power into a smaller, safer battery.<\/p>",
+            "copy_size": "xl",
+            "button_link": "shopify:\/\/pages\/technology",
+            "button_cta": "Learn More",
+            "content_align_y": "center",
+            "content_align_x": "start",
+            "text_align": "left"
+          }
+        },
+        "ca66e137-dad0-4e96-8bfc-d272fb2fb9b3": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dependable-power-lg.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/dependable-power-sm.jpg",
+            "image_align_x": 50,
+            "image_align_y": 50,
+            "bg_color": "#000000",
+            "headline": "Dependable Power Anywhere",
+            "headline_size": "xl",
+            "copy": "<p>This lightweight and portable power station packs a punch, with 660 watts of power and 602 watt-hours of capacity. Perfect for extended camping or road trips.<\/p>",
+            "copy_size": "xl",
+            "button_link": "shopify:\/\/products\/b660-sst",
+            "button_cta": "Learn More",
+            "content_align_y": "center",
+            "content_align_x": "start",
+            "text_align": "left"
+          }
+        },
+        "64385435-6259-4540-ad55-e498cdc41bcb": {
+          "type": "images",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/freedom-lg.jpg",
+            "mobile_image": "shopify:\/\/shop_images\/freedom-sm.jpg",
+            "image_align_x": 50,
+            "image_align_y": 50,
+            "bg_color": "#000000",
+            "headline": "Freedom  to Dream Bigger",
+            "headline_size": "xl",
+            "copy": "<p>The B2000 SST delivers 2000 watts of power while being lighter and more compact than the competition.<\/p>",
+            "copy_size": "xl",
+            "button_link": "shopify:\/\/products\/b2000-sst",
+            "button_cta": "Learn More",
+            "content_align_y": "center",
+            "content_align_x": "start",
+            "text_align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "d83a2f72-056a-4a7d-a51a-00a2c5072070",
+        "2c3a74fa-a672-4c16-9665-65b3aa5cc03d",
+        "ca66e137-dad0-4e96-8bfc-d272fb2fb9b3",
+        "64385435-6259-4540-ad55-e498cdc41bcb"
+      ],
       "settings": {
-        "tall": true,
-        "image": "shopify:\/\/shop_images\/hp-hero-330.jpg",
-        "image_align_x": 80,
-        "image_align_y": 50,
-        "bg_color": "#000000",
-        "headline": "POWER BEYOND ADVENTURE",
-        "headline_size": "xl",
-        "copy": "<p>All the wattage without the weight. The solid-state B330 SST can power all your devices on the go.<\/p>",
-        "copy_size": "xl",
-        "button_link": "shopify:\/\/products\/b330-sst",
-        "button_cta": "Learn More",
-        "content_align_y": "center",
-        "content_align_x": "start",
-        "text_align": "left",
-        "hide_mobile": false,
         "padding_top": 0,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "change_slides_speed": 5,
+        "auto_rotate": true,
+        "accessibility_info": "Slideshow about our brand"
       }
     },
     "1664315491b5cb0a61": {
@@ -131,7 +203,7 @@
     }
   },
   "order": [
-    "6600128f-33fb-4589-926d-1a8462800259",
+    "b23ec75d-384e-4740-9c94-2beaa9a4cef6",
     "1664315491b5cb0a61",
     "16643898014cfaebbe"
   ]

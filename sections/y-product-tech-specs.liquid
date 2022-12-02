@@ -30,7 +30,8 @@
         <ul class="y-prod-spec-list">
           <li class="y-prod-tech-spec !tw-border-t-0">
             <h6 class="y-spec-title tw-h7">Net Weight</h6>
-            {{ product.variants.first.weight | weight_with_unit }}
+            {{ product.variants.first.weight | weight_with_unit }} / 
+            {{ product.variants.first.weight | weight | times: 0.453592 | round: 2 }} kg
           </li>
           {%- if product.metafields.pps.ts_power.value != blank -%}
           <li class="y-prod-tech-spec">
