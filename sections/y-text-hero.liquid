@@ -13,7 +13,10 @@
     }
   }
 {%- endstyle -%}
-<div class="tw-relative tw-w-full y-page-section-{{ section.id }}-padding tw-overflow-hidden">
+{%- comment -%}
+This is only really good for use on the technology page right now or with the battery image because of the negative margin located under here.
+{%- endcomment -%}
+<div class="tw-relative tw-w-full y-page-section-{{ section.id }}-padding tw-overflow-hidden tw--mb-16">
   <span class="tw-absolute tw-inset-0 tw-z-0 bg-gray-gradient-2 tw-w-full tw-h-full"></span>
   <div class="lg:tw-h-[600px] tw-container tw-relative tw-px-6 lg:tw-px-4 tw-z-10 tw-flex tw-items-stretch tw-py-24">
     <span class="tw-inline-block tw-absolute tw-top-24 tw--left-[114px] lg:tw-left-[8.333%] tw-z--10 tw-opacity-20">
@@ -30,19 +33,79 @@
         <path fill="#7F8B87" d="M81.016.334.732 46.387v92.067l80.284 46.015 80.322-46.015V46.387L81.016.334Z"/>
       </svg>
     </span>
-    <div class="tw-flex tw-w-full lg:tw-w-9/12 lg:tw-mx-auto tw-h-full tw-justify-center tw-items-center tw-text-center tw-z-10">
+    <div class="tw-relative tw-flex tw-w-full lg:tw-w-9/12 lg:tw-mx-auto tw-h-full tw-justify-center tw-items-center tw-text-center tw-z-10">
       <div>
-        <h1 class="tw-hxl tw-text-uppercase tw-text-white">Solid-State Technology</h1>
-        <p class="tw-text-white tw-mt-8 tw-text-base lg:tw-text-xl">The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.</p>
+        {%- if section.settings.hero_header != blank -%}
+        <h1 class="tw-hxl tw-text-uppercase tw-text-white">
+          {{ section.settings.hero_header | escape }}
+        </h1>
+        {%- endif -%}
+        {%- if section.settings.hero_text != blank -%}
+        <p class="tw-text-white tw-mt-8 tw-text-base lg:tw-text-xl">{{section.settings.hero_text}}</p>
+        {%- endif -%}
       </div>
     </div>
   </div>
+  <div class="tw-relative tw--mt-[65%] sm:tw--mt-[45%] xl:tw--mt-[40%] xxl:tw--mt-[27.5%] tw-z-0 tw-mx-auto tw-text-center tw-block tw-overflow-hidden">
+    <div class="tw-w-full tw-max-w-[1060px] tw-inline-block tw-mx-auto">
+      {%- if section.settings.image != blank -%}
+        <picture>
+          <source 
+            media="(min-width:640px)" 
+            srcset="
+              {%- if section.settings.image.width >= 760 -%}{{ section.settings.image | image_url: width: 760 }} 760w,{%- endif -%}
+              {%- if section.settings.image.width >= 1060 -%}{{ section.settings.image | image_url: width: 1060 }} 1060w,{%- endif -%}
+              {%- if section.settings.image.width >= 1600 -%}{{ section.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
+              {%- if section.settings.image.width >= 2120 -%}{{ section.settings.image | image_url: width: 2120 }} 2120w,{%- endif -%}
+              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+            "
+          >
+          <img
+            {% if section.settings.mobile_image != blank %}
+            src="{{ section.settings.mobile_image | image_url: width: 760 }}"
+            {% else %}
+            src="{{ section.settings.image | image_url: width: 1600 }}"
+            {%- endif -%}
+            sizes="(min-width:640px) 1060w, 100vw"
+            alt="{{ section.settings.image.alt | escape }}"
+            loading="eager"
+            width="{{ section.settings.image.width }}"
+            height="{{ section.settings.image.height }}"
+            class="tw-w-full tw-h-auto"
+          >
+        </picture>
+      {%- else -%}
+        {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-auto' }}
+      {%- endif -%}
+    </div>
+  </div>
+  
 </div>
 {% schema %}
   {
     "name": "Custom Text Hero",
     "class": "section",
     "settings": [
+      {
+        "type": "text",
+        "id": "hero_header",
+        "label": "Header"
+      },
+      {
+        "type": "textarea",
+        "id": "hero_text",
+        "label": "Copy"
+      },
+      {
+        "id": "image",
+        "type": "image_picker",
+        "label": "Image"
+      },
+      {
+        "id": "mobile_image",
+        "type": "image_picker",
+        "label": "Mobile Image"
+      },
       {
         "type": "number",
         "id": "padding_top",

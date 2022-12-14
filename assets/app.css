@@ -1005,6 +1005,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: auto;
 }
 
+.tw--mt-\[75\%\] {
+  margin-top: -75%;
+}
+
+.tw--mb-16 {
+  margin-bottom: -6.4rem;
+}
+
+.tw--mt-\[70\%\] {
+  margin-top: -70%;
+}
+
+.tw--mt-\[65\%\] {
+  margin-top: -65%;
+}
+
 .tw-block {
   display: block;
 }
@@ -1143,6 +1159,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-full {
   max-width: 100%;
+}
+
+.tw-max-w-\[1215px\] {
+  max-width: 1215px;
+}
+
+.tw-max-w-\[1200px\] {
+  max-width: 1200px;
+}
+
+.tw-max-w-\[1060px\] {
+  max-width: 1060px;
 }
 
 .tw-flex-none {
@@ -1771,6 +1799,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px) {
+  .sm\:tw--mt-\[50\%\] {
+    margin-top: -50%;
+  }
+
+  .sm\:tw--mt-\[45\%\] {
+    margin-top: -45%;
+  }
+
   .sm\:tw-items-start {
     align-items: flex-start;
   }
@@ -1811,6 +1847,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:tw-mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:tw--mt-\[40\%\] {
+    margin-top: -40%;
   }
 
   .md\:tw-w-6\/12 {
@@ -1926,6 +1966,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:tw-mr-0 {
     margin-right: 0px;
+  }
+
+  .lg\:tw--mt-\[30\%\] {
+    margin-top: -30%;
+  }
+
+  .lg\:tw--mt-\[40\%\] {
+    margin-top: -40%;
+  }
+
+  .lg\:tw--mt-\[45\%\] {
+    margin-top: -45%;
   }
 
   .lg\:tw-block {
@@ -2176,12 +2228,28 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 1280px) {
+  .xl\:tw--mt-\[30\%\] {
+    margin-top: -30%;
+  }
+
+  .xl\:tw--mt-\[40\%\] {
+    margin-top: -40%;
+  }
+
   .xl\:tw-w-2\/3 {
     width: 66.666667%;
   }
 }
 
 @media (min-width: 1440px) {
+  .xxl\:tw--mt-\[30\%\] {
+    margin-top: -30%;
+  }
+
+  .xxl\:tw--mt-\[27\.5\%\] {
+    margin-top: -27.5%;
+  }
+
   .xxl\:tw-max-w-screen-xxl {
     max-width: 1440px;
   }

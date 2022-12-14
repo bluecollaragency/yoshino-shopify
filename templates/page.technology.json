@@ -3,6 +3,10 @@
     "f5317c66-415d-49c2-868e-af7386cf2dc2": {
       "type": "y-text-hero",
       "settings": {
+        "hero_header": "Solid-State Technology",
+        "hero_text": "The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.",
+        "image": "shopify:\/\/shop_images\/technology-hero-2.png",
+        "mobile_image": "shopify:\/\/shop_images\/technology-hero-sm-2.png",
         "padding_top": 0,
         "padding_bottom": 0
       }
@@ -45,7 +49,7 @@
         "intro_headline_size": "3",
         "intro_text": "",
         "intro_text_size": "base",
-        "padding_top": 0,
+        "padding_top": 96,
         "padding_bottom": 0,
         "grid_cols_lg": 3,
         "grid_cols_sm": 1,
