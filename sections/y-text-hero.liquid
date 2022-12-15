@@ -35,48 +35,45 @@ This is only really good for use on the technology page right now or with the ba
     </span>
     <div class="tw-relative tw-flex tw-w-full lg:tw-w-9/12 lg:tw-mx-auto tw-h-full tw-justify-center tw-items-center tw-text-center tw-z-10">
       <div>
-        {%- if section.settings.hero_header != blank -%}
+        {% comment %} {%- if section.settings.hero_header != blank -%}
         <h1 class="tw-hxl tw-text-uppercase tw-text-white">
           {{ section.settings.hero_header | escape }}
         </h1>
-        {%- endif -%}
-        {%- if section.settings.hero_text != blank -%}
+        {%- endif -%} {% endcomment %}
+        <h1 class="tw-hxl tw-text-uppercase tw-text-white">
+          Solid-State Technology
+        </h1>
+        {% comment %} {%- if section.settings.hero_text != blank -%}
         <p class="tw-text-white tw-mt-8 tw-text-base lg:tw-text-xl">{{ section.settings.hero_text }}</p>
-        {%- endif -%}
+        {%- endif -%} {% endcomment %}
+        <p class="tw-text-white tw-mt-8 tw-text-base lg:tw-text-xl">The next major evolution in battery technology is here. Yoshino power stations are the first to be built around solid-state batteries. By doing away with the heavy and flammable liquid electrolyte in traditional lithium-ion batteries, Yoshino solid-state batteries put more power into a smaller package, recharge faster, and are safer to use. That’s power beyond.</p>
       </div>
     </div>
   </div>
   <div class="tw-relative tw--mt-[65%] sm:tw--mt-[45%] xl:tw--mt-[40%] xxl:tw--mt-[27.5%] tw-z-0 tw-mx-auto tw-text-center tw-block tw-overflow-hidden">
     <div class="tw-w-full tw-max-w-[1060px] tw-inline-block tw-mx-auto">
-      {%- if section.settings.image != blank -%}
+      
         <picture>
           <source 
             media="(min-width:640px)" 
             srcset="
-              {%- if section.settings.image.width >= 760 -%}{{ section.settings.image | image_url: width: 760 }} 760w,{%- endif -%}
-              {%- if section.settings.image.width >= 1060 -%}{{ section.settings.image | image_url: width: 1060 }} 1060w,{%- endif -%}
-              {%- if section.settings.image.width >= 1600 -%}{{ section.settings.image | image_url: width: 1600 }} 1600w,{%- endif -%}
-              {%- if section.settings.image.width >= 2120 -%}{{ section.settings.image | image_url: width: 2120 }} 2120w,{%- endif -%}
-              {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+              {%- if images['technology-hero-2.png'].width >= 760 -%}{{ images['technology-hero-2.png'] | image_url: width: 760 }} 760w,{%- endif -%}
+              {%- if images['technology-hero-2.png'].width >= 1060 -%}{{ images['technology-hero-2.png'] | image_url: width: 1060 }} 1060w,{%- endif -%}
+              {%- if images['technology-hero-2.png'].width >= 1600 -%}{{ images['technology-hero-2.png'] | image_url: width: 1600 }} 1600w,{%- endif -%}
+              {%- if images['technology-hero-2.png'].width >= 2120 -%}{{ images['technology-hero-2.png'] | image_url: width: 2120 }} 2120w,{%- endif -%}
+              {{ images['technology-hero-2.png'] | image_url }} {{ images['technology-hero-2.png'].width }}w
             "
           >
           <img
-            {% if section.settings.mobile_image != blank %}
-            src="{{ section.settings.mobile_image | image_url: width: 760 }}"
-            {% else %}
-            src="{{ section.settings.image | image_url: width: 1600 }}"
-            {%- endif -%}
+            src="{{ images['technology-hero-sm-2.png'] | image_url: width: 760 }}"
             sizes="(min-width:640px) 1060w, 100vw"
-            alt="{{ section.settings.image.alt | escape }}"
+            alt="{{ images['technology-hero-2.png'].alt | escape }}"
             loading="eager"
-            width="{{ section.settings.image.width }}"
-            height="{{ section.settings.image.height }}"
+            width="{{ images['technology-hero-2.png'].width }}"
+            height="{{ images['technology-hero-2.png'].height }}"
             class="tw-w-full tw-h-auto"
           >
         </picture>
-      {%- else -%}
-        {{ 'image' | placeholder_svg_tag: 'tw-w-full tw-h-auto' }}
-      {%- endif -%}
     </div>
   </div>
   
