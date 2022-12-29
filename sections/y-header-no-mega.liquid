@@ -19,6 +19,8 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+  [x-cloak] { display: none !important; }
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -161,8 +163,7 @@
                 >
                   
                   <div 
-                    class="tw-w-full lg:tw-w-52 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 lg:tw-py-3 
-                    "
+                    class="tw-w-full lg:tw-w-52 lg:tw-bg-white lg:tw-shadow-md lg:tw-border-t-2 lg:tw-border-bee-green-200 lg:tw-py-3 "
                   >
                     {%- for childlink in link.links -%}
                       {%- if childlink.links == blank -%}

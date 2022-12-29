@@ -1,0 +1,76 @@
+{% if product.handle == 'b2000-sst' or product.handle == 'b4000-sst' %}
+{%- style -%}
+  .y-page-section-{{ section.id }}-padding {
+     padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+<div class="y-yoshino-app y-page-section-{{ section.id }}-padding">
+  <div class="tw-container tw-px-6 lg:tw-px-4">
+    <div class="tw-grid tw-grid-cols-2 lg:tw-grid-cols-12 tw-items-center tw-gap-8">
+      <div class="tw-col-span-7">
+        <img 
+          srcset="
+          {%- if section.settings.image.width >= 342 -%}{{ section.settings.image | image_url: width: 342 }} 342w,{%- endif -%}
+          {%- if section.settings.image.width >= 685 -%}{{ section.settings.image | image_url: width: 685 }} 685w,{%- endif -%}
+          {{ section.settings.image | image_url }} {{ section.settings.image.width }}w
+          "
+          src="{{ section.settings.image | image_url }}" 
+          sizes="(min-width: 990px) 50vw, 100vw"
+          loading="lazy"
+          width="{{ section.settings.image.width | divided_by: 2 }}"
+          height="{{ section.settings.image.height | divided_by: 2 }}"
+          alt="Yoshino Power station being used as a UPS"
+          class="lg:tw-mx-auto"
+        >
+      </div>
+      <div class="tw-col-span-4">
+        <h2 class="tw-h3">{{ section.settings.headline }}</h2>
+        <p class="tw-mt-4">{{ section.settings.copy }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Product PPS UPS",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "number",
+        "id": "padding_top",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "padding_bottom",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default":  0
+      },
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline",
+        "default": "Always Ready with UPS"
+      },
+      {
+        "type": "textarea",
+        "id": "copy",
+        "label": "Copy",
+        "default": "When plugged into a wall outlet, this power station works as an uninterruptible power supply (UPS) and keeps your critical equipment running in the event of a blackout."
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Product PPS UPS"
+      }
+    ]
+  }
+{% endschema %}

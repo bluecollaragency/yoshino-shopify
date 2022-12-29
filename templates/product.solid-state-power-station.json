@@ -97,6 +97,16 @@
         "padding_bottom": 96
       }
     },
+    "637ae9f0-4893-4b85-9c2e-23aece3be57b": {
+      "type": "y-product-pps-ups",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 96,
+        "headline": "Always Ready with UPS",
+        "copy": "When plugged into a wall outlet, this power station works as an uninterruptible power supply (UPS) and keeps your critical equipment running in the event of a blackout.",
+        "image": "shopify:\/\/shop_images\/yoshino-ups_f570866c-0c05-4a64-99b9-bba494c63732.png"
+      }
+    },
     "7493c56d-8df1-4c93-9751-731c624f1f72": {
       "type": "y-product-zone2a",
       "settings": {
@@ -243,6 +253,7 @@
     "main",
     "c5597ab6-4f04-47d7-8683-0567a93299c3",
     "28850191-11d8-4339-a10b-11b3a2bb824b",
+    "637ae9f0-4893-4b85-9c2e-23aece3be57b",
     "7493c56d-8df1-4c93-9751-731c624f1f72",
     "ae6e6cab-fcfc-4fa5-a98c-17b1d135d409",
     "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90",
