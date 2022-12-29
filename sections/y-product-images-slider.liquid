@@ -37,111 +37,31 @@
         id="Slider-{{section.id}}-slider" 
         role="list"
       >
-        {%- if product.metafields.pps.slider_zone_image_1 != empty -%}
-          {% assign slide_image = product.metafields.pps.slider_zone_image_1.value %}
+        {%- for image in product.metafields.pps.slider_zone_images.value -%}
           <div 
             class="tw-w-[95%] slider__slide" 
-            id="Slide-{{section.id}}-1"
+            id="Slide-{{section.id}}-{{ forloop.index }}"
           >
             <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
               <img
-                srcset="{%- if slide_image.width >= 165 -%}{{ slide_image | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if slide_image.width >= 360 -%}{{ slide_image | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if slide_image.width >= 560 -%}{{ slide_image | image_url: width: 560 }} 560w,{%- endif -%}
-                {%- if slide_image.width >= 1120 -%}{{ slide_image | image_url: width: 1120 }} 1120w,{%- endif -%}
-                {%- if slide_image.width >= 1800 -%}{{ slide_image | image_url: width: 1800 }} 1800w,{%- endif -%}
-                {%- if slide_image.width >= 2240 -%}{{ slide_image | image_url: width: 2240 }} 2240w,{%- endif -%}
-                {{ slide_image | image_url }} {{ slide_image.width }}w"
-                src="{{ slide_image | image_url: width: 1800 }}"
+                srcset="{%- if image.width >= 165 -%}{{ image | image_url: width: 165 }} 165w,{%- endif -%}
+                {%- if image.width >= 360 -%}{{ image | image_url: width: 360 }} 360w,{%- endif -%}
+                {%- if image.width >= 560 -%}{{ image | image_url: width: 560 }} 560w,{%- endif -%}
+                {%- if image.width >= 1120 -%}{{ image | image_url: width: 1120 }} 1120w,{%- endif -%}
+                {%- if image.width >= 1800 -%}{{ image | image_url: width: 1800 }} 1800w,{%- endif -%}
+                {%- if image.width >= 2240 -%}{{ image | image_url: width: 2240 }} 2240w,{%- endif -%}
+                {{ image | image_url }} {{ image.width }}w"
+                src="{{ image | image_url: width: 1800 }}"
                 sizes="100vw"
-                alt="{{ slide_image.alt | escape }}"
+                alt="{{ image.alt | escape }}"
                 loading="eager"
-                width="{{ slide_image.width }}"
-                height="{{ slide_image.height }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
                 class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
               >
             </div>
           </div>
-        {%- endif -%}
-        {%- if product.metafields.pps.slider_zone_image_2 -%}
-          {% assign slide_image_2 = product.metafields.pps.slider_zone_image_2.value %}
-          <div 
-            class="tw-w-[95%] slider__slide" 
-            id="Slide-{{section.id}}-2"
-          >
-            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
-              <img
-                srcset="{%- if slide_image_2.width >= 165 -%}{{ slide_image_2 | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if slide_image_2.width >= 360 -%}{{ slide_image_2 | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if slide_image_2.width >= 560 -%}{{ slide_image_2 | image_url: width: 560 }} 560w,{%- endif -%}
-                {%- if slide_image_2.width >= 1120 -%}{{ slide_image_2 | image_url: width: 1120 }} 1120w,{%- endif -%}
-                {%- if slide_image_2.width >= 1800 -%}{{ slide_image_2 | image_url: width: 1800 }} 1800w,{%- endif -%}
-                {%- if slide_image_2.width >= 2240 -%}{{ slide_image_2 | image_url: width: 2240 }} 2240w,{%- endif -%}
-                {{ slide_image_2 | image_url }} {{ slide_image_2.width }}w"
-                src="{{ slide_image_2 | image_url: width: 1500 }}"
-                sizes="100vw"
-                alt="{{ slide_image_2.alt | escape }}"
-                loading="eager"
-                width="{{ slide_image_2.width }}"
-                height="{{ slide_image_2.height }}"
-                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
-              >
-            </div>
-          </div>
-        {%- endif -%}
-        {%- if product.metafields.pps.slider_zone_image_3 -%}
-          {% assign slide_image_3 = product.metafields.pps.slider_zone_image_3.value %}
-          <div 
-            class="tw-w-[95%] slider__slide" 
-            id="Slide-{{section.id}}-3"
-          >
-            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
-              <img
-                srcset="{%- if slide_image_3.width >= 165 -%}{{ slide_image_3 | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if slide_image_3.width >= 360 -%}{{ slide_image_3 | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if slide_image_3.width >= 560 -%}{{ slide_image_3 | image_url: width: 560 }} 560w,{%- endif -%}
-                {%- if slide_image_3.width >= 1120 -%}{{ slide_image_3 | image_url: width: 1120 }} 1120w,{%- endif -%}
-                {%- if slide_image_3.width >= 1800 -%}{{ slide_image_3 | image_url: width: 1800 }} 1800w,{%- endif -%}
-                {%- if slide_image_3.width >= 2240 -%}{{ slide_image_3 | image_url: width: 2240 }} 2240w,{%- endif -%}
-                {{ slide_image_3 | image_url }} {{ slide_image_3.width }}w"
-                src="{{ slide_image_3 | image_url: width: 1500 }}"
-                sizes="100vw"
-                alt="{{ slide_image_3.alt | escape }}"
-                loading="eager"
-                width="{{ slide_image_3.width }}"
-                height="{{ slide_image_3.height }}"
-                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
-              >
-            </div>
-          </div>
-        {%- endif -%}
-        {%- if product.metafields.pps.slider_zone_image_4 -%}
-          <div 
-            class="tw-w-[95%] slider__slide" 
-            id="Slide-{{section.id}}-4"
-          >
-            <div class="tw-relative tw-w-full tw-pb-[80%] lg:tw-pb-[50%] tw-bg-white">
-              <img
-                srcset="{%- if product.metafields.pps.slider_zone_image_4.width >= 165 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 165 }} 165w,{%- endif -%}
-                {%- if product.metafields.pps.slider_zone_image_4.width >= 360 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 360 }} 360w,{%- endif -%}
-                {%- if product.metafields.pps.slider_zone_image_4.width >= 560 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 560 }} 560w,{%- endif -%}
-                {%- if product.metafields.pps.slider_zone_image_4.width >= 1120 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1120 }} 1120w,{%- endif -%}
-                {%- if product.metafields.pps.slider_zone_image_4.width >= 1800 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1800 }} 1800w,{%- endif -%}
-                {%- if product.metafields.pps.slider_zone_image_4.width >= 2240 -%}{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 2240 }} 2240w,{%- endif -%}
-                {{ product.metafields.pps.slider_zone_image_4 | image_url }} {{ product.metafields.pps.slider_zone_image_4.width }}w"
-                src="{{ product.metafields.pps.slider_zone_image_4 | image_url: width: 1500 }}"
-                sizes="100vw"
-                alt="{{ product.metafields.pps.slider_zone_image_4.alt | escape }}"
-                loading="eager"
-                width="{{ product.metafields.pps.slider_zone_image_4.width }}"
-                height="{{ product.metafields.pps.slider_zone_image_4.height }}"
-                class="tw-w-full tw-h-full tw-object-cover tw-left-0 tw-top-0 tw-absolute"
-              >
-            </div>
-          </div>
-        {%- endif -%}
-
-        
+        {%- endfor -%}  
       </div>
 
       <div class="slider-buttons no-js-hidden">
