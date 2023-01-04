@@ -12,70 +12,118 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .pps-ideal-icon {
+    max-width:200px;
+    margin:0 auto;
+    margin-bottom:-5%;
+  }
+  .pps-ideal-icon svg {
+    width: 100%;
+    height: auto;
+  }
+  .ideal-for-tabs-container {
+    background: -o-linear-gradient(349.84deg, #525E5A 0%, #2C3431 98.44%);
+    background: linear-gradient(100.16deg, #525E5A 0%, #2C3431 98.44%);
+  }
 {%- endstyle -%}
-<div {% if section.settings.custom_id != blank %}id="{{ section.settings.custom_id }}"{% endif %} class="y-page-section-{{ section.id }}-padding">
-  <div class="y-page-section-{{ section.id }}-bg-color tw-py-24">
-    <div class="tw-container tw-px-6 lg:tw-px-4 tw-space-y-24">
-      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12">
-        <div class="lg:tw-col-span-5 lg:tw-col-start-2">
-          <img src="https://via.placeholder.com/544x307" alt="">
+{%- if product.metafields.pps.ideal_for_home.value != blank or product.metafields.pps.ideal_for_offgrid.value != blank or product.metafields.pps.ideal_for_professional.value != blank -%}
+<div 
+  {% if section.settings.custom_id != blank %}
+  id="{{ section.settings.custom_id }}"
+  {% endif %} 
+  class="y-page-section-{{ section.id }}-padding"
+>
+  <div class="tw-py-24 ideal-for-tabs-container">
+    <div class="tw-container tw-px-6 lg:tw-px-4 tw-text-center">
+      <h2 class="tw-h3 tw-text-white">Ideal For</h2>
+      <div x-data x-tabs class="tw-mt-8">
+        <div x-tabs:list class="tw--mb-px tw-flex tw-items-stretch tw-gap-8 tw-justify-center">
+          {%- if product.metafields.pps.ideal_for_home.value != blank -%}
+          <button x-tabs:tab type="button"
+            :class="$tab.isSelected ? 'tw-border-bee-green-200 hover:tw-border-bee-green-200' : 'tw-border-transparent'"
+            class="tw-inline-flex tw-border-b-4 tw-py-2.5  tw-font-semibold tw-h7 tw-text-white hover:tw-border-bee-green-300"
+          >Home</button>
+          {%- endif -%}
+          {%- if product.metafields.pps.ideal_for_offgrid.value != blank -%}
+          <button x-tabs:tab type="button"
+            :class="$tab.isSelected ? 'tw-border-bee-green-200 hover:tw-border-bee-green-200' : 'tw-border-transparent'"
+            class="tw-inline-flex tw-border-b-4 tw-py-2.5  tw-font-semibold tw-h7 tw-text-white hover:tw-border-bee-green-300"
+          >Off Grid</button>
+          {%- endif -%}
+          {%- if product.metafields.pps.ideal_for_professional.value != blank -%}
+          <button x-tabs:tab type="button"
+            :class="$tab.isSelected ? 'tw-border-bee-green-200 hover:tw-border-bee-green-200' : 'tw-border-transparent'"
+            class="tw-inline-flex tw-border-b-4 tw-py-2.5  tw-font-semibold tw-h7 tw-text-white hover:tw-border-bee-green-300"
+          >Professional</button>
+          {%- endif -%}
         </div>
-        <div class="lg:tw-col-span-4 lg:tw-col-start-8">
-          <h3 class="tw-h4 tw-text-white">Ideal For</h3>
-          <ul class="tw-divide-y tw-divide-bee-green-100 tw-text-white tw-mt-6">
-            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4 tw-justify-between">
-              <div class="tw-flex-initial">
-                <h4 class="tw-h7 tw-text-white">Cell Phone</h4>
+        <div x-tabs:panels class="tw-mt-8">
+          {%- if product.metafields.pps.ideal_for_home.value != blank -%}
+          <section x-tabs:panel>
+            <div class="tw-flex tw-flex-wrap tw--mx-4 tw-justify-center tw-gap-y-8">
+              {% for item in product.metafields.pps.ideal_for_home.value %}
+              {% assign icon = 'icon-ideal-' | append: item.icon %}
+              {% assign title = item.title %}
+              {% assign charges = item.charges %}
+              {% assign wattage = item.wattage %}
+              <div class="tw-w-1/2 sm:tw-w-1/3 lg:tw-w-1/5 tw-px-4">
+                <div class="pps-ideal-icon">
+                {%- include icon -%}
+                </div>
+                <h4 class="tw-text-gray-50 tw-text-[2.4rem]">{{ title }}</h4>
+                <span class="tw-block tw-text-gray-50 tw-text-[2rem]">{{ charges }}</span>
+                <span class="tw-text-iron-gate-100">{{ wattage }}</span>
               </div>
-              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm tw-gap-x-2">
-                <div class="tw-w-5/12">12 Wh</div>
-                <div class="tw-w-7/12">25 Charges</div>
+              {% endfor %}
+            </div>
+          </section>
+          {%- endif -%}
+          {%- if product.metafields.pps.ideal_for_offgrid.value != blank -%}
+          <section x-tabs:panel>
+            <div class="tw-flex tw-flex-wrap tw--mx-4 tw-justify-center tw-gap-y-8">
+              {% for item in product.metafields.pps.ideal_for_offgrid.value %}
+              {% assign icon = 'icon-ideal-' | append: item.icon %}
+              {% assign title = item.title %}
+              {% assign charges = item.charges %}
+              {% assign wattage = item.wattage %}
+              <div class="tw-w-1/2 sm:tw-w-1/3 lg:tw-w-1/5 tw-px-4">
+                <div class="pps-ideal-icon">
+                {%- include icon -%}
+                </div>
+                <h4 class="tw-text-gray-50 tw-text-[2.4rem]">{{ title }}</h4>
+                <span class="tw-block tw-text-gray-50 tw-text-[2rem]">{{ charges }}</span>
+                <span class="tw-text-iron-gate-100">{{ wattage }}</span>
               </div>
-            </li>
-            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4 tw-justify-between">
-              <div class="tw-flex-initial">
-                <h4 class="tw-h7 tw-text-white">TV</h4>
+              {% endfor %}
+            </div>
+          </section>
+          {%- endif -%}
+          {%- if product.metafields.pps.ideal_for_professional.value != blank -%}
+          <section x-tabs:panel>
+            <div class="tw-flex tw-flex-wrap tw--mx-4 tw-justify-center tw-gap-y-8">
+              {% for item in product.metafields.pps.ideal_for_professional.value %}
+              {% assign icon = 'icon-ideal-' | append: item.icon %}
+              {% assign title = item.title %}
+              {% assign charges = item.charges %}
+              {% assign wattage = item.wattage %}
+              <div class="tw-w-1/2 sm:tw-w-1/3 lg:tw-w-1/5 tw-px-4">
+                <div class="pps-ideal-icon">
+                {%- include icon -%}
+                </div>
+                <h4 class="tw-text-gray-50 tw-text-[2.4rem]">{{ title }}</h4>
+                <span class="tw-block tw-text-gray-50 tw-text-[2rem]">{{ charges }}</span>
+                <span class="tw-text-iron-gate-100">{{ wattage }}</span>
               </div>
-              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm tw-gap-x-2">
-                <div class="tw-w-5/12">100 Wh</div>
-                <div class="tw-w-7/12">25 Charges</div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-12">
-        <div class="lg:tw-col-span-5 lg:tw-col-start-2">
-          <img src="https://via.placeholder.com/544x307" alt="">
-        </div>
-        <div class="lg:tw-col-span-4 lg:tw-col-start-8">
-          <h3 class="tw-h4 tw-text-white">Recharge Times</h3>
-          <ul class="tw-divide-y tw-divide-bee-green-100 tw-text-white tw-mt-6">
-            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
-              <div class="tw-w-1/2">
-                <h4 class="tw-h7 tw-text-white">Cell Phone</h4>
-              </div>
-              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
-                <div class="tw-w-4/12">12 Wh</div>
-                <div class="tw-w-8/12">25 Charges</div>
-              </div>
-            </li>
-            <li class="tw-py-4 tw-flex tw-flex-nowrap tw-gap-4">
-              <div class="tw-w-1/2">
-                <h4 class="tw-h7 tw-text-white">TV</h4>
-              </div>
-              <div class="tw-w-1/2 tw-flex tw-text-right tw-text-sm">
-                <div class="tw-w-4/12">100 Wh</div>
-                <div class="tw-w-8/12">25 Charges</div>
-              </div>
-            </li>
-          </ul>
+              {% endfor %}
+            </div>
+          </section>
+          {%- endif -%}
         </div>
       </div>
     </div>
   </div>
 </div>
-
+{%- endif -%}
 {% schema %}
   {
     "name": "Product Ideal For",

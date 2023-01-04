@@ -112,6 +112,7 @@ module.exports = {
         300: '#BDBFBF',
         200: '#D7D9D8',
         100: '#F0F2F1',
+        50: '#FAFAFA',
       },
     },
   },
