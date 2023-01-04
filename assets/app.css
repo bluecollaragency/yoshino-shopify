@@ -1026,14 +1026,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -65%;
 }
 
-.tw-mt-24 {
-  margin-top: 9.600000000000001rem;
-}
-
-.tw-mb-24 {
-  margin-bottom: 9.600000000000001rem;
-}
-
 .tw-block {
   display: block;
 }
@@ -1138,12 +1130,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 50%;
 }
 
-.tw-w-\[95\%\] {
-  width: 95%;
-}
-
 .tw-w-\[83px\] {
   width: 83px;
+}
+
+.tw-w-\[95\%\] {
+  width: 95%;
 }
 
 .tw-max-w-screen-xxl {
@@ -1166,12 +1158,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-width: 100%;
 }
 
-.tw-max-w-\[1060px\] {
-  max-width: 1060px;
-}
-
 .tw-max-w-\[860px\] {
   max-width: 860px;
+}
+
+.tw-max-w-\[1060px\] {
+  max-width: 1060px;
 }
 
 .tw-flex-none {
@@ -1368,12 +1360,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 48px;
 }
 
-.\!tw-border-0 {
-  border-width: 0px !important;
-}
-
 .tw-border {
   border-width: 1px;
+}
+
+.\!tw-border-0 {
+  border-width: 0px !important;
 }
 
 .tw-border-t-2 {
