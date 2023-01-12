@@ -819,6 +819,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 0;
 }
 
+.tw-fixed {
+  position: fixed;
+}
+
 .tw-absolute {
   position: absolute;
 }
@@ -875,6 +879,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   top: 64px;
 }
 
+.tw-top-4 {
+  top: 1.6rem;
+}
+
+.tw-right-4 {
+  right: 1.6rem;
+}
+
+.tw-top-2 {
+  top: 0.8rem;
+}
+
+.tw-right-2 {
+  right: 0.8rem;
+}
+
+.tw-right-3 {
+  right: 1.2000000000000002rem;
+}
+
 .tw-z-10 {
   z-index: 10;
 }
@@ -889,6 +913,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw--z-10 {
   z-index: -10;
+}
+
+.tw-z-30 {
+  z-index: 30;
 }
 
 .tw-order-2 {
@@ -1098,6 +1126,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   min-height: 540px;
 }
 
+.tw-min-h-screen {
+  min-height: 100vh;
+}
+
 .tw-w-full {
   width: 100%;
 }
@@ -1164,6 +1196,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-max-w-\[1060px\] {
   max-width: 1060px;
+}
+
+.tw-max-w-xl {
+  max-width: 36rem;
+}
+
+.tw-max-w-2xl {
+  max-width: 42rem;
+}
+
+.tw-max-w-4xl {
+  max-width: 56rem;
 }
 
 .tw-flex-none {
@@ -1340,6 +1384,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow-x: auto;
 }
 
+.tw-overflow-y-auto {
+  overflow-y: auto;
+}
+
 .tw-overflow-y-hidden {
   overflow-y: hidden;
 }
@@ -1358,6 +1406,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-rounded-\[48px\] {
   border-radius: 48px;
+}
+
+.tw-rounded-xl {
+  border-radius: 1.2000000000000002rem;
 }
 
 .tw-border {
@@ -1446,6 +1498,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
+.tw-bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.tw-bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
+.tw-bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.tw-bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
+}
+
 .tw-bg-cover {
   background-size: cover;
 }
@@ -1482,6 +1551,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-p-4 {
   padding: 1.6rem;
+}
+
+.tw-p-12 {
+  padding: 4.800000000000001rem;
+}
+
+.tw-p-8 {
+  padding: 3.2rem;
 }
 
 .tw-px-6 {
@@ -1607,6 +1684,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.8000000000000003rem;
 }
 
+.tw-text-lg {
+  font-size: 1.8rem;
+  line-height: 2.8000000000000003rem;
+}
+
 .tw-font-semibold {
   font-weight: 600;
 }
@@ -1621,6 +1703,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .tw-uppercase {
   text-transform: uppercase;
+}
+
+.tw-leading-none {
+  line-height: 1;
 }
 
 .tw-tracking-tight {
@@ -1679,6 +1765,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 0.2;
 }
 
+.tw-opacity-40 {
+  opacity: 0.4;
+}
+
 .tw-shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
@@ -1691,6 +1781,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
     0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.tw-shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color),
+    0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -1799,6 +1898,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:tw-outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.focus\:tw-outline-1:focus {
+  outline-width: 1px;
+}
+
+.focus-visible\:tw-shadow-none:focus-visible {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.focus-visible\:tw-outline-1:focus-visible {
+  outline-width: 1px;
+}
+
+.focus-visible\:tw-outline-bee-green-200:focus-visible {
+  outline-color: #40a828;
 }
 
 .disabled\:tw-cursor-not-allowed:disabled {

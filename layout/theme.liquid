@@ -230,6 +230,8 @@
     <script defer src="https://unpkg.com/@alpinejs/collapse@3.10.5/dist/cdn.min.js"></script>
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
 
+    <script src="{{ 'cookies.js' | asset_url }}"></script>
+
     {%- if settings.predictive_search_enabled -%}
       <link rel="stylesheet" href="{{ 'component-predictive-search.css' | asset_url }}" media="print" onload="this.media='all'">
     {%- endif -%}
@@ -260,8 +262,100 @@
 
     {% section 'y-footer' %}
     {% comment %} {% section 'footer' %} {% endcomment %}
-    {% section 'y-email-modal' %}
 
+    {%- unless canonical_url contains 'challenge' -%}
+    <!-- Modal -->
+    <div 
+      x-data="{ show_banner: false }"
+      x-init="show_banner = docCookies.hasItem('show_banner') ? (docCookies.getItem('show_banner') == 'false') : true;"
+    >
+      <div
+        x-show="show_banner"
+        style="display: none"
+        x-on:keydown.escape.prevent.stop="show_banner = false"
+        role="dialog"
+        aria-modal="true"
+        x-id="['modal-title']"
+        :aria-labelledby="$id('modal-title')"
+        class="tw-fixed tw-inset-0 tw-z-30 tw-overflow-y-auto"
+      >
+        <!-- Panel -->
+        <div
+          x-show="show_banner"
+          x-transition.opacity 
+          class="tw-relative tw-flex tw-min-h-screen tw-items-center tw-justify-center p-4"
+        >
+          <!-- Overlay -->
+          <div 
+            x-show="show_banner" 
+            x-transition.opacity 
+            class="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-60"
+            @click="show_banner = false"
+          >
+            &nbsp;
+          </div>
+          <div
+            x-on:click.stop
+            x-trap.noscroll.inert="show_banner"
+            class="tw-relative tw-w-full tw-max-w-4xl tw-overflow-y-auto tw-bg-white tw-shadow-lg"
+          >
+            <img src="{{ images['newsletter-modal-image.jpg'] | image_url: width: 1120 }}" alt="">
+            <button 
+              class="tw-absolute tw-top-2 tw-right-3 tw-text-white tw-text-2xl tw-leading-none focus-visible:tw-outline-bee-green-200 focus-visible:tw-outline-1 focus-visible:tw-shadow-none"
+              @click="show_banner = false"
+            >
+              &#10006;
+            </button>
+            <!-- Title -->
+            <div class="tw-p-8">
+              <h2 class="text-3xl font-bold" :id="$id('modal-title')">Join our mailing list</h2>
+              <p class="tw-mt-4">Join our mailing list to be the first to hear about new products and other news from Yoshino.</p>
+              {%- form 'customer', id: 'ModalNewsletter', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="y-newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                      id="NewsletterForm--{{ section.id }}"
+                      type="email"
+                      name="contact[email]"
+                      class="field__input"
+                      value="{{ form.email }}"
+                      aria-required="true"
+                      autocorrect="off"
+                      autocapitalize="off"
+                      autocomplete="email"
+                      {% if form.errors %}
+                        autofocus
+                        aria-invalid="true"
+                        aria-describedby="ModalNewsletter-error"
+                      {% elsif form.posted_successfully? %}
+                        aria-describedby="ModalNewsletter-succes"
+                        disabled
+                      {% endif %}
+                      placeholder="{{ 'newsletter.label' | t }}"
+                      required
+                    >
+                    <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                      {{ 'newsletter.label' | t }}
+                    </label>
+                    <button type="submit" class="y-newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                      {% render 'icon-arrow' %}
+                    </button>
+                  </div>
+                  {%- if form.errors -%}
+                    <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                  {%- endif -%}
+                </div>
+                {%- if form.posted_successfully? -%}
+                  <h3 class="y-newsletter-form__message y-newsletter-form__message--success form__message" id="ModalNewsletter-succes" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+                {%- endif -%}
+              {%- endform -%}
+            </di >
+          </div>
+        </div>
+      </div>
+    </div>
+    {%- endunless -%}
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
       <li id="a11y-new-window-message">{{ 'accessibility.link_messages.new_window' | t }}</li>

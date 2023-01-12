@@ -1,6 +1,19 @@
 {%- style -%}
 {%- endstyle -%}
 
+<div 
+  x-dialog
+  x-data="{ hide_banner: true }"
+  x-init="hide_banner = docCookies.hasItem('hide_banner') ? (docCookies.getItem('hide_banner') == 'true') : false;"
+  x-bind:class="{ 'tw-hidden': hide_banner, 'tw-fixed': !hide_banner }"
+>
+  <div x-dialog:overlay></div> 
+ 
+  <div x-dialog:panel>
+    Content
+  </div>
+</div>
+
 {% schema %}
   {
     "name": "Email Signup Modal",
