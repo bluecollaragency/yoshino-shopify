@@ -290,7 +290,9 @@
             x-show="show_banner" 
             x-transition.opacity 
             class="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-60"
-            @click="show_banner = false"
+            @click="
+              show_banner = false;
+            "
           >
             &nbsp;
           </div>
@@ -300,12 +302,6 @@
             class="tw-relative tw-w-full tw-max-w-4xl tw-overflow-y-auto tw-bg-white tw-shadow-lg"
           >
             <img src="{{ images['newsletter-modal-image.jpg'] | image_url: width: 1120 }}" alt="">
-            <button 
-              class="tw-absolute tw-top-2 tw-right-3 tw-text-white tw-text-2xl tw-leading-none focus-visible:tw-outline-bee-green-200 focus-visible:tw-outline-1 focus-visible:tw-shadow-none"
-              @click="show_banner = false"
-            >
-              &#10006;
-            </button>
             <!-- Title -->
             <div class="tw-p-8">
               <h2 class="text-3xl font-bold" :id="$id('modal-title')">Join our mailing list</h2>
@@ -350,7 +346,15 @@
                   <h3 class="y-newsletter-form__message y-newsletter-form__message--success form__message" id="ModalNewsletter-succes" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
                 {%- endif -%}
               {%- endform -%}
-            </di >
+            </div>
+            <button 
+              class="tw-absolute tw-top-2 tw-right-3 tw-text-white tw-text-2xl tw-leading-none focus-visible:tw-outline-bee-green-200 focus-visible:tw-outline-1 focus-visible:tw-shadow-none"
+              @click="
+                show_banner = false;
+              "
+            >
+              &#10006;
+            </button>
           </div>
         </div>
       </div>
