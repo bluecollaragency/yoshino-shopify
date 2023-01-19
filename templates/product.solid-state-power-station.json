@@ -188,6 +188,13 @@
         "padding_bottom": 0
       }
     },
+    "0a1b8364-59a9-4719-a565-49282e0476c7": {
+      "type": "y-product-ways-to-charge-icons",
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "ca100651-c047-4cc4-bf2d-b66d37e744ca": {
       "type": "y-product-images-slider",
       "settings": {
@@ -214,6 +221,7 @@
     "d2bd7e61-8f4e-4f74-a42a-a9db7a25ab90",
     "a9cac2f4-62c6-480f-abc0-4112ed3d7555",
     "16b149cf-5314-401d-be06-8a67a5f65f81",
+    "0a1b8364-59a9-4719-a565-49282e0476c7",
     "ca100651-c047-4cc4-bf2d-b66d37e744ca",
     "3dfe4b66-77fe-490d-9b1c-b6d92691086f"
   ]
