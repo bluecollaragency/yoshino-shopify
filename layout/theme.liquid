@@ -298,5 +298,13 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <!-- temp collection redirect -->
+    <script>
+      let url = window.location.href;
+      if (url.includes('/collections')) {
+        location.href = '/pages/solid-state-power-stations';
+      }
+    </script>
   </body>
 </html>
