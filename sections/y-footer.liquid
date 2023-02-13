@@ -145,10 +145,19 @@
     </div>
   </div>
 </footer>
+
+{% include 'y-email-modal' %}
+
 {% schema %}
   {
     "name": "Custom Footer",
     "settings": [
+      {
+        "id": "enable_email_modal",
+        "type": "checkbox",
+        "label": "Enable Email Modal",
+        "default": false
+      },
       {
         "id": "footer_logo",
         "type": "image_picker",

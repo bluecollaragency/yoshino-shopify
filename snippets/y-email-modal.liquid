@@ -1,0 +1,119 @@
+{%- if section.settings.enable_email_modal == true -%}
+{%- unless canonical_url contains 'challenge' or canonical_url contains 'myshopify' or canonical_url contains 'privacy-policy' -%}
+  <!-- Modal -->
+  <div 
+    x-data="{ 
+      show_yoshino_email_banner: false
+    }"
+    x-init="      
+      if (Modernizr.cookies) {
+        show_yoshino_email_banner = docCookies.hasItem('show_yoshino_email_banner') ? (docCookies.getItem('show_yoshino_email_banner') == 'false') : true;
+      } else {
+        show_yoshino_email_banner = false;
+      }
+    "
+  >
+    <div
+      x-show="show_yoshino_email_banner"
+      style="display: none"
+      x-on:keydown.escape.prevent.stop="show_yoshino_email_banner = false;docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));"
+      role="dialog"
+      aria-modal="true"
+      x-id="['modal-title']"
+      :aria-labelledby="$id('modal-title')"
+      class="tw-fixed tw-inset-0 tw-z-30 tw-overflow-y-auto"
+    >
+      <!-- Panel -->
+      <div
+        x-show="show_yoshino_email_banner"
+        x-transition.opacity 
+        class="tw-relative tw-flex tw-min-h-screen tw-items-center tw-justify-center p-4"
+      >
+        <!-- Overlay -->
+        <div 
+          x-show="show_yoshino_email_banner" 
+          x-transition.opacity 
+          class="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-60"
+          @click="
+            show_yoshino_email_banner = false;
+            docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));
+          "
+        >
+          &nbsp;
+        </div>
+        <div
+          x-on:click.stop
+          x-trap.noscroll.inert="show_yoshino_email_banner"
+          class="tw-relative tw-w-full tw-max-w-4xl tw-overflow-y-auto tw-bg-white tw-shadow-lg"
+        >
+          <img 
+            srcset="{{ images['newsletter-modal-image.jpg'] | image_url: width: 560 }} 560w,
+            {{ images['newsletter-modal-image.jpg'] | image_url: width: 1120 }} 1120w"
+            sizes="560px"
+            src="{{ images['newsletter-modal-image.jpg'] | image_url: width: 560 }}" 
+            alt="Phone charging wirelessly on PPS" 
+            loading="eager"
+          >
+          <!-- Title -->
+          <div class="tw-p-8 tw-pb-4">
+            <h2 class="text-3xl font-bold" :id="$id('modal-title')">Join our mailing list</h2>
+            <p class="tw-mt-4">Join our mailing list to be the first to hear about new products and other news from Yoshino.</p>
+            {%- form 'customer', id: 'ModalNewsletter', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <div class="y-newsletter-form__field-wrapper">
+                <div class="field">
+                  <input
+                    id="NewsletterForm--{{ section.id }}"
+                    type="email"
+                    name="contact[email]"
+                    class="field__input"
+                    value="{{ form.email }}"
+                    aria-required="true"
+                    autocorrect="off"
+                    autocapitalize="off"
+                    autocomplete="email"
+                    {% if form.errors %}
+                      autofocus
+                      aria-invalid="true"
+                      aria-describedby="ModalNewsletter-error"
+                    {% elsif form.posted_successfully? %}
+                      aria-describedby="ModalNewsletter-succes"
+                      disabled
+                    {% endif %}
+                    placeholder="{{ 'newsletter.label' | t }}"
+                    required
+                  >
+                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
+                    {{ 'newsletter.label' | t }}
+                  </label>
+                  <button type="submit" class="y-newsletter-form__button field__button" name="commit" id="Subscribe" aria-label="{{ 'newsletter.button_label' | t }}">
+                    {% render 'icon-arrow' %}
+                  </button>
+                </div>
+                {%- if form.errors -%}
+                  <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                {%- endif -%}
+              </div>
+              {%- if form.posted_successfully? -%}
+                <h3 class="y-newsletter-form__message y-newsletter-form__message--success form__message" id="ModalNewsletter-succes" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
+              {%- endif -%}
+            {%- endform -%}
+          </div>
+          <div class="tw-text-center tw-block tw-pb-4 tw-px-8 tw-text-[10px]">
+            <a href="/pages/privacy-policy" class="tw-inline-block tw-underline">View Our Privacy Policy</a>
+          </div>
+          <button 
+            class="tw-absolute tw-top-2 tw-right-3 tw-text-white tw-text-2xl tw-leading-none focus-visible:tw-outline-bee-green-200 focus-visible:tw-outline-1 focus-visible:tw-shadow-none"
+            @click="
+              show_yoshino_email_banner = false;
+              docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));
+            "
+          >
+            &#10006;
+          </button>
+        </div> <!-- end of modal container -->
+      </div>
+    </div>
+  </div>
+{%- endunless -%}
+{%- endif -%}

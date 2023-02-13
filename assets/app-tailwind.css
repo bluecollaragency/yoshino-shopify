@@ -154,4 +154,8 @@
   .y-product-features-icon svg {
     @apply tw-w-auto tw-h-full tw-max-w-[64px];
   }
+
+  .grecaptcha-badge {
+    visibility: hidden;
+  }
 }
