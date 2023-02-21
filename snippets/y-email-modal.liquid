@@ -1,5 +1,13 @@
 {%- if section.settings.enable_email_modal == true -%}
-{%- unless canonical_url contains 'challenge' or canonical_url contains 'myshopify' or canonical_url contains 'privacy-policy' -%}
+{%- unless 
+  canonical_url contains 'challenge' 
+  or 
+  canonical_url contains 'myshopify' 
+  or 
+  canonical_url contains 'privacy-policy' 
+  or
+  customer.accepts_marketing == true
+-%}
   <!-- Modal -->
   <div 
     x-data="{ 
@@ -16,7 +24,7 @@
     <div
       x-show="show_yoshino_email_banner"
       style="display: none"
-      x-on:keydown.escape.prevent.stop="show_yoshino_email_banner = false;docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));"
+      x-on:keydown.escape.prevent.stop="show_yoshino_email_banner = false;docCookies.setItem('show_yoshino_email_banner', true, (14*24*60*60));"
       role="dialog"
       aria-modal="true"
       x-id="['modal-title']"
@@ -36,7 +44,7 @@
           class="tw-fixed tw-inset-0 tw-bg-black tw-bg-opacity-60"
           @click="
             show_yoshino_email_banner = false;
-            docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));
+            docCookies.setItem('show_yoshino_email_banner', true, (14*24*60*60));
           "
         >
           &nbsp;
@@ -106,7 +114,7 @@
             class="tw-absolute tw-top-2 tw-right-3 tw-text-white tw-text-2xl tw-leading-none focus-visible:tw-outline-bee-green-200 focus-visible:tw-outline-1 focus-visible:tw-shadow-none"
             @click="
               show_yoshino_email_banner = false;
-              docCookies.setItem('show_yoshino_email_banner', true, (365*24*60*60));
+              docCookies.setItem('show_yoshino_email_banner', true, (14*24*60*60));
             "
           >
             &#10006;

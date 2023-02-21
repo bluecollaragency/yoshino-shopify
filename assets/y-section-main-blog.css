@@ -1,0 +1,22 @@
+.blog-tag-list li {
+  flex-shrink: 0;
+}
+.blog-tag-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #323333;
+  padding: 1.4rem 2.4rem;
+  border: 1px solid #d7d9d8;
+  border-radius: 9999px;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  flex-shrink: 0;
+  flex-grow: 1;
+}
+.blog-tag-link:hover {
+  background-color: #40a828;
+  border: 1px solid #40a828;
+  color: #fff;
+}

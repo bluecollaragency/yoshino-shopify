@@ -1,0 +1,66 @@
+{% comment %}
+    Renders an article card for a given blog with settings to either show the image or not.
+
+    Accepts:
+    - blog: {Object} Blog object
+    - article: {Object} Article object
+    - media_aspect_ratio: {String} The setting changes the aspect ratio of the article image, if shown
+    - media_height: {String} The setting changes the height of the article image. Overrides media_aspect_ratio.
+    - show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+    - show_date: {String} The setting either show the article date or not. If it's not included it will not show the image by default
+    - show_author: {String} The setting either show the article author or not. If it's not included it will not show the author by default
+    - show_badge: {String} The setting either show the blog badge or not.
+    - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+    Usage:
+    {% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{%- if article and article != empty -%}
+
+<div class="tw-flex tw-items-center sm:tw-flex-col">
+  <div class="tw-w-full tw-h-auto tw-relative tw-aspect-video tw-bg-bee-green-200 tw-flex tw-items-center tw-justify-center">
+    <img 
+      srcset="
+        {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
+        {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
+        {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
+        {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
+        {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+      "
+      src="{{ article.image.src | image_url: width: 533 }}"
+      sizes="
+        (min-width: 990px) 33vw, 
+        (min-width: 750px) 50vw, 
+        100vw
+      " 
+      alt="{{ article.image.src.alt | escape }}" 
+      class="tw-absolute tw-w-full tw-h-full tw-object-cover"
+      {% unless lazy_load == false %}loading="lazy"{% endunless %}
+      width="{{ article.image.width }}"
+      height="{{ article.image.height }}"
+    >
+  </div>
+  <div class="tw-w-full tw-p-4 xl:tw-p-8">
+    <h3 class="tw-text-base sm:tw-h5">
+      <a href="{{ article.url }}">
+        {{ article.title | truncate: 50 | escape }}
+      </a>
+    </h3>
+    <span class="tw-text-sm sm:tw-text-lg tw-font-semibold tw-text-gray-800 tw-mt-2">
+      {{ article.published_at | time_tag: format: 'date' }}
+    </span>
+    {%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+      <p class="tw-text-gray-700 tw-mt-6 tw-hidden sm:tw-block">
+        {%- if article.excerpt.size > 0 -%}
+          {{ article.excerpt | strip_html | truncatewords: 30 }}
+        {%- else -%}
+          {{ article.content | strip_html | truncatewords: 30 }}
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+    <a href="{{ article.url }}" class="tw-inline-block tw-mt-2 sm:tw-mt-8 blog-card-link tw-text-sm sm:tw-text-base">Read Blog</a>
+  </div>
+</div>  
+
+{%- endif -%}

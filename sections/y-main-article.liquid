@@ -1,6 +1,6 @@
-{{ 'section-blog-post.css' | asset_url | stylesheet_tag }}
+{{ 'y-section-blog-post.css' | asset_url | stylesheet_tag }}
 
-<article class="article-template" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="yoshino-blog-post" itemscope itemtype="http://schema.org/BlogPosting">
   {%- for block in section.blocks -%}
     {%- case block.type -%}
       {%- when '@app' -%}
@@ -9,13 +9,51 @@
         </div>
       {%- when 'featured_image'-%}
         {%- if article.image -%}
-          <div class="tw-relative tw-block">
-            <div class="tw-container tw-mx-auto lg:tw-px-4"></div>
+          <div class="tw-relative tw-block tw-mt-0">
+            <span class="tw-absolute tw-block tw-z-0 tw-w-full tw-h-full tw-bg-black" itemprop="image">
+              <img
+                srcset="
+                  {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                  {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                  {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                  {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                  {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                  {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                  {{ article.image | image_url }} {{ article.image.width }}w
+                "
+                sizes="100vw"
+                src="{{ article.image | image_url: width: 1500 }}"
+                loading="lazy"
+                width="{{ article.image.width }}"
+                height="{{ article.image.height }}"
+                alt="{{ article.image.alt | escape }}"
+                class="tw-w-full tw-h-full tw-object-cover tw-object-center tw-opacity-60"
+              >
+            </span>
+            <div class="tw-max-w-screen-xxl tw-relative tw-flex tw-z-10 tw-mx-auto tw-px-6 lg:tw-px-4 tw-justify-start tw-items-end md:tw-items-center tw-min-h-[640px] tw-h-full">
+              <div 
+                class="tw-max-w-prose tw-text-white tw-text-left tw-py-12"
+              >        
+                <span class="tw-h7 tw-pb-6 tw-block" itemprop="dateCreated pubdate datePublished">
+                  {%- if article.published -%}
+                  {{ article.published_at | time_tag: format: 'date' }}
+                  {%- else -%}
+                  Aug 21 2022
+                  {%- endif -%}
+                </span>
+                <h1 class="tw-h2 tw-text-white tw-uppercase" itemprop="headline">
+                  {{ article.title | escape }}
+                </h1>
+                <span class="tw-h7 tw-pt-6 tw-block" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  by <span itemprop="name">{{ article.author }}</span>
+                </span>
+              </div>
+            </div>
           </div>
         {%- endif -%}
 
         {%- when 'title'-%}
-          <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
+          {% comment %} <header class="page-width page-width--narrow" {{ block.shopify_attributes }}>
             <h1 class="article-template__title" itemprop="headline">{{ article.title | escape }}</h1>
             {%- if block.settings.blog_show_date -%}
               <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">{{ article.published_at | time_tag: format: 'date' }}</span>
@@ -25,15 +63,15 @@
                 <span itemprop="name">{{ article.author }}</span>
               </span>
             {%- endif -%}
-          </header>
+          </header> {% endcomment %}
 
         {%- when 'content'-%}
-          <div class="article-template__content page-width page-width--narrow rte" itemprop="articleBody" {{ block.shopify_attributes }}>
+          <div class="rte tw-container tw-max-w-screen-lg tw-mx-auto tw-px-6 lg:tw-px-4 tw-mt-8" itemprop="articleBody" {{ block.shopify_attributes }}>
               {{ article.content }}
           </div>
 
         {%- when 'share' -%}
-          <div class="article-template__social-sharing page-width page-width--narrow" {{ block.shopify_attributes }}>
+          <div class="tw-container tw-max-w-screen-lg tw-mx-auto tw-px-6 lg:tw-px-4 tw-overflow-hidden article-template__social-sharing" {{ block.shopify_attributes }}>
             <share-button class="share-button" {{ block.shopify_attributes }}>
               <button class="share-button__button hidden">
                 {% render 'icon-share' %}
@@ -74,12 +112,13 @@
     {%- endcase -%}
   {%- endfor -%}
 
-  <div class="article-template__back element-margin-top center">
+  <div class="tw-container tw-max-w-screen-lg tw-mx-auto tw-pb-8 tw-px-6 lg:tw-px-4 tw-flex">
     <a href="{{ blog.url }}" class="article-template__link link animate-arrow">
       <span class="icon-wrap">{% render 'icon-arrow' %}</span>
       {{ 'blogs.article.back_to_blog' | t: title: blog.title }}
     </a>
   </div>
+
   {%- if blog.comments_enabled? -%}
     <div class="article-template__comment-wrapper background-secondary">
       <div id="comments" class="page-width page-width--narrow">
