@@ -64,8 +64,8 @@
           >
           <!-- Title -->
           <div class="tw-p-8 tw-pb-4">
-            <h2 class="text-3xl font-bold" :id="$id('modal-title')">Join our mailing list</h2>
-            <p class="tw-mt-4">Join our mailing list to be the first to hear about new products and other news from Yoshino.</p>
+            <h2 class="text-3xl font-bold" :id="$id('modal-title')">{{ section.settings.email_modal_heading | safe }}</h2>
+            <p class="tw-mt-4">{{ section.settings.email_modal_text | safe }}</p>
             {%- form 'customer', id: 'ModalNewsletter', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="y-newsletter-form__field-wrapper">
