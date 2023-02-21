@@ -4,7 +4,6 @@
       "type": "y-main-blog",
       "settings": {
         "hero_image": "shopify:\/\/shop_images\/blog-hero.jpg",
-        "layout": "collage",
         "show_image": true,
         "image_height": "medium",
         "show_date": true,
