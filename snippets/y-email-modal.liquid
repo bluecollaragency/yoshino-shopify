@@ -64,8 +64,8 @@
           >
           <!-- Title -->
           <div class="tw-p-8 tw-pb-4">
-            <h2 class="text-3xl font-bold" :id="$id('modal-title')">Join our mailing list</h2>
-            <p class="tw-mt-4">Join our mailing list to be the first to hear about new products and other news from Yoshino.</p>
+            <h2 class="text-3xl font-bold" :id="$id('modal-title')">{{ section.settings.email_modal_heading | safe }}</h2>
+            <p class="tw-mt-4">{{ section.settings.email_modal_text | safe }}</p>
             {%- form 'customer', id: 'ModalNewsletter', class: 'footer__newsletter y-newsletter-form tw-mt-6' -%}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div class="y-newsletter-form__field-wrapper">
@@ -98,10 +98,24 @@
                     {% render 'icon-arrow' %}
                   </button>
                 </div>
-                {%- if form.errors -%}
-                  <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
-                {%- endif -%}
               </div>
+              {%- if form.errors -%}
+                  {%- liquid
+                    assign email_registered = false
+                    if form.errors.messages.size == 1
+                      for message in form.errors.messages
+                        if message contains "note"
+                          assign email_registered = true
+                        endif
+                      endfor
+                    endif
+                  -%}
+                  {%- if email_registered -%}
+                    <small class="newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %} Email Is Already Registered</small>
+                  {%- else -%}
+                    <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                  {%- endif -%}
+                {%- endif -%}
               {%- if form.posted_successfully? -%}
                 <h3 class="y-newsletter-form__message y-newsletter-form__message--success form__message" id="ModalNewsletter-succes" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
