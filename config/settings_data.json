@@ -178,7 +178,7 @@
       "y-footer": {
         "type": "y-footer",
         "settings": {
-          "enable_email_modal": true,
+          "enable_email_modal": false,
           "email_modal_heading": "Join our mailing list",
           "email_modal_text": "Be the first to hear about new products and other news from Yoshino.",
           "footer_logo": "shopify:\/\/shop_images\/yoshino-solid-state-power.png",

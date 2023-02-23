@@ -98,10 +98,24 @@
                     {% render 'icon-arrow' %}
                   </button>
                 </div>
-                {%- if form.errors -%}
-                  <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
-                {%- endif -%}
               </div>
+              {%- if form.errors -%}
+                  {%- liquid
+                    assign email_registered = false
+                    if form.errors.messages.size == 1
+                      for message in form.errors.messages
+                        if message contains "note"
+                          assign email_registered = true
+                        endif
+                      endfor
+                    endif
+                  -%}
+                  {%- if email_registered -%}
+                    <small class="newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %} Email Is Already Registered</small>
+                  {%- else -%}
+                    <small class="y-newsletter-form__message form__message" id="ModalNewsletter-error">{% render 'icon-error' %}{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}</small>
+                  {%- endif -%}
+                {%- endif -%}
               {%- if form.posted_successfully? -%}
                 <h3 class="y-newsletter-form__message y-newsletter-form__message--success form__message" id="ModalNewsletter-succes" tabindex="-1" autofocus>{% render 'icon-success' %}{{ 'newsletter.success' | t }}</h3>
               {%- endif -%}
