@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "b23ec75d-384e-4740-9c94-2beaa9a4cef6": {
@@ -34,7 +43,7 @@
             "headline_size": "xl",
             "copy": "<p>Our advanced solid-state technology puts more power into a smaller, safer battery.<\/p>",
             "copy_size": "xl",
-            "button_link": "shopify:\/\/pages\/solid-state-technology",
+            "button_link": "shopify:\/\/pages\/solid-state-technology-1",
             "button_cta": "Learn More",
             "content_align_y": "center",
             "content_align_x": "start",

@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "21384cbe-5457-47bf-8ae1-f89ef14cb5d3": {
@@ -204,7 +213,7 @@
         "headline_size": "3",
         "copy": "<p>Solid-state technology makes Yoshino power stations more powerful, more portable, and safer than those powered by traditional lithium-ion batteries.<\/p>",
         "copy_size": "base",
-        "button_link": "shopify:\/\/pages\/solid-state-technology",
+        "button_link": "shopify:\/\/pages\/solid-state-technology-1",
         "button_cta": "Learn More",
         "content_align_y": "end",
         "content_align_x": "start",
@@ -238,7 +247,7 @@
         "headline_size": "3",
         "copy": "<p>Read about how solid-state technology brings a new level of safety to portable battery power.<\/p>",
         "copy_size": "base",
-        "button_link": "shopify:\/\/pages\/solid-state-technology",
+        "button_link": "shopify:\/\/pages\/solid-state-technology-1",
         "button_cta": "Learn More",
         "content_align_y": "end",
         "content_align_x": "end",
@@ -260,7 +269,7 @@
         "headline_size": "3",
         "copy": "<p>With a power-to-weight ratio up to double what’s possible with traditional lithium-ion batteries, Yoshino SST power stations are built to go anywhere.<\/p>",
         "copy_size": "base",
-        "button_link": "shopify:\/\/pages\/solid-state-technology",
+        "button_link": "shopify:\/\/pages\/solid-state-technology-1",
         "button_cta": "Learn More",
         "content_align_y": "end",
         "content_align_x": "end",
